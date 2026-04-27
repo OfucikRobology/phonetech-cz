@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhoneTech | Servis mobilních telefonů - Jindřichův Hradec &amp; Praha</title>
+  <meta name="description" content="Profesionální opravy mobilních telefonů, notebooků a elektroniky. Originální díly, 12 měsíců záruka. Jindřichův Hradec a Praha.">
+
+  <meta property="og:title" content="PhoneTech - Servis mobilních telefonů">
+  <meta property="og:description" content="Rychlé opravy s 12M zárukou. J. Hradec &amp; Praha.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <link rel="canonical" href="https://www.phonetech.cz/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "PhoneTech",
+    "description": "Profesionální opravy mobilních telefonů, notebooků a elektroniky.",
+    "url": "https://www.phonetech.cz",
+    "telephone": "+420733622017",
+    "email": "info@phonetech.cz",
+    "address": [
+      {"@type": "PostalAddress","streetAddress": "Jiráskovo předměstí 636","addressLocality": "Jindřichův Hradec","postalCode": "377 01","addressCountry": "CZ"},
+      {"@type": "PostalAddress","streetAddress": "Jeseniova 1196/52","addressLocality": "Praha 3","postalCode": "130 00","addressCountry": "CZ"}
+    ],
+    "openingHours": "Mo-Su",
+    "aggregateRating": {"@type": "AggregateRating","ratingValue": "5.0","reviewCount": "50"}
+  }
+  </script>
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Announcement bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span>
+        <i class="ph ph-map-pin-simple-area" weight="fill"></i>
+        Jindřichův Hradec &amp; Praha -
+        <strong>Opravy na počkání</strong>
+      </span>
+      <a href="tel:+420733622017" class="announcement-bar__phone">
+        <i class="ph ph-phone" weight="fill"></i>
+        +420 733 622 017
+      </a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Hlavní navigace">
+    <div class="container navbar__inner">
+      <a href="./index.html" class="navbar__logo" aria-label="PhoneTech domů">
+        <img src="./images/phonetech-logo.svg" alt="PhoneTech" class="navbar__logo-img">
+      </a>
+
+      <ul class="navbar__links" role="list">
+        <li><a href="./sluzby.html" class="navbar__link">Služby</a></li>
+        <li><a href="./cenik.html" class="navbar__link">Ceník</a></li>
+        <li><a href="./blog.html" class="navbar__link">Blog</a></li>
+        <li><a href="./o-nas.html" class="navbar__link">O nás</a></li>
+        <li><a href="./recenze.html" class="navbar__link">Recenze</a></li>
+        <li><a href="./kontakt.html" class="navbar__link">Kontakt</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="tel:+420733622017" class="navbar__phone-link">
+          <i class="ph ph-phone" weight="bold"></i>
+          733 622 017
+        </a>
+        <a href="./kontakt.html" class="btn btn-accent btn-sm magnetic" data-strength="0.25">
+          Poptávka
+          <i class="ph ph-arrow-up-right" weight="bold"></i>
+        </a>
+      </div>
+
+      <button class="navbar__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="navbar__drawer" id="nav-drawer" aria-hidden="true">
+      <ul role="list">
+        <li><a href="./sluzby.html">Služby</a></li>
+        <li><a href="./cenik.html">Ceník</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./o-nas.html">O nás</a></li>
+        <li><a href="./recenze.html">Recenze</a></li>
+        <li><a href="./kontakt.html">Kontakt</a></li>
+      </ul>
+      <a href="./kontakt.html" class="btn btn-accent btn-full">Nezávazná poptávka</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg-blob" aria-hidden="true"></div>
+      <div class="hero__bg-blob hero__bg-blob--2" aria-hidden="true"></div>
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title hero-reveal" id="hero-heading">
+            Vaše zařízení <em class="text-gradient">v bezpečných rukou</em>.
+          </h1>
+
+          <p class="hero__description hero-reveal">
+            Opravy mobilů, notebooků a elektroniky. Originální díly, 12 měsíců záruka. Jindřichův Hradec &amp; Praha.
+          </p>
+
+          <div class="hero__search hero-reveal" id="device-search-wrapper">
+            <div class="search-box">
+              <i class="ph ph-magnifying-glass search-box__icon"></i>
+              <input
+                type="text"
+                id="device-search"
+                class="search-box__input"
+                placeholder="Najít model - iPhone 15 Pro, Galaxy S24…"
+                autocomplete="off"
+                aria-label="Vyhledat zařízení"
+                aria-autocomplete="list"
+                aria-controls="search-results"
+              >
+              <button class="search-box__clear" id="search-clear" aria-label="Vymazat" hidden>
+                <i class="ph ph-x"></i>
+              </button>
+              <button class="search-box__submit" aria-label="Hledat" type="button">
+                <i class="ph ph-arrow-right" weight="bold"></i>
+              </button>
+            </div>
+            <div class="search-results" id="search-results" role="listbox" aria-label="Nalezená zařízení" hidden></div>
+          </div>
+
+          <div class="hero__buttons hero-reveal">
+            <a href="./kontakt.html" class="btn btn-accent btn-lg magnetic" data-strength="0.2">
+              Nezávazná poptávka
+              <i class="ph ph-arrow-up-right" weight="bold"></i>
+            </a>
+            <a href="./sluzby.html" class="btn-arrow magnetic" data-strength="0.15">
+              Prohlédnout služby
+              <span class="btn-arrow__icon"><i class="ph ph-arrow-right" weight="bold"></i></span>
+            </a>
+          </div>
+
+          <div class="hero__trust hero-reveal">
+            <div class="hero__trust-item">
+              <span class="hero__trust-num">
+                <span class="counter" data-target="500">0</span><span class="hero__trust-num__accent">+</span>
+              </span>
+              <span class="hero__trust-label">Dokončených oprav</span>
+            </div>
+            <div class="hero__trust-item">
+              <span class="hero__trust-num">
+                12<span class="hero__trust-num__accent">M</span>
+              </span>
+              <span class="hero__trust-label">Záruka na práci</span>
+            </div>
+            <div class="hero__trust-item">
+              <span class="hero__trust-num">
+                5.0<i class="ph ph-fill ph-star hero__trust-num__star"></i>
+              </span>
+              <span class="hero__trust-label">Google hodnocení</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual hero-reveal" aria-hidden="true">
+          <div class="hero__visual-frame">
+            <img
+              class="hero__visual-img parallax"
+              data-speed="0.08"
+              src="https://images.unsplash.com/photo-1639776738932-956082f0b704?w=900&h=1100&fit=crop&q=80"
+              alt=""
+              loading="eager"
+              fetchpriority="high"
+            >
+          </div>
+          <div class="hero__visual-tag">
+            <span class="dot"></span>
+            Live servis
+          </div>
+
+          <div class="floating-card floating-card--tl floaty">
+            <i class="ph ph-check-circle" weight="fill" style="color: var(--color-success)"></i>
+            <span>Originální díly</span>
+          </div>
+          <div class="floating-card floating-card--tr floaty-2">
+            <i class="ph ph-lightning" weight="fill" style="color: var(--color-accent)"></i>
+            <span>Do 24 hodin</span>
+          </div>
+          <div class="floating-card floating-card--br floaty-3">
+            <i class="ph ph-shield-check" weight="fill" style="color: var(--color-accent)"></i>
+            <span>12M záruka</span>
+          </div>
+
+          <div class="floating-stat">
+            <strong>4.9<small style="font-size: 60%">/5</small></strong>
+            <span>Průměrné hodnocení</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         BRANDS STRIP
+    ═══════════════════════════════════════════ -->
+    <section class="brands-strip" aria-label="Značky zařízení které opravujeme">
+      <div class="brands-strip__label">Opravujeme zařízení těchto značek a mnoho dalších</div>
+      <div class="brands-strip__track">
+        <div class="brands-strip__inner">
+          <img src="./logos/apple.svg" alt="Apple" height="24">
+          <img src="./logos/samsung.svg" alt="Samsung" height="24">
+          <img src="./logos/huawei.svg" alt="Huawei" height="24">
+          <img src="./logos/xiaomi.svg" alt="Xiaomi" height="24">
+          <img src="./logos/sony.svg" alt="Sony" height="24">
+          <img src="./logos/motorola.svg" alt="Motorola" height="28">
+          <img src="./logos/honor.svg" alt="Honor" height="22">
+          <img src="./logos/realme.svg" alt="realme" height="22">
+          <img src="./logos/google-pixel.svg" alt="Google Pixel" height="22">
+          <img src="./logos/vivo.svg" alt="vivo" height="20">
+          <img src="./logos/apple.svg" alt="" aria-hidden="true" height="24">
+          <img src="./logos/samsung.svg" alt="" aria-hidden="true" height="24">
+          <img src="./logos/huawei.svg" alt="" aria-hidden="true" height="24">
+          <img src="./logos/xiaomi.svg" alt="" aria-hidden="true" height="24">
+          <img src="./logos/sony.svg" alt="" aria-hidden="true" height="24">
+          <img src="./logos/motorola.svg" alt="" aria-hidden="true" height="28">
+          <img src="./logos/honor.svg" alt="" aria-hidden="true" height="22">
+          <img src="./logos/realme.svg" alt="" aria-hidden="true" height="22">
+          <img src="./logos/google-pixel.svg" alt="" aria-hidden="true" height="22">
+          <img src="./logos/vivo.svg" alt="" aria-hidden="true" height="20">
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SERVICES
+    ═══════════════════════════════════════════ -->
+    <section class="section services-section" id="sluzby" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Naše služby</span>
+          <h2 id="services-heading">Co pro vás <em class="text-gradient">uděláme</em></h2>
+          <p class="section-description">Ať potřebujete rychlou opravu nebo výhodnou výměnu zařízení, jsme tu pro vás.</p>
+        </div>
+
+        <div class="services-grid stagger">
+          <article class="service-card tilt" id="servis">
+            <div class="service-card__header">
+              <div class="icon-frame icon-frame--lg"><i class="ph ph-wrench" weight="bold"></i></div>
+              <div class="service-card__tag">Nejpopulárnější</div>
+            </div>
+            <span class="service-card__subtitle">Servis &amp; opravy</span>
+            <h3>Servis mobilů, notebooků a elektroniky</h3>
+            <p>Rychlá a spolehlivá oprava smartphonů, tabletů, notebooků i herních konzolí. Vyměníme displej, baterii, konektor nebo opravíme základní desku.</p>
+            <ul class="service-card__features">
+              <li><i class="ph ph-check" weight="bold"></i> Výměna displeje</li>
+              <li><i class="ph ph-check" weight="bold"></i> Výměna baterie</li>
+              <li><i class="ph ph-check" weight="bold"></i> Oprava konektoru</li>
+              <li><i class="ph ph-check" weight="bold"></i> Základní deska</li>
+              <li><i class="ph ph-check" weight="bold"></i> Čištění zařízení</li>
+              <li><i class="ph ph-check" weight="bold"></i> Datová obnova</li>
+            </ul>
+            <a href="./sluzby.html" class="btn-link">
+              Detaily a ceník
+              <i class="ph ph-arrow-right" weight="bold"></i>
+            </a>
+          </article>
+
+          <article class="service-card tilt" id="prodej">
+            <div class="service-card__header">
+              <div class="icon-frame icon-frame--lg icon-frame--dark"><i class="ph ph-arrows-left-right" weight="bold"></i></div>
+            </div>
+            <span class="service-card__subtitle">Prodej &amp; výkup</span>
+            <h3>Prověřené telefony &amp; výkup starých zařízení</h3>
+            <p>Nabízíme prověřená zařízení za výhodné ceny. Každé prochází důkladnou kontrolou. Zároveň odkoupíme vaše staré zařízení za férovou cenu.</p>
+            <ul class="service-card__features">
+              <li><i class="ph ph-check" weight="bold"></i> Prověřená zařízení</li>
+              <li><i class="ph ph-check" weight="bold"></i> Záruka na každý kus</li>
+              <li><i class="ph ph-check" weight="bold"></i> Férové výkupní ceny</li>
+              <li><i class="ph ph-check" weight="bold"></i> Vyřízení na místě</li>
+            </ul>
+            <a href="./sluzby.html#vykup" class="btn-link">
+              Prohlédnout nabídku
+              <i class="ph ph-arrow-right" weight="bold"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROCESS
+    ═══════════════════════════════════════════ -->
+    <section class="section process-section" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center eyebrow--inverse">Jak to u nás funguje</span>
+          <h2 id="process-heading">Čtyři kroky k&nbsp;<em class="text-accent">opravenému</em> zařízení</h2>
+          <p class="section-description">Od první zprávy po vyzvednutí - proces, který respektuje váš čas.</p>
+        </div>
+
+        <div class="process-grid stagger">
+          <div class="process-step">
+            <div class="process-step__num">01</div>
+            <h3>Nezávazná poptávka</h3>
+            <p>Napište nám model a co se stalo. Do 2 hodin zašleme odhad ceny a termínu.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step__num">02</div>
+            <h3>Přineste nebo pošlete</h3>
+            <p>Osobně na pobočku v J. Hradci či Praze, nebo pošlete přes Zásilkovnu.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step__num">03</div>
+            <h3>Oprava se zárukou</h3>
+            <p>Diagnostika, oprava s originálními díly. Průběh vám hlásíme SMS.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-step__num">04</div>
+            <h3>Vyzvednutí zpět</h3>
+            <p>Zařízení si převezmete s 12měsíční zárukou a kompletním servisním listem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         WHY US (stats + features)
+    ═══════════════════════════════════════════ -->
+    <section class="section why-section" id="proc-my" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Proč si nás vybrat</span>
+          <h2 id="why-heading">Kvalita, kterou <em class="text-gradient">poznáte</em></h2>
+          <p class="section-description">Osobní přístup, férové ceny a 12 měsíců záruka. To není marketing - to je standard.</p>
+        </div>
+
+        <div class="stats-row reveal">
+          <div class="stat-card">
+            <span class="stat-card__number"><span class="counter" data-target="500">0</span><em>+</em></span>
+            <span class="stat-card__label">Spokojených oprav</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number">12<em>M</em></span>
+            <span class="stat-card__label">Záruka na práci</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number">2</span>
+            <span class="stat-card__label">Pobočky v ČR</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number">5.0<i class="ph ph-star num-star" weight="fill"></i></span>
+            <span class="stat-card__label">Google hodnocení</span>
+          </div>
+        </div>
+
+        <div class="features-grid stagger">
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="ph ph-seal-check" weight="fill"></i></div>
+            <h3>Kvalita</h3>
+            <p>Primárně originální díly. Hledáte úsporu? Nabídneme alternativy. Vždy kvalitně.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="ph ph-shield-check" weight="fill"></i></div>
+            <h3>Záruka</h3>
+            <p>12 měsíců na naše služby i díly. Pokud se něco pokazí, napravíme to zdarma.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="ph ph-lightning" weight="fill"></i></div>
+            <h3>Rychlost</h3>
+            <p>Efektivní postupy a zásoba dílů. Zařízení zpět v rekordním čase.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="ph ph-arrows-out" weight="fill"></i></div>
+            <h3>Flexibilita</h3>
+            <p>Od smartphonů po notebooky, konzole i hodinky. Opravujeme i mimo pracovní dobu.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT preview
+    ═══════════════════════════════════════════ -->
+    <section class="section about-section" id="o-nas">
+      <div class="container">
+        <div class="about-section__grid">
+          <div class="about-section__visual reveal reveal--from-left">
+            <div class="about-photo">
+              <img
+                class="about-photo__img"
+                src="https://images.unsplash.com/photo-1539331586018-346b53b2aaa4?w=1040&h=1240&fit=crop&q=80"
+                alt="Tomáš Stoklasa, zakladatel PhoneTech při opravě telefonu"
+                width="520" height="620"
+                loading="lazy"
+              >
+              <div class="about-photo__quote floaty">
+                <i class="ph ph-quotes" weight="fill"></i>
+                <p>Pan Stoklasa je opravdový specialista.</p>
+                <span>- Adam Gusty, zákazník</span>
+              </div>
+              <div class="about-photo__badge">
+                <i class="ph ph-trophy" weight="fill"></i>
+                5.0 na Google
+              </div>
+            </div>
+          </div>
+
+          <div class="about-section__content reveal reveal--from-right">
+            <span class="eyebrow">O nás</span>
+            <h2>Jsme tu pro vás<br>od roku <em class="text-accent">2018</em></h2>
+            <p class="about-section__lead">
+              PhoneTech vznikl z prosté potřeby: dobrý servis mobilů v Jindřichově Hradci jednoduše neexistoval. Tomáš Stoklasa se rozhodl to změnit.
+            </p>
+            <p>
+              Začínali jsme v malém prostoru s jednou sadou nářadí. Dnes máme dvě plně vybavené pobočky - v J. Hradci a v Praze - a za námi jsou stovky spokojených zákazníků.
+            </p>
+
+            <ul class="about-section__values">
+              <li><i class="ph ph-check-circle" weight="fill"></i><span>Osobní přístup ke každému zákazníkovi</span></li>
+              <li><i class="ph ph-check-circle" weight="fill"></i><span>Průběžná SMS komunikace o stavu opravy</span></li>
+              <li><i class="ph ph-check-circle" weight="fill"></i><span>Opravy i mimo standardní pracovní dobu</span></li>
+              <li><i class="ph ph-check-circle" weight="fill"></i><span>12 měsíců záruka na díly i práci</span></li>
+            </ul>
+
+            <div class="about-section__cta">
+              <a href="./o-nas.html" class="btn btn-primary magnetic" data-strength="0.2">
+                Náš příběh
+                <i class="ph ph-arrow-right" weight="bold"></i>
+              </a>
+              <a href="tel:+420733622017" class="btn btn-ghost">
+                <i class="ph ph-phone" weight="bold"></i>
+                733 622 017
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-timeline" id="about-timeline" role="list" aria-label="Historie PhoneTech">
+          <div class="about-timeline__line" aria-hidden="true">
+            <div class="about-timeline__line-fill"></div>
+          </div>
+          <div class="about-timeline__item" role="listitem">
+            <div class="about-timeline__dot"><i class="ph ph-flag" weight="fill"></i></div>
+            <div class="about-timeline__year">2018</div>
+            <div class="about-timeline__content">
+              <strong>Začátek</strong>
+              <p>Otevření první pobočky v Jindřichově Hradci.</p>
+            </div>
+          </div>
+          <div class="about-timeline__item" role="listitem">
+            <div class="about-timeline__dot"><i class="ph ph-rocket" weight="fill"></i></div>
+            <div class="about-timeline__year">2020</div>
+            <div class="about-timeline__content">
+              <strong>Rozšíření</strong>
+              <p>Notebooky, tablety a konzole přidány do nabídky.</p>
+            </div>
+          </div>
+          <div class="about-timeline__item" role="listitem">
+            <div class="about-timeline__dot"><i class="ph ph-buildings" weight="fill"></i></div>
+            <div class="about-timeline__year">2022</div>
+            <div class="about-timeline__content">
+              <strong>Praha</strong>
+              <p>Druhá pobočka na Žižkově, Jeseniova 1196/52.</p>
+            </div>
+          </div>
+          <div class="about-timeline__item" role="listitem">
+            <div class="about-timeline__dot"><i class="ph ph-trophy" weight="fill"></i></div>
+            <div class="about-timeline__year">2024+</div>
+            <div class="about-timeline__content">
+              <strong>500+ oprav</strong>
+              <p>Stovky spokojených zákazníků a 5.0 na Google.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════════ -->
+    <section class="section testimonials-section" id="recenze" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-header section-header--light reveal">
+          <span class="eyebrow eyebrow--center eyebrow--inverse">Co říkají zákazníci</span>
+          <h2 id="reviews-heading">Důvěra se <em class="text-accent">nekupuje</em><br>- zaslouží si jí.</h2>
+          <div class="testimonials-section__rating">
+            <span class="stars">★★★★★</span>
+            <span>5.0 průměr · 50+ recenzí</span>
+            <img src="./logos/google.svg" alt="Google" height="20">
+          </div>
+        </div>
+
+        <div class="swiper testimonials-swiper reveal" aria-label="Karusel recenzí">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <blockquote class="testimonial-card">
+                <div class="testimonial-card__quote-mark">"</div>
+                <p>Moje zkušenost je velmi pozitivní. Pan Stoklasa je velice ochotný, vše vysvětlí a poradí. Určitě se rádi znovu obrátíme.</p>
+                <footer class="testimonial-card__author">
+                  <div class="author-avatar">VV</div>
+                  <div>
+                    <cite>Vlasta Vyhnalíková</cite>
+                    <span>iPhone 13 - výměna displeje</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+            <div class="swiper-slide">
+              <blockquote class="testimonial-card">
+                <div class="testimonial-card__quote-mark">"</div>
+                <p>Moc doporučuji! Rychlost, profesionalita, ochota a super ceny. Večer jsem volala a druhý den mi displej vyměnil.</p>
+                <footer class="testimonial-card__author">
+                  <div class="author-avatar">LN</div>
+                  <div>
+                    <cite>Lenka Nová</cite>
+                    <span>iPhone - výměna displeje</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+            <div class="swiper-slide">
+              <blockquote class="testimonial-card">
+                <div class="testimonial-card__quote-mark">"</div>
+                <p>Neskutečně vstřícný přístup. Člověk na svém místě - už podle hlasu poznáte, že mluvíte s někým, komu se dá věřit.</p>
+                <footer class="testimonial-card__author">
+                  <div class="author-avatar">TJ</div>
+                  <div>
+                    <cite>Tomáš Jedlička</cite>
+                    <span>Oprava PlayStation</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+            <div class="swiper-slide">
+              <blockquote class="testimonial-card">
+                <div class="testimonial-card__quote-mark">"</div>
+                <p>Po zkušenostech ve značkových opravnách jsem ocenil osobní přístup, časovou flexibilitu i SMS zprávy o průběhu opravy.</p>
+                <footer class="testimonial-card__author">
+                  <div class="author-avatar">B</div>
+                  <div>
+                    <cite>Bobo</cite>
+                    <span>Oprava zařízení</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+            <div class="swiper-slide">
+              <blockquote class="testimonial-card">
+                <div class="testimonial-card__quote-mark">"</div>
+                <p>Konečně kvalitní a precizní servis iPhonů u nás na jihu Čech. Skvělé jednání, rychlost i cena. Mohu jen doporučit.</p>
+                <footer class="testimonial-card__author">
+                  <div class="author-avatar">MP</div>
+                  <div>
+                    <cite>Martin Popelka</cite>
+                    <span>iPhone 12 Pro</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+            <div class="swiper-slide">
+              <blockquote class="testimonial-card">
+                <div class="testimonial-card__quote-mark">"</div>
+                <p>Pan Stoklasa je opravdový specialista. Opravil PlayStation, který nikdo nezvládl - jako kdyby o nic nešlo.</p>
+                <footer class="testimonial-card__author">
+                  <div class="author-avatar">AG</div>
+                  <div>
+                    <cite>Adam Gusty</cite>
+                    <span>PlayStation - oprava</span>
+                  </div>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="swiper-pagination" role="tablist" aria-label="Stránky recenzí"></div>
+        </div>
+
+        <div class="testimonials-section__cta reveal">
+          <a href="./recenze.html" class="btn btn-ghost btn-ghost--inverse">
+            Všechny recenze
+            <i class="ph ph-arrow-right" weight="bold"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top reveal">
+        <div class="footer__cta">
+          <h2>Připraveni dát zařízení <em>druhou šanci?</em></h2>
+          <p>Napište nám, zavolejte nebo přijďte na pobočku. Odpovídáme do 2 hodin.</p>
+        </div>
+        <div class="footer__cta-actions">
+          <a href="./kontakt.html" class="btn btn-accent btn-xl magnetic" data-strength="0.2">
+            Nezávazná poptávka
+            <i class="ph ph-arrow-up-right" weight="bold"></i>
+          </a>
+          <a href="tel:+420733622017" class="btn btn-ghost btn-ghost--inverse btn-lg">
+            <i class="ph ph-phone" weight="bold"></i>
+            +420 733 622 017
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="./index.html" class="footer__logo">
+            <img src="./images/phonetech-logo-white.svg" alt="PhoneTech" class="footer__logo-img">
+          </a>
+          <p>Profesionální servis mobilních telefonů a elektroniky. Jindřichův Hradec &amp; Praha - od roku 2018.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook PhoneTech"><i class="ph ph-facebook-logo" weight="fill"></i></a>
+            <a href="#" aria-label="Instagram PhoneTech"><i class="ph ph-instagram-logo" weight="fill"></i></a>
+          </div>
+        </div>
+        <nav class="footer__nav" aria-label="Patičková navigace">
+          <strong>Navigace</strong>
+          <a href="./sluzby.html">Služby</a>
+          <a href="./cenik.html">Ceník</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./o-nas.html">O nás</a>
+          <a href="./recenze.html">Recenze</a>
+          <a href="./kontakt.html">Kontakt</a>
+        </nav>
+        <div class="footer__contact">
+          <strong>Kontakt</strong>
+          <a href="tel:+420733622017"><i class="ph ph-phone"></i> +420 733 622 017</a>
+          <a href="mailto:info@phonetech.cz"><i class="ph ph-envelope"></i> info@phonetech.cz</a>
+        </div>
+        <div class="footer__locations">
+          <strong>Pobočky</strong>
+          <address>
+            <p><strong>J. Hradec</strong>Jiráskovo předm. 636<br>377 01 Jindřichův Hradec</p>
+            <p><strong>Praha 3</strong>Jeseniova 1196/52<br>130 00 Praha</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <span>© 2026 PhoneTech - Tomáš Stoklasa. Všechna práva vyhrazena.</span>
+          <a href="#">Ochrana osobních údajů</a>
+        </div>
+      </div>
+    </div>
+  </footer><!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="./src/scripts/text-reveal.js" type="module"></script>
+  <script src="./src/scripts/navbar.js" type="module"></script>
+  <script src="./src/scripts/hero.js" type="module"></script>
+  <script src="./src/scripts/animations.js" type="module"></script>
+  <script src="./src/scripts/counter.js" type="module"></script>
+  <script src="./src/scripts/timeline.js" type="module"></script>
+  <script src="./src/scripts/testimonials.js" type="module"></script>
+  <script src="./src/scripts/search.js" type="module"></script>
+  <script src="./src/scripts/magnetic.js" type="module"></script>
+  <script src="./src/scripts/tilt.js" type="module"></script>
+  <script src="./src/scripts/parallax.js" type="module"></script>
+  <script src="./src/scripts/faq.js" type="module"></script>
+</body>
+</html>

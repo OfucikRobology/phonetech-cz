@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O nás | PhoneTech - Příběh servisu, který začal v J. Hradci</title>
+  <meta name="description" content="PhoneTech. Příběh servisu mobilních telefonů, naše hodnoty, tým a cesta od první pobočky v J. Hradci až po dnešní stovky spokojených zákazníků.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span>
+        <i class="ph ph-map-pin-simple-area" weight="fill"></i>
+        Jindřichův Hradec &amp; Praha -
+        <strong>Opravy na počkání</strong>
+      </span>
+      <a href="tel:+420733622017" class="announcement-bar__phone">
+        <i class="ph ph-phone" weight="fill"></i> +420 733 622 017
+      </a>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Hlavní navigace">
+    <div class="container navbar__inner">
+      <a href="./index.html" class="navbar__logo" aria-label="PhoneTech domů">
+        <img src="./images/phonetech-logo.svg" alt="PhoneTech" class="navbar__logo-img">
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="./sluzby.html" class="navbar__link">Služby</a></li>
+        <li><a href="./cenik.html" class="navbar__link">Ceník</a></li>
+        <li><a href="./blog.html" class="navbar__link">Blog</a></li>
+        <li><a href="./o-nas.html" class="navbar__link" aria-current="page">O nás</a></li>
+        <li><a href="./recenze.html" class="navbar__link">Recenze</a></li>
+        <li><a href="./kontakt.html" class="navbar__link">Kontakt</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="tel:+420733622017" class="navbar__phone-link">
+          <i class="ph ph-phone" weight="bold"></i> 733 622 017
+        </a>
+        <a href="./kontakt.html" class="btn btn-accent btn-sm magnetic" data-strength="0.25">
+          Poptávka <i class="ph ph-arrow-up-right" weight="bold"></i>
+        </a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__drawer" id="nav-drawer" aria-hidden="true">
+      <ul role="list">
+        <li><a href="./sluzby.html">Služby</a></li>
+        <li><a href="./cenik.html">Ceník</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./o-nas.html">O nás</a></li>
+        <li><a href="./recenze.html">Recenze</a></li>
+        <li><a href="./kontakt.html">Kontakt</a></li>
+      </ul>
+      <a href="./kontakt.html" class="btn btn-accent btn-full">Nezávazná poptávka</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__inner">
+          <div class="page-hero__content reveal">
+            <nav class="breadcrumb">
+              <a href="./index.html">Domů</a>
+              <i class="ph ph-caret-right"></i>
+              <span aria-current="page">O nás</span>
+            </nav>
+            <h1 class="page-hero__title">
+              Začali jsme v&nbsp;malé dílně.<br>Dnes pomáháme <em>tisícům</em>.
+            </h1>
+            <p class="page-hero__desc">
+              PhoneTech je příběh o jednom přesvědčení: že servis elektroniky se dá dělat poctivě, rychle a s respektem - i v malém městě.
+            </p>
+          </div>
+          <div class="page-hero__visual reveal reveal--from-right">
+            <img
+              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=900&h=1100&fit=crop&q=80"
+              alt="Technik s mikroskopem při práci"
+              loading="lazy"
+            >
+            <span class="page-hero__visual-tag">Od roku 2018</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story with photo -->
+    <section class="section">
+      <div class="container">
+        <div class="about-section__grid">
+          <div class="about-section__visual reveal reveal--from-left">
+            <div class="about-photo">
+              <img
+                class="about-photo__img parallax"
+                data-speed="0.06"
+                src="https://images.unsplash.com/photo-1539331586018-346b53b2aaa4?w=1040&h=1240&fit=crop&q=80"
+                alt="Tomáš Stoklasa při opravě telefonu"
+                loading="lazy"
+              >
+              <div class="about-photo__quote floaty">
+                <i class="ph ph-quotes" weight="fill"></i>
+                <p>Telefon je osobní věc. Zachází se s ní jako s&nbsp;osobní věcí.</p>
+                <span>- Tomáš Stoklasa, zakladatel</span>
+              </div>
+              <div class="about-photo__badge">
+                <i class="ph ph-certificate" weight="fill"></i>
+                Certifikovaný servis
+              </div>
+            </div>
+          </div>
+
+          <div class="about-section__content reveal reveal--from-right">
+            <span class="eyebrow">Náš příběh</span>
+            <h2>Proč&nbsp;<em class="text-gradient">PhoneTech</em>&nbsp;vznikl</h2>
+            <p class="about-section__lead">
+              V roce 2018 nebylo v Jindřichově Hradci kam s telefonem. Dojíždění do Budějovic znamenalo ztracený den, a zkušenosti s některými „opravnami" byly děsivé.
+            </p>
+            <p>
+              Tomáš Stoklasa se rozhodl to změnit. Začal v malém prostoru s mikroskopem, pájkou a přesvědčením, že i v malém městě lze dělat práci na profesionální úrovni.
+            </p>
+            <p>
+              Dnes máme dvě pobočky, profesionální vybavení včetně ultrazvukové čističky a mikropájecí stanice, a za námi stovky spokojených zákazníků. Jedno se ale nezměnilo - každou opravu bereme osobně.
+            </p>
+            <div class="about-section__cta">
+              <a href="./sluzby.html" class="btn btn-primary magnetic" data-strength="0.2">
+                Co opravujeme
+                <i class="ph ph-arrow-right" weight="bold"></i>
+              </a>
+              <a href="./kontakt.html" class="btn btn-ghost">
+                Navštívit pobočku
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section" style="background: var(--color-bg-warm);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Naše hodnoty</span>
+          <h2>Jak&nbsp;<em class="text-gradient">přemýšlíme</em>&nbsp;o&nbsp;servisu</h2>
+          <p class="section-description">Šest principů, kterými se řídíme každý den.</p>
+        </div>
+
+        <div class="values-grid stagger">
+          <div class="value-card">
+            <span class="value-card__num">/ 01</span>
+            <h3>Osobní přístup</h3>
+            <p>Každý zákazník dostává osobní péči. Víme, že telefon je dnes víc než nástroj - je to paměť, adresář a brána k blízkým. Zachází se s ním tak.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__num">/ 02</span>
+            <h3>Transparentní ceny</h3>
+            <p>Cena, kterou vám řekneme před opravou, je cena, kterou zaplatíte. Žádné „nečekané" dodatečné poplatky, žádné drobné písmo.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__num">/ 03</span>
+            <h3>Kvalitní díly</h3>
+            <p>Primárně originální díly a OEM komponenty. Pokud hledáte úsporu, nabídneme prověřené alternativy - vždy s popisem rozdílů.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__num">/ 04</span>
+            <h3>Záruka, která něco znamená</h3>
+            <p>12 měsíců na díly i na práci. Když se něco pokazí, napravíme to bez otázek. Kontinuální záruku evidujeme v systému - nepotřebujete doklad.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__num">/ 05</span>
+            <h3>Komunikace</h3>
+            <p>V každé fázi opravy víte, co se děje. SMS notifikace o převzetí, diagnóze i dokončení. Žádné nervy a čekání ve tmě.</p>
+          </div>
+          <div class="value-card">
+            <span class="value-card__num">/ 06</span>
+            <h3>Udržitelnost</h3>
+            <p>Opravená zařízení snižují elektroodpad. Staré baterie a díly recyklujeme přes certifikované sběrny. Každá oprava má i ekologický smysl.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workshop gallery -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Fotky z&nbsp;dílny</span>
+          <h2>Kde se&nbsp;<em class="text-gradient">odehrává</em>&nbsp;ta&nbsp;pečlivá&nbsp;práce</h2>
+        </div>
+        <div class="photo-gallery reveal">
+          <div class="photo-gallery__item photo-gallery__item--hero">
+            <img src="https://images.unsplash.com/photo-1576613109753-27804de2cba8?w=1200&h=800&fit=crop&q=80" alt="Pracovní stůl servisu" loading="lazy">
+          </div>
+          <div class="photo-gallery__item photo-gallery__item--mid">
+            <img src="https://images.unsplash.com/photo-1550041473-d296a3a8a18a?w=600&h=400&fit=crop&q=80" alt="Ruce při práci na telefonu" loading="lazy">
+          </div>
+          <div class="photo-gallery__item photo-gallery__item--small">
+            <img src="https://images.unsplash.com/photo-1574755393849-623942496936?w=400&h=400&fit=crop&q=80" alt="Rozebraný telefon" loading="lazy">
+          </div>
+          <div class="photo-gallery__item photo-gallery__item--mid">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop&q=80" alt="Pájení komponent" loading="lazy">
+          </div>
+          <div class="photo-gallery__item photo-gallery__item--small">
+            <img src="https://images.unsplash.com/photo-1746005514011-ea00280f3b6e?w=400&h=400&fit=crop&q=80" alt="Nářadí" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Big quote -->
+    <section class="section" aria-hidden="false">
+      <div class="container container--tight">
+        <div class="quote-block reveal">
+          <div class="quote-block__mark">"</div>
+          <blockquote>
+            Mám raději poctivou opravu za rozumnou cenu než prodaný nový telefon. Když to zní jako byznys plán, je to spíš vyznání.
+          </blockquote>
+          <cite>- Tomáš Stoklasa, zakladatel PhoneTech</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline full -->
+    <section class="section" style="background: var(--color-ink); color: white;">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center eyebrow--inverse">Naše cesta</span>
+          <h2 style="color: white;">Milníky, kterými jsme <em class="text-accent">prošli</em></h2>
+        </div>
+
+        <div class="about-timeline" id="about-timeline" style="margin-top: var(--space-10);">
+          <div class="about-timeline__line" style="background: rgba(255,255,255,0.15);" aria-hidden="true">
+            <div class="about-timeline__line-fill"></div>
+          </div>
+          <div class="about-timeline__item">
+            <div class="about-timeline__dot" style="background: var(--color-ink); border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.8);"><i class="ph ph-flag" weight="fill"></i></div>
+            <div class="about-timeline__year" style="color: rgba(255,255,255,0.4);">2018</div>
+            <div class="about-timeline__content">
+              <strong style="color: white;">První pobočka</strong>
+              <p style="color: rgba(255,255,255,0.55);">Otevření servisu v J. Hradci. Jedna sada nářadí, velká vize.</p>
+            </div>
+          </div>
+          <div class="about-timeline__item">
+            <div class="about-timeline__dot" style="background: var(--color-ink); border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.8);"><i class="ph ph-rocket" weight="fill"></i></div>
+            <div class="about-timeline__year" style="color: rgba(255,255,255,0.4);">2020</div>
+            <div class="about-timeline__content">
+              <strong style="color: white;">Rozšíření nabídky</strong>
+              <p style="color: rgba(255,255,255,0.55);">Notebooky, tablety, herní konzole. Mikropájení a oprava desek.</p>
+            </div>
+          </div>
+          <div class="about-timeline__item">
+            <div class="about-timeline__dot" style="background: var(--color-ink); border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.8);"><i class="ph ph-buildings" weight="fill"></i></div>
+            <div class="about-timeline__year" style="color: rgba(255,255,255,0.4);">2022</div>
+            <div class="about-timeline__content">
+              <strong style="color: white;">Praha 3 - Žižkov</strong>
+              <p style="color: rgba(255,255,255,0.55);">Otevření druhé pobočky na Jeseniově ulici.</p>
+            </div>
+          </div>
+          <div class="about-timeline__item">
+            <div class="about-timeline__dot" style="background: var(--color-ink); border-color: rgba(255,255,255,0.2); color: rgba(255,255,255,0.8);"><i class="ph ph-trophy" weight="fill"></i></div>
+            <div class="about-timeline__year" style="color: rgba(255,255,255,0.4);">2024+</div>
+            <div class="about-timeline__content">
+              <strong style="color: white;">500+ oprav a 5.0★</strong>
+              <p style="color: rgba(255,255,255,0.55);">Stovky spokojených zákazníků a nejvyšší hodnocení na Google.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">V číslech</span>
+          <h2>PhoneTech <em class="text-gradient">dnes</em></h2>
+        </div>
+
+        <div class="stats-row reveal">
+          <div class="stat-card">
+            <span class="stat-card__number"><span class="counter" data-target="500">0</span><em>+</em></span>
+            <span class="stat-card__label">Oprav za rok</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number"><span class="counter" data-target="6">0</span></span>
+            <span class="stat-card__label">Let zkušeností</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number">2</span>
+            <span class="stat-card__label">Pobočky</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number">5.0<i class="ph ph-star num-star" weight="fill"></i></span>
+            <span class="stat-card__label">Google rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment bento -->
+    <section class="section" style="background: var(--color-bg-warm);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Vybavení</span>
+          <h2>Profi servisní <em class="text-gradient">vybavení</em></h2>
+          <p class="section-description">Bez správných nástrojů nejde dělat správnou práci.</p>
+        </div>
+
+        <div class="bento stagger">
+          <div class="bento-card bento-card--half">
+            <div class="icon-frame icon-frame--lg"><i class="ph ph-magnifying-glass-plus" weight="fill"></i></div>
+            <h3>Stereo mikroskop</h3>
+            <p>Pro práci na základních deskách a mikropájení - 20× zvětšení s LED osvětlením.</p>
+          </div>
+          <div class="bento-card bento-card--half bento-card--dark">
+            <div class="icon-frame icon-frame--lg" style="background: rgba(255,107,43,0.15); color: var(--color-accent);">
+              <i class="ph ph-lightning" weight="fill"></i>
+            </div>
+            <h3>Mikropájecí stanice</h3>
+            <p>Precizní teplota a proudění horkého vzduchu pro BGA komponenty.</p>
+          </div>
+          <div class="bento-card bento-card--third">
+            <div class="icon-frame icon-frame--lg"><i class="ph ph-drop" weight="fill"></i></div>
+            <h3>Ultrazvuková čistička</h3>
+            <p>Pro zařízení po tekutinách.</p>
+          </div>
+          <div class="bento-card bento-card--third">
+            <div class="icon-frame icon-frame--lg"><i class="ph ph-gauge" weight="fill"></i></div>
+            <h3>Testovací přístroje</h3>
+            <p>Multimetr, osciloskop, programátor.</p>
+          </div>
+          <div class="bento-card bento-card--third bento-card--accent">
+            <div class="icon-frame icon-frame--lg" style="background: rgba(255,255,255,0.2); color: white;">
+              <i class="ph ph-package" weight="fill"></i>
+            </div>
+            <h3>Sklad originálních dílů</h3>
+            <p>Tisíce komponent pro iPhone, Samsung, Xiaomi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next CTA -->
+    <section class="next-cta">
+      <div class="container next-cta__inner reveal">
+        <div>
+          <h2>Zanechte nám&nbsp;zařízení <em>v&nbsp;dobrých&nbsp;rukou</em></h2>
+          <p>Poctivě, rychle, se zárukou. Napište nebo přijďte - rádi vám pomůžeme.</p>
+        </div>
+        <div class="next-cta__actions">
+          <a href="./kontakt.html" class="btn btn-accent btn-xl magnetic" data-strength="0.2">
+            Kontakt &amp; poptávka
+            <i class="ph ph-arrow-up-right" weight="bold"></i>
+          </a>
+          <a href="./recenze.html" class="btn btn-ghost btn-ghost--inverse btn-lg">
+            Co o&nbsp;nás říkají
+            <i class="ph ph-arrow-right" weight="bold"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="./index.html" class="footer__logo">
+            <img src="./images/phonetech-logo-white.svg" alt="PhoneTech" class="footer__logo-img">
+          </a>
+          <p>Profesionální servis mobilních telefonů a elektroniky. Jindřichův Hradec &amp; Praha - od roku 2018.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" weight="fill"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo" weight="fill"></i></a>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <strong>Navigace</strong>
+          <a href="./sluzby.html">Služby</a>
+          <a href="./cenik.html">Ceník</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./o-nas.html">O nás</a>
+          <a href="./recenze.html">Recenze</a>
+          <a href="./kontakt.html">Kontakt</a>
+        </nav>
+        <div class="footer__contact">
+          <strong>Kontakt</strong>
+          <a href="tel:+420733622017"><i class="ph ph-phone"></i> +420 733 622 017</a>
+          <a href="mailto:info@phonetech.cz"><i class="ph ph-envelope"></i> info@phonetech.cz</a>
+        </div>
+        <div class="footer__locations">
+          <strong>Pobočky</strong>
+          <address>
+            <p><strong>J. Hradec</strong>Jiráskovo předm. 636<br>377 01 Jindřichův Hradec</p>
+            <p><strong>Praha 3</strong>Jeseniova 1196/52<br>130 00 Praha</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <span>© 2026 PhoneTech - Tomáš Stoklasa. Všechna práva vyhrazena.</span>
+          <a href="#">Ochrana osobních údajů</a>
+        </div>
+      </div>
+    </div>
+  </footer><script src="./src/scripts/navbar.js" type="module"></script>
+  <script src="./src/scripts/animations.js" type="module"></script>
+  <script src="./src/scripts/counter.js" type="module"></script>
+  <script src="./src/scripts/timeline.js" type="module"></script>
+  <script src="./src/scripts/magnetic.js" type="module"></script>
+  <script src="./src/scripts/parallax.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Služby | PhoneTech - Opravy mobilů, notebooků a elektroniky</title>
+  <meta name="description" content="Kompletní servis: opravy displejů, baterií, konektorů a základních desek. Prodej a výkup telefonů. Originální díly, 12 měsíců záruka.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span>
+        <i class="ph ph-map-pin-simple-area" weight="fill"></i>
+        Jindřichův Hradec &amp; Praha -
+        <strong>Opravy na počkání</strong>
+      </span>
+      <a href="tel:+420733622017" class="announcement-bar__phone">
+        <i class="ph ph-phone" weight="fill"></i>
+        +420 733 622 017
+      </a>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Hlavní navigace">
+    <div class="container navbar__inner">
+      <a href="./index.html" class="navbar__logo" aria-label="PhoneTech domů">
+        <img src="./images/phonetech-logo.svg" alt="PhoneTech" class="navbar__logo-img">
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="./sluzby.html" class="navbar__link" aria-current="page">Služby</a></li>
+        <li><a href="./cenik.html" class="navbar__link">Ceník</a></li>
+        <li><a href="./blog.html" class="navbar__link">Blog</a></li>
+        <li><a href="./o-nas.html" class="navbar__link">O nás</a></li>
+        <li><a href="./recenze.html" class="navbar__link">Recenze</a></li>
+        <li><a href="./kontakt.html" class="navbar__link">Kontakt</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="tel:+420733622017" class="navbar__phone-link">
+          <i class="ph ph-phone" weight="bold"></i> 733 622 017
+        </a>
+        <a href="./kontakt.html" class="btn btn-accent btn-sm magnetic" data-strength="0.25">
+          Poptávka <i class="ph ph-arrow-up-right" weight="bold"></i>
+        </a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__drawer" id="nav-drawer" aria-hidden="true">
+      <ul role="list">
+        <li><a href="./sluzby.html">Služby</a></li>
+        <li><a href="./cenik.html">Ceník</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./o-nas.html">O nás</a></li>
+        <li><a href="./recenze.html">Recenze</a></li>
+        <li><a href="./kontakt.html">Kontakt</a></li>
+      </ul>
+      <a href="./kontakt.html" class="btn btn-accent btn-full">Nezávazná poptávka</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page hero -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <div class="page-hero__inner">
+          <div class="page-hero__content reveal">
+            <nav class="breadcrumb" aria-label="Drobečková navigace">
+              <a href="./index.html">Domů</a>
+              <i class="ph ph-caret-right"></i>
+              <span aria-current="page">Služby</span>
+            </nav>
+            <h1 class="page-hero__title" id="page-title">
+              Opravy se&nbsp;<em>zárukou</em>.<br>Ceník, který nepřekvapí.
+            </h1>
+            <p class="page-hero__desc">
+              Servis mobilů, tabletů, notebooků, herních konzolí i chytrých hodinek. Originální díly,
+              12 měsíců záruka, transparentní ceny.
+            </p>
+          </div>
+          <div class="page-hero__visual reveal reveal--from-right">
+            <img
+              src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=900&h=1100&fit=crop&q=80"
+              alt="Technik při opravě telefonu"
+              loading="lazy"
+            >
+            <span class="page-hero__visual-tag">Živý servis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services detail list -->
+    <section class="section" aria-labelledby="services-list-heading">
+      <div class="container container--tight">
+        <div class="section-header section-header--left reveal">
+          <span class="eyebrow">Co opravíme</span>
+          <h2 id="services-list-heading">Kompletní spektrum oprav<br>pod&nbsp;jednou&nbsp;střechou</h2>
+        </div>
+
+        <div class="services-detail">
+          <div class="service-row reveal">
+            <span class="service-row__num">01 / Displeje</span>
+            <div>
+              <h3>Výměna displeje</h3>
+              <p>Prasklé sklo, černý displej nebo nefungující dotyk. Používáme primárně originální moduly, alternativy pouze po domluvě. Stará kalibrace se přenáší - True Tone, Face ID a 3D Touch zůstávají funkční.</p>
+            </div>
+            <div class="service-row__price">od 1 990 Kč<small>iPhone · Android</small></div>
+            <span class="service-row__arrow"><i class="ph ph-arrow-right" weight="bold"></i></span>
+          </div>
+
+          <div class="service-row reveal">
+            <span class="service-row__num">02 / Baterie</span>
+            <div>
+              <h3>Výměna baterie</h3>
+              <p>Baterie drží hodinu? Vyměníme ji za novou a vydrží jako první den. Použité baterie recyklujeme. Na nové baterie se vztahuje plná 12měsíční záruka.</p>
+            </div>
+            <div class="service-row__price">od 990 Kč<small>včetně baterie</small></div>
+            <span class="service-row__arrow"><i class="ph ph-arrow-right" weight="bold"></i></span>
+          </div>
+
+          <div class="service-row reveal">
+            <span class="service-row__num">03 / Konektory</span>
+            <div>
+              <h3>Nabíjecí konektor &amp; reproduktor</h3>
+              <p>Lightning, USB-C, 3.5mm jack. Pokud telefon nenabíjí nebo špatně drží kabel, většinou stačí vyčištění nebo výměna konektoru. Repro, mikrofony a sluchátka zvládneme také.</p>
+            </div>
+            <div class="service-row__price">od 890 Kč<small>30–60 min</small></div>
+            <span class="service-row__arrow"><i class="ph ph-arrow-right" weight="bold"></i></span>
+          </div>
+
+          <div class="service-row reveal">
+            <span class="service-row__num">04 / Základní deska</span>
+            <div>
+              <h3>Oprava základní desky</h3>
+              <p>Telefon spadl do vody, nenabíhá nebo se restartuje? Na mikroskopu najdeme spálené komponenty, zkraty a přerušené cesty. Mikropájení, rekultivace BGA, diagnostika ze schématu.</p>
+            </div>
+            <div class="service-row__price">od 2 490 Kč<small>dle náročnosti</small></div>
+            <span class="service-row__arrow"><i class="ph ph-arrow-right" weight="bold"></i></span>
+          </div>
+
+          <div class="service-row reveal">
+            <span class="service-row__num">05 / Datová obnova</span>
+            <div>
+              <h3>Záchrana dat</h3>
+              <p>Nejde zapnout, ale potřebujete fotky a kontakty? Zkusíme přímé čtení paměti nebo oživení desky do stavu, který umožní zálohu. Úspěšnost cca 85 %.</p>
+            </div>
+            <div class="service-row__price">od 1 490 Kč<small>jen při úspěchu</small></div>
+            <span class="service-row__arrow"><i class="ph ph-arrow-right" weight="bold"></i></span>
+          </div>
+
+          <div class="service-row reveal">
+            <span class="service-row__num">06 / Čištění</span>
+            <div>
+              <h3>Vyčištění &amp; údržba</h3>
+              <p>Po letech se v telefonu nasbírá prach a nečistoty, které blokují reproduktor nebo nabíjení. Kompletně rozebereme, vyčistíme ultrazvukem a vrátíme vám výkon jako nový.</p>
+            </div>
+            <div class="service-row__price">od 490 Kč<small>30 min</small></div>
+            <span class="service-row__arrow"><i class="ph ph-arrow-right" weight="bold"></i></span>
+          </div>
+
+          <div class="service-row reveal" id="notebooky">
+            <span class="service-row__num">07 / Notebooky</span>
+            <div>
+              <h3>Servis notebooků</h3>
+              <p>Výměna klávesnice, displeje, baterie, SSD. Čištění chladiče a přemazání pasty. Diagnostika a oprava desky. MacBook, ThinkPad, Dell, HP, Asus.</p>
+            </div>
+            <div class="service-row__price">od 990 Kč<small>diagnostika zdarma</small></div>
+            <span class="service-row__arrow"><i class="ph ph-arrow-right" weight="bold"></i></span>
+          </div>
+
+          <div class="service-row reveal">
+            <span class="service-row__num">08 / Konzole</span>
+            <div>
+              <h3>Herní konzole</h3>
+              <p>PlayStation (3/4/5), Xbox (One/Series), Nintendo Switch. HDMI porty, ventilátory, řadiče, nabíjecí obvody. Specializujeme se i na komplexní opravy, které jinde odmítají.</p>
+            </div>
+            <div class="service-row__price">od 1 490 Kč<small>HDMI · napájení</small></div>
+            <span class="service-row__arrow"><i class="ph ph-arrow-right" weight="bold"></i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workshop gallery -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Naše dílna</span>
+          <h2>Kde se <em class="text-gradient">opravy</em> odehrávají</h2>
+        </div>
+        <div class="photo-gallery reveal">
+          <div class="photo-gallery__item photo-gallery__item--hero">
+            <img src="https://images.unsplash.com/photo-1576613109753-27804de2cba8?w=1200&h=800&fit=crop&q=80" alt="Dílna s nástroji" loading="lazy">
+          </div>
+          <div class="photo-gallery__item photo-gallery__item--mid">
+            <img src="https://images.unsplash.com/photo-1746005514011-ea00280f3b6e?w=600&h=400&fit=crop&q=80" alt="Rozebraný telefon" loading="lazy">
+          </div>
+          <div class="photo-gallery__item photo-gallery__item--small">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&q=80" alt="Detail elektroniky" loading="lazy">
+          </div>
+          <div class="photo-gallery__item photo-gallery__item--mid">
+            <img src="https://images.unsplash.com/photo-1550041473-d296a3a8a18a?w=600&h=400&fit=crop&q=80" alt="Nástroje na stole" loading="lazy">
+          </div>
+          <div class="photo-gallery__item photo-gallery__item--small">
+            <img src="https://images.unsplash.com/photo-1574755393849-623942496936?w=400&h=400&fit=crop&q=80" alt="Součástky" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process detail -->
+    <section class="section" style="background: var(--color-bg-warm);" aria-labelledby="process-heading">
+      <div class="container container--tight">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Jak to u nás funguje</span>
+          <h2 id="process-heading">Proces v&nbsp;<em class="text-gradient">pěti</em>&nbsp;krocích</h2>
+          <p class="section-description">Transparentní, rychlý, bez zbytečného stresu. Vy máte přehled v každé fázi.</p>
+        </div>
+
+        <div class="process-detail">
+          <div class="process-detail__item reveal">
+            <div class="process-detail__num">01</div>
+            <div class="process-detail__content">
+              <h3>Nezávazná poptávka</h3>
+              <p>Napište nám přes formulář, zavolejte nebo dorazte na pobočku. Popište, co se stalo - a jaký model máte. Do 2 hodin (v pracovní době) vám zašleme odhad ceny a termínu.</p>
+              <ul>
+                <li><i class="ph ph-check-circle" weight="fill"></i> Odpověď do 2 hodin</li>
+                <li><i class="ph ph-check-circle" weight="fill"></i> Orientační cena na první zprávu</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-detail__item reveal">
+            <div class="process-detail__num">02</div>
+            <div class="process-detail__content">
+              <h3>Převzetí zařízení</h3>
+              <p>Můžete přijít osobně v J. Hradci či Praze, poslat zařízení Zásilkovnou nebo domluvit kurýra. Všechny možnosti jsou bezpečné - zařízení dostává protokol.</p>
+              <ul>
+                <li><i class="ph ph-check-circle" weight="fill"></i> Osobně - J. Hradec &amp; Praha 3</li>
+                <li><i class="ph ph-check-circle" weight="fill"></i> Zásilkovna / kurýr po ČR</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-detail__item reveal">
+            <div class="process-detail__num">03</div>
+            <div class="process-detail__content">
+              <h3>Diagnostika &amp; schválení</h3>
+              <p>Provedeme kompletní diagnostiku. Pokud se cena v průběhu diagnostiky upřesní, okamžitě vás kontaktujeme. Nic neopravíme bez vašeho souhlasu.</p>
+              <ul>
+                <li><i class="ph ph-check-circle" weight="fill"></i> Diagnostika zdarma</li>
+                <li><i class="ph ph-check-circle" weight="fill"></i> Schválení před zahájením práce</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-detail__item reveal">
+            <div class="process-detail__num">04</div>
+            <div class="process-detail__content">
+              <h3>Samotná oprava</h3>
+              <p>Primárně originální díly. Kvalifikovaný technik, profi vybavení (mikroskop, mikropájení, ultrazvuková čistička). Průběh vám hlásíme SMS.</p>
+              <ul>
+                <li><i class="ph ph-check-circle" weight="fill"></i> Originální nebo prověřené díly</li>
+                <li><i class="ph ph-check-circle" weight="fill"></i> SMS notifikace o stavu</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-detail__item reveal">
+            <div class="process-detail__num">05</div>
+            <div class="process-detail__content">
+              <h3>Vyzvednutí se&nbsp;zárukou</h3>
+              <p>Po zkoušce fungování si zařízení vyzvednete. Dostanete servisní list s popisem provedených prací a 12měsíční záruku na díly i práci.</p>
+              <ul>
+                <li><i class="ph ph-check-circle" weight="fill"></i> 12 měsíců záruka</li>
+                <li><i class="ph ph-check-circle" weight="fill"></i> Servisní list &amp; daňový doklad</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing table -->
+    <section class="section" id="vykup" aria-labelledby="pricing-heading">
+      <div class="container container--tight">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Orientační ceník</span>
+          <h2 id="pricing-heading">Výměna displeje - <em class="text-gradient">bez překvapení</em></h2>
+          <p class="section-description">Níže najdete vybrané modely. Přesnou cenu pro váš model vám řekneme obratem po zprávě.</p>
+        </div>
+
+        <div class="pricing-table reveal">
+          <div class="pricing-table__header">
+            <div>Model</div>
+            <div>Displej</div>
+            <div>Baterie</div>
+            <div>Doba</div>
+          </div>
+          <div class="pricing-table__row">
+            <strong>iPhone 16 Pro Max</strong>
+            <span class="pricing-table__price">12 990 Kč</span>
+            <span>2 990 Kč</span>
+            <span>60–90 min</span>
+          </div>
+          <div class="pricing-table__row">
+            <strong>iPhone 15 Pro</strong>
+            <span class="pricing-table__price">10 490 Kč</span>
+            <span>2 490 Kč</span>
+            <span>60 min</span>
+          </div>
+          <div class="pricing-table__row">
+            <strong>iPhone 14</strong>
+            <span class="pricing-table__price">5 990 Kč</span>
+            <span>1 490 Kč</span>
+            <span>45 min</span>
+          </div>
+          <div class="pricing-table__row">
+            <strong>iPhone 13</strong>
+            <span class="pricing-table__price">4 990 Kč</span>
+            <span>1 290 Kč</span>
+            <span>45 min</span>
+          </div>
+          <div class="pricing-table__row">
+            <strong>iPhone 12</strong>
+            <span class="pricing-table__price">3 990 Kč</span>
+            <span>990 Kč</span>
+            <span>30–45 min</span>
+          </div>
+          <div class="pricing-table__row">
+            <strong>Samsung Galaxy S24 Ultra</strong>
+            <span class="pricing-table__price">10 990 Kč</span>
+            <span>2 290 Kč</span>
+            <span>60–90 min</span>
+          </div>
+          <div class="pricing-table__row">
+            <strong>Samsung Galaxy S23</strong>
+            <span class="pricing-table__price">6 990 Kč</span>
+            <span>1 490 Kč</span>
+            <span>45 min</span>
+          </div>
+          <div class="pricing-table__row">
+            <strong>Google Pixel 8 Pro</strong>
+            <span class="pricing-table__price">6 490 Kč</span>
+            <span>1 790 Kč</span>
+            <span>60 min</span>
+          </div>
+          <div class="pricing-table__row">
+            <strong>Xiaomi 14</strong>
+            <span class="pricing-table__price">5 990 Kč</span>
+            <span>1 290 Kč</span>
+            <span>45 min</span>
+          </div>
+          <div class="pricing-table__note">
+            Uvedené ceny jsou orientační a zahrnují originální díl. Přesnou kalkulaci pro váš model vám pošleme do 2 hodin po nezávazné poptávce.
+          </div>
+        </div>
+
+        <div class="reveal" style="text-align: center; margin-top: var(--space-8);">
+          <a href="./kontakt.html" class="btn btn-primary btn-lg magnetic" data-strength="0.2">
+            Získat cenu pro&nbsp;váš model
+            <i class="ph ph-arrow-right" weight="bold"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bento quality promise -->
+    <section class="section" style="background: var(--color-bg-warm);">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Naše záruka</span>
+          <h2>Čtyři důvody, proč <em class="text-gradient">opravovat u nás</em></h2>
+        </div>
+
+        <div class="bento stagger">
+          <div class="bento-card bento-card--wide bento-card--dark">
+            <div class="icon-frame icon-frame--lg" style="background: rgba(255,107,43,0.15); color: var(--color-accent);">
+              <i class="ph ph-shield-check" weight="fill"></i>
+            </div>
+            <h3>12 měsíců záruka na práci i díly</h3>
+            <p>Pokud se do roka cokoliv pokazí v souvislosti s provedenou opravou, napravíme to zdarma. Nepotřebujete doklad, stačí přijít.</p>
+          </div>
+
+          <div class="bento-card bento-card--third">
+            <div class="icon-frame icon-frame--lg"><i class="ph ph-seal-check" weight="fill"></i></div>
+            <h3>Originální díly</h3>
+            <p>Primárně OEM a originální komponenty. Alternativy jen po domluvě.</p>
+          </div>
+
+          <div class="bento-card bento-card--third">
+            <div class="icon-frame icon-frame--lg"><i class="ph ph-lightning" weight="fill"></i></div>
+            <h3>Do 24 hodin</h3>
+            <p>Nejčastější opravy hotové do 24 hodin. Expres na počkání.</p>
+          </div>
+
+          <div class="bento-card bento-card--half bento-card--accent">
+            <div class="icon-frame icon-frame--lg" style="background: rgba(255,255,255,0.2); color: white;">
+              <i class="ph ph-chat-circle-dots" weight="fill"></i>
+            </div>
+            <h3>Průběžná komunikace</h3>
+            <p>SMS notifikace v každé fázi opravy. Víte, co se s vaším zařízením děje.</p>
+          </div>
+
+          <div class="bento-card bento-card--half">
+            <div class="icon-frame icon-frame--lg"><i class="ph ph-currency-circle-dollar" weight="fill"></i></div>
+            <h3>Férové ceny bez skrytých poplatků</h3>
+            <p>Diagnostika je zdarma. Cenu znáte před zahájením opravy - co nabídneme, to platí.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" aria-labelledby="faq-heading">
+      <div class="container container--tight">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Časté dotazy</span>
+          <h2 id="faq-heading">Co&nbsp;se&nbsp;nejčastěji&nbsp;ptáte</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Jak dlouho trvá výměna displeje?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Standardní výměna displeje u iPhonů 12–15 trvá 45–60 minut. U Pro Max modelů a Androidu to může být 60–90 minut. Pokud si zařízení chcete nechat opravit na počkání, domluvte si předem termín - většinu dílů máme skladem.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Používáte originální díly?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Primárně ano. Pro iPhone používáme originální Apple díly (OEM). U Androidu originální servisní díly od výrobce. Pokud hledáte úsporu, můžeme nabídnout prověřené alternativy - vždy se k volbě vracíme s vámi a vysvětlíme rozdíly.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Jak funguje 12měsíční záruka?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Na každou opravu dáváme 12 měsíců záruky na díly i na odvedenou práci. Záruka se vztahuje na vady způsobené naší prací nebo vadou dílu. Nevztahuje se na mechanické poškození (znovu prasklý displej po pádu) a tekutiny. V případě reklamace stačí přijít s opraveným zařízením - záruku máme v systému.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Můžete opravu provést na počkání?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              U většiny běžných oprav (displej, baterie, konektor) ano - domluvte si předem termín a díl pro vás odložíme stranou. Složitější opravy základních desek a datové obnovy vyžadují více času, typicky 2–5 dní.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Co když je oprava dražší, než se čekalo?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Diagnostika je u nás vždy zdarma. Pokud po otevření zjistíme, že je závada jiná nebo širší, okamžitě vás kontaktujeme. Nic nikdy neopravíme bez vašeho souhlasu s konečnou cenou.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Opravujete i zařízení po vodě?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Ano, tekutiny jsou naše specialita. Čím dříve zařízení přinesete (ideálně do 24 hodin), tím vyšší je šance na plnou záchranu. Po oplachu izopropylalkoholem a diagnostice najdeme spálené komponenty a vyměníme je.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Mohu zařízení poslat poštou?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Ano, můžete poslat přes Zásilkovnu nebo kurýrem po celé ČR. Po přijetí vám pošleme potvrzení a pustíme se do diagnostiky. Zpět posíláme pojištěnou zásilkou.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Vykupujete staré telefony?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Ano, nabízíme výkup iPhonů, Samsungu, Xiaomi a dalších značek. Cenu stanovíme po prohlédnutí. Můžete využít i protiúčet při koupi jiného zařízení z naší nabídky.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next CTA -->
+    <section class="next-cta">
+      <div class="container next-cta__inner reveal">
+        <div>
+          <h2>Nevíte, co s vaším <em>zařízením?</em></h2>
+          <p>Napište nám model a problém - odhad ceny a termínu do 2 hodin.</p>
+        </div>
+        <div class="next-cta__actions">
+          <a href="./kontakt.html" class="btn btn-accent btn-xl magnetic" data-strength="0.2">
+            Nezávazná poptávka
+            <i class="ph ph-arrow-up-right" weight="bold"></i>
+          </a>
+          <a href="tel:+420733622017" class="btn btn-ghost btn-ghost--inverse btn-lg">
+            <i class="ph ph-phone" weight="bold"></i> +420 733 622 017
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="./index.html" class="footer__logo">
+            <img src="./images/phonetech-logo-white.svg" alt="PhoneTech" class="footer__logo-img">
+          </a>
+          <p>Profesionální servis mobilních telefonů a elektroniky. Jindřichův Hradec &amp; Praha - od roku 2018.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" weight="fill"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo" weight="fill"></i></a>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <strong>Navigace</strong>
+          <a href="./sluzby.html">Služby</a>
+          <a href="./cenik.html">Ceník</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./o-nas.html">O nás</a>
+          <a href="./recenze.html">Recenze</a>
+          <a href="./kontakt.html">Kontakt</a>
+        </nav>
+        <div class="footer__contact">
+          <strong>Kontakt</strong>
+          <a href="tel:+420733622017"><i class="ph ph-phone"></i> +420 733 622 017</a>
+          <a href="mailto:info@phonetech.cz"><i class="ph ph-envelope"></i> info@phonetech.cz</a>
+        </div>
+        <div class="footer__locations">
+          <strong>Pobočky</strong>
+          <address>
+            <p><strong>J. Hradec</strong>Jiráskovo předm. 636<br>377 01 Jindřichův Hradec</p>
+            <p><strong>Praha 3</strong>Jeseniova 1196/52<br>130 00 Praha</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <span>© 2026 PhoneTech - Tomáš Stoklasa. Všechna práva vyhrazena.</span>
+          <a href="#">Ochrana osobních údajů</a>
+        </div>
+      </div>
+    </div>
+  </footer><script src="./src/scripts/navbar.js" type="module"></script>
+  <script src="./src/scripts/animations.js" type="module"></script>
+  <script src="./src/scripts/counter.js" type="module"></script>
+  <script src="./src/scripts/magnetic.js" type="module"></script>
+  <script src="./src/scripts/faq.js" type="module"></script>
+</body>
+</html>

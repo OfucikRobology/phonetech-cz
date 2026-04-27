@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recenze | PhoneTech - Co říkají naši zákazníci</title>
+  <meta name="description" content="50+ recenzí s průměrem 5.0 na Google. Přečtěte si, co o nás říkají zákazníci, kterým jsme opravili zařízení.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span>
+        <i class="ph ph-map-pin-simple-area" weight="fill"></i>
+        Jindřichův Hradec &amp; Praha - <strong>Opravy na počkání</strong>
+      </span>
+      <a href="tel:+420733622017" class="announcement-bar__phone">
+        <i class="ph ph-phone" weight="fill"></i> +420 733 622 017
+      </a>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Hlavní navigace">
+    <div class="container navbar__inner">
+      <a href="./index.html" class="navbar__logo" aria-label="PhoneTech domů">
+        <img src="./images/phonetech-logo.svg" alt="PhoneTech" class="navbar__logo-img">
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="./sluzby.html" class="navbar__link">Služby</a></li>
+        <li><a href="./cenik.html" class="navbar__link">Ceník</a></li>
+        <li><a href="./blog.html" class="navbar__link">Blog</a></li>
+        <li><a href="./o-nas.html" class="navbar__link">O nás</a></li>
+        <li><a href="./recenze.html" class="navbar__link" aria-current="page">Recenze</a></li>
+        <li><a href="./kontakt.html" class="navbar__link">Kontakt</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="tel:+420733622017" class="navbar__phone-link">
+          <i class="ph ph-phone" weight="bold"></i> 733 622 017
+        </a>
+        <a href="./kontakt.html" class="btn btn-accent btn-sm magnetic" data-strength="0.25">
+          Poptávka <i class="ph ph-arrow-up-right" weight="bold"></i>
+        </a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__drawer" id="nav-drawer" aria-hidden="true">
+      <ul role="list">
+        <li><a href="./sluzby.html">Služby</a></li>
+        <li><a href="./cenik.html">Ceník</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./o-nas.html">O nás</a></li>
+        <li><a href="./recenze.html">Recenze</a></li>
+        <li><a href="./kontakt.html">Kontakt</a></li>
+      </ul>
+      <a href="./kontakt.html" class="btn btn-accent btn-full">Nezávazná poptávka</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__inner">
+          <div class="page-hero__content reveal">
+            <nav class="breadcrumb">
+              <a href="./index.html">Domů</a>
+              <i class="ph ph-caret-right"></i>
+              <span aria-current="page">Recenze</span>
+            </nav>
+            <h1 class="page-hero__title">
+              Důvěra, která se <em>zaslouží</em>.<br>Ne slibuje.
+            </h1>
+            <p class="page-hero__desc">
+              Přes 50 ověřených recenzí na Google s průměrem 5.0. Každá hvězda znamená jednoho spokojeného zákazníka - a jednu poctivě provedenou opravu.
+            </p>
+          </div>
+          <div class="page-hero__visual reveal reveal--from-right">
+            <img
+              src="https://images.unsplash.com/photo-1639776738932-956082f0b704?w=900&h=1100&fit=crop&q=80"
+              alt="Spokojený zákazník s&nbsp;telefonem"
+              loading="lazy"
+            >
+            <span class="page-hero__visual-tag">50+ recenzí · 5.0★</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary card -->
+    <section class="section section--tight">
+      <div class="container container--tight">
+        <div class="reviews-summary reveal">
+          <div class="reviews-summary__score">5.0</div>
+          <div class="reviews-summary__stars">★★★★★</div>
+          <div class="reviews-summary__label">
+            Průměrné hodnocení na <img src="./logos/google.svg" alt="Google" height="20" style="display: inline-block; vertical-align: middle; margin: 0 4px;">
+            · <strong style="color: var(--color-ink);">50+ recenzí</strong>
+          </div>
+          <div style="margin-top: var(--space-6);">
+            <a href="https://www.google.com/search?q=PhoneTech+Jind%C5%99ich%C5%AFv+Hradec" target="_blank" rel="noopener noreferrer" class="btn btn-primary magnetic" data-strength="0.2">
+              Přečíst všechny na Google
+              <i class="ph ph-arrow-up-right" weight="bold"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews grid -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="reviews-grid stagger">
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Moje zkušenost s tímto servisem je velmi pozitivní. Pan Stoklasa je velice ochotný, vše vysvětlí a poradí. Určitě se na něj znovu rádi obrátíme.</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">VV</div>
+              <div>
+                <strong>Vlasta Vyhnalíková</strong>
+                <span>iPhone 13 - výměna displeje</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Moc doporučuji! Rychlost, profesionalita, ochota a super ceny oproti konkurenci. Originální displej na iPhone, večer jsem volala a druhý den hotovo.</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">LN</div>
+              <div>
+                <strong>Lenka Nová</strong>
+                <span>iPhone - výměna displeje</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Neskutečně vstřícný přístup. Člověk na svém místě - už podle hlasu poznáte, že mluvíte s někým, komu se dá věřit. Strašně moc si toho vážím.</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">TJ</div>
+              <div>
+                <strong>Tomáš Jedlička</strong>
+                <span>Oprava PlayStation</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Po několika nedobrých zkušenostech ve značkových opravnách jsem se setkal s osobním přístupem. Ocenil jsem časovou flexibilitu a podrobné SMS o průběhu.</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">B</div>
+              <div>
+                <strong>Bobo</strong>
+                <span>Komplexní oprava</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Konečně kvalitní a precizní servis iPhonů u nás na jihu Čech. Skvělé jednání, rychlost i cena. Mohu pouze doporučit. Oprava mikrofonu na iPhone 12 Pro.</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">MP</div>
+              <div>
+                <strong>Martin Popelka</strong>
+                <span>iPhone 12 Pro - mikrofon</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Pan Stoklasa je opravdový specialista. Nechali jsme u něj opravit PlayStation, který nikdo opravit nezvládl, a pan Stoklasa si s tím poradil, jak kdyby o nic nešlo.</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">AG</div>
+              <div>
+                <strong>Adam Gusty</strong>
+                <span>PlayStation - HDMI</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Úžasný přístup a skvělá cena. Bratrovi opravili iPhone po pádu do vody - zařízení, které jsme už odepsali. Jde vidět, že je to dělané poctivě.</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">KH</div>
+              <div>
+                <strong>Karolína H.</strong>
+                <span>iPhone 11 - po vodě</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Vyměnili mi displej na Samsungu S21, vše super, na počkání. SMS o průběhu jsem dostával pravidelně. Cena byla férová, záruka 12 měsíců.</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">JN</div>
+              <div>
+                <strong>Jiří Němec</strong>
+                <span>Galaxy S21 - displej</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Pan Stoklasa mi poradil i když šlo o menší problém, který se dal vyřešit nastavením. Nikdo by mi neřekl, že vlastně není třeba nic opravovat. Respekt.</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">EK</div>
+              <div>
+                <strong>Eva Koubková</strong>
+                <span>Konzultace zdarma</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Rychlá oprava MacBooku Pro. Vyměněná klávesnice, vyčištěný ventilátor, nová pasta. Běží jako nový. Děkuji za profesionální servis!</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">DS</div>
+              <div>
+                <strong>David S.</strong>
+                <span>MacBook Pro - servis</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Můj iPhone 12 nenabíjel, jiná opravna chtěla 3000 Kč za výměnu desky. Tady to vyčistili za 490 Kč a funguje. Poctivost za každých okolností.</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">PH</div>
+              <div>
+                <strong>Pavel H.</strong>
+                <span>iPhone 12 - čištění</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-card__stars">★★★★★</div>
+            <p>Záchrana dat z rozbitého telefonu - všechny fotky a kontakty zpět. V jednom týdnu. Neexistuje větší hodnota než ztracené vzpomínky, které jsou najednou zase tu.</p>
+            <footer class="review-card__footer">
+              <div class="author-avatar">MN</div>
+              <div>
+                <strong>Marie Nováková</strong>
+                <span>Záchrana dat</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="reveal" style="text-align: center; margin-top: var(--space-10);">
+          <a href="https://www.google.com/search?q=PhoneTech+Jind%C5%99ich%C5%AFv+Hradec" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg magnetic" data-strength="0.2">
+            <i class="ph ph-pencil-simple" weight="bold"></i>
+            Napsat vlastní recenzi
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote block -->
+    <section class="section" style="background: var(--color-bg-warm);">
+      <div class="container container--tight">
+        <div class="quote-block reveal">
+          <div class="quote-block__mark">"</div>
+          <blockquote>
+            Každá hvězda je pro nás závazek, ne trofej.
+          </blockquote>
+          <cite>- PhoneTech</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next CTA -->
+    <section class="next-cta">
+      <div class="container next-cta__inner reveal">
+        <div>
+          <h2>Chcete být <em>další spokojený</em> zákazník?</h2>
+          <p>Napište nám nebo přijďte osobně. Uděláme všechno pro to, abyste odcházeli s&nbsp;úsměvem.</p>
+        </div>
+        <div class="next-cta__actions">
+          <a href="./kontakt.html" class="btn btn-accent btn-xl magnetic" data-strength="0.2">
+            Nezávazná poptávka
+            <i class="ph ph-arrow-up-right" weight="bold"></i>
+          </a>
+          <a href="./sluzby.html" class="btn btn-ghost btn-ghost--inverse btn-lg">
+            Co opravujeme
+            <i class="ph ph-arrow-right" weight="bold"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="./index.html" class="footer__logo">
+            <img src="./images/phonetech-logo-white.svg" alt="PhoneTech" class="footer__logo-img">
+          </a>
+          <p>Profesionální servis mobilních telefonů a elektroniky. Jindřichův Hradec &amp; Praha - od roku 2018.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" weight="fill"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo" weight="fill"></i></a>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <strong>Navigace</strong>
+          <a href="./sluzby.html">Služby</a>
+          <a href="./cenik.html">Ceník</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./o-nas.html">O nás</a>
+          <a href="./recenze.html">Recenze</a>
+          <a href="./kontakt.html">Kontakt</a>
+        </nav>
+        <div class="footer__contact">
+          <strong>Kontakt</strong>
+          <a href="tel:+420733622017"><i class="ph ph-phone"></i> +420 733 622 017</a>
+          <a href="mailto:info@phonetech.cz"><i class="ph ph-envelope"></i> info@phonetech.cz</a>
+        </div>
+        <div class="footer__locations">
+          <strong>Pobočky</strong>
+          <address>
+            <p><strong>J. Hradec</strong>Jiráskovo předm. 636<br>377 01 Jindřichův Hradec</p>
+            <p><strong>Praha 3</strong>Jeseniova 1196/52<br>130 00 Praha</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <span>© 2026 PhoneTech - Tomáš Stoklasa. Všechna práva vyhrazena.</span>
+          <a href="#">Ochrana osobních údajů</a>
+        </div>
+      </div>
+    </div>
+  </footer><script src="./src/scripts/navbar.js" type="module"></script>
+  <script src="./src/scripts/animations.js" type="module"></script>
+  <script src="./src/scripts/counter.js" type="module"></script>
+  <script src="./src/scripts/magnetic.js" type="module"></script>
+</body>
+</html>

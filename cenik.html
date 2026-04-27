@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ceník | PhoneTech - Opravy iPhone, Apple zařízení a další</title>
+  <meta name="description" content="Vyberte svůj model iPhone a získáte přesnou cenu opravy. Originální díly, 12 měsíců záruka. Pro Android a další zařízení nás prosím kontaktujte přímo.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span>
+        <i class="ph ph-map-pin-simple-area" weight="fill"></i>
+        Jindřichův Hradec &amp; Praha - <strong>Opravy na počkání</strong>
+      </span>
+      <a href="tel:+420733622017" class="announcement-bar__phone">
+        <i class="ph ph-phone" weight="fill"></i> +420 733 622 017
+      </a>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Hlavní navigace">
+    <div class="container navbar__inner">
+      <a href="./index.html" class="navbar__logo" aria-label="PhoneTech domů">
+        <img src="./images/phonetech-logo.svg" alt="PhoneTech" class="navbar__logo-img">
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="./sluzby.html" class="navbar__link">Služby</a></li>
+        <li><a href="./cenik.html" class="navbar__link" aria-current="page">Ceník</a></li>
+        <li><a href="./blog.html" class="navbar__link">Blog</a></li>
+        <li><a href="./o-nas.html" class="navbar__link">O nás</a></li>
+        <li><a href="./recenze.html" class="navbar__link">Recenze</a></li>
+        <li><a href="./kontakt.html" class="navbar__link">Kontakt</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="tel:+420733622017" class="navbar__phone-link">
+          <i class="ph ph-phone" weight="bold"></i> 733 622 017
+        </a>
+        <a href="./kontakt.html" class="btn btn-accent btn-sm magnetic" data-strength="0.25">
+          Poptávka <i class="ph ph-arrow-up-right" weight="bold"></i>
+        </a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__drawer" id="nav-drawer" aria-hidden="true">
+      <ul role="list">
+        <li><a href="./sluzby.html">Služby</a></li>
+        <li><a href="./cenik.html">Ceník</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./o-nas.html">O nás</a></li>
+        <li><a href="./recenze.html">Recenze</a></li>
+        <li><a href="./kontakt.html">Kontakt</a></li>
+      </ul>
+      <a href="./kontakt.html" class="btn btn-accent btn-full">Nezávazná poptávka</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__inner">
+          <div class="page-hero__content reveal">
+            <nav class="breadcrumb">
+              <a href="./index.html">Domů</a>
+              <i class="ph ph-caret-right"></i>
+              <span aria-current="page">Ceník</span>
+            </nav>
+            <h1 class="page-hero__title">
+              Ceník<br><em>oprav iPhone</em>.
+            </h1>
+            <p class="page-hero__desc">
+              Vyberte svůj model a obratem vám pošleme přesnou cenu opravy.
+              Originální díly, 12 měsíců záruka. Pro Android a další zařízení nás
+              prosím kontaktujte přímo.
+            </p>
+          </div>
+          <div class="page-hero__visual reveal reveal--from-right">
+            <img
+              src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=900&h=1100&fit=crop&q=80"
+              alt="Výměna displeje iPhone"
+              loading="lazy"
+            >
+            <span class="page-hero__visual-tag">Apple servis · od 2018</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search + disclaimer -->
+    <section class="section section--tight" style="padding-top: var(--space-8); padding-bottom: var(--space-6);">
+      <div class="container container--tight">
+        <div class="device-search-wrap reveal">
+          <div class="search-box">
+            <i class="ph ph-magnifying-glass search-box__icon"></i>
+            <input
+              type="text"
+              id="device-filter"
+              class="search-box__input"
+              placeholder="Najít model - iPhone 15 Pro, iPhone SE..."
+              autocomplete="off"
+              aria-label="Vyhledat model"
+            >
+            <button type="button" class="search-box__clear" id="device-filter-clear" aria-label="Vymazat" hidden>
+              <i class="ph ph-x"></i>
+            </button>
+          </div>
+          <p class="device-search-wrap__hint">
+            <i class="ph ph-cursor-click"></i>
+            Klikněte na model pro získání ceny
+          </p>
+        </div>
+
+        <div class="cenik-disclaimer reveal">
+          <i class="ph ph-info" weight="fill"></i>
+          <div>
+            <strong>Vzhledem k rozmanitosti Android telefonů a ostatních zařízení na trhu není možné poskytnout jednotný ceník.</strong>
+            Kontaktujte nás pro přesnou kalkulaci opravy vašeho konkrétního zařízení -
+            cenu pošleme do 2 hodin.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- iPhone device grid -->
+    <section class="section section--tight" id="iphone" aria-labelledby="iphone-heading">
+      <div class="container">
+        <div class="section-header section-header--left reveal" style="margin-bottom: var(--space-7);">
+          <span class="eyebrow">Apple</span>
+          <h2 id="iphone-heading">Vyberte svůj <em class="text-gradient">iPhone</em></h2>
+        </div>
+
+        <div class="device-grid stagger" id="device-grid">
+          <!-- iPhone 16 -->
+          <a href="./kontakt.html?device=iPhone%2016e" class="device-card" data-name="iPhone 16e" data-id="iphone-16e">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2025</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 16e</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2016%20Pro%20Max" class="device-card" data-name="iPhone 16 Pro Max" data-id="iphone-16-pro-max">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2024</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 16 Pro Max</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2016%20Pro" class="device-card" data-name="iPhone 16 Pro" data-id="iphone-16-pro">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2024</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 16 Pro</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2016%20Plus" class="device-card" data-name="iPhone 16 Plus" data-id="iphone-16-plus">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2024</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 16 Plus</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2016" class="device-card" data-name="iPhone 16" data-id="iphone-16">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2024</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 16</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+
+          <!-- iPhone 15 -->
+          <a href="./kontakt.html?device=iPhone%2015%20Pro%20Max" class="device-card" data-name="iPhone 15 Pro Max" data-id="iphone-15-pro-max">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2023</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 15 Pro Max</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2015%20Pro" class="device-card" data-name="iPhone 15 Pro" data-id="iphone-15-pro">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2023</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 15 Pro</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2015%20Plus" class="device-card" data-name="iPhone 15 Plus" data-id="iphone-15-plus">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2023</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 15 Plus</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2015" class="device-card" data-name="iPhone 15" data-id="iphone-15">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2023</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 15</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+
+          <!-- iPhone 14 -->
+          <a href="./kontakt.html?device=iPhone%2014%20Pro%20Max" class="device-card" data-name="iPhone 14 Pro Max" data-id="iphone-14-pro-max">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2022</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 14 Pro Max</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2014%20Pro" class="device-card" data-name="iPhone 14 Pro" data-id="iphone-14-pro">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2022</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 14 Pro</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2014%20Plus" class="device-card" data-name="iPhone 14 Plus" data-id="iphone-14-plus">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2022</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 14 Plus</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2014" class="device-card" data-name="iPhone 14" data-id="iphone-14">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2022</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 14</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+
+          <!-- iPhone 13 -->
+          <a href="./kontakt.html?device=iPhone%2013%20Pro%20Max" class="device-card" data-name="iPhone 13 Pro Max" data-id="iphone-13-pro-max">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2021</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 13 Pro Max</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2013%20Pro" class="device-card" data-name="iPhone 13 Pro" data-id="iphone-13-pro">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2021</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 13 Pro</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2013" class="device-card" data-name="iPhone 13" data-id="iphone-13">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2021</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 13</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2013%20mini" class="device-card" data-name="iPhone 13 mini" data-id="iphone-13-mini">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2021</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 13 mini</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+
+          <!-- iPhone 12 -->
+          <a href="./kontakt.html?device=iPhone%2012%20Pro%20Max" class="device-card" data-name="iPhone 12 Pro Max" data-id="iphone-12-pro-max">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2020</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 12 Pro Max</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2012%20Pro" class="device-card" data-name="iPhone 12 Pro" data-id="iphone-12-pro">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2020</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 12 Pro</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2012" class="device-card" data-name="iPhone 12" data-id="iphone-12">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2020</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 12</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2012%20mini" class="device-card" data-name="iPhone 12 mini" data-id="iphone-12-mini">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2020</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 12 mini</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+
+          <!-- iPhone 11 -->
+          <a href="./kontakt.html?device=iPhone%2011%20Pro%20Max" class="device-card" data-name="iPhone 11 Pro Max" data-id="iphone-11-pro-max">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2019</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 11 Pro Max</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2011%20Pro" class="device-card" data-name="iPhone 11 Pro" data-id="iphone-11-pro">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2019</span>
+            </div>
+            <i class="ph ph-device-mobile-camera device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 11 Pro</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%2011" class="device-card" data-name="iPhone 11" data-id="iphone-11">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2019</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 11</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+
+          <!-- iPhone X series -->
+          <a href="./kontakt.html?device=iPhone%20XS%20Max" class="device-card" data-name="iPhone XS Max" data-id="iphone-xs-max">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2018</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone XS Max</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%20XS" class="device-card" data-name="iPhone XS" data-id="iphone-xs">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2018</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone XS</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%20XR" class="device-card" data-name="iPhone XR" data-id="iphone-xr">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2018</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone XR</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%20X" class="device-card" data-name="iPhone X" data-id="iphone-x">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2017</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone X</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+
+          <!-- iPhone SE & 8 series -->
+          <a href="./kontakt.html?device=iPhone%20SE%20(2022)" class="device-card" data-name="iPhone SE 2022" data-id="iphone-se-2022">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2022</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone SE (2022)</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%20SE%20(2020)" class="device-card" data-name="iPhone SE 2020" data-id="iphone-se-2020">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2020</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone SE (2020)</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%208%20Plus" class="device-card" data-name="iPhone 8 Plus" data-id="iphone-8-plus">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2017</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 8 Plus</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+          <a href="./kontakt.html?device=iPhone%208" class="device-card" data-name="iPhone 8" data-id="iphone-8">
+            <div class="device-card__top">
+              <span class="device-card__brand">Apple</span>
+              <span class="device-card__year">2017</span>
+            </div>
+            <i class="ph ph-device-mobile device-card__icon" weight="fill"></i>
+            <h3 class="device-card__name">iPhone 8</h3>
+            <span class="device-card__cta">Získat cenu <i class="ph ph-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <div class="device-grid__empty" id="device-grid-empty" hidden>
+          <i class="ph ph-magnifying-glass-minus"></i>
+          <p>Žádný iPhone neodpovídá vašemu hledání. Zkuste jiný výraz nebo nám napište přímo - opravujeme i&nbsp;všechny ostatní modely.</p>
+          <a href="./kontakt.html" class="btn btn-primary">Kontaktovat nás</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Android & ostatní callout -->
+    <section class="section section--tight" style="background: var(--color-bg-warm);">
+      <div class="container container--tight">
+        <div class="other-devices reveal">
+          <div class="other-devices__icons">
+            <div class="other-devices__icon"><i class="ph ph-device-mobile" weight="fill"></i></div>
+            <div class="other-devices__icon"><i class="ph ph-laptop" weight="fill"></i></div>
+            <div class="other-devices__icon"><i class="ph ph-game-controller" weight="fill"></i></div>
+            <div class="other-devices__icon"><i class="ph ph-watch" weight="fill"></i></div>
+            <div class="other-devices__icon"><i class="ph ph-headphones" weight="fill"></i></div>
+            <div class="other-devices__icon"><i class="ph ph-device-tablet" weight="fill"></i></div>
+          </div>
+          <h2>Android, notebooky, konzole<br>&amp; <em class="text-gradient">další zařízení</em></h2>
+          <p>
+            Vzhledem k rozmanitosti Android telefonů, notebooků, herních konzolí a dalších zařízení
+            není možné poskytnout jednotný ceník. Stačí nás kontaktovat - cenu pošleme do 2&nbsp;hodin.
+          </p>
+          <div class="other-devices__chips">
+            <span class="chip">Samsung Galaxy</span>
+            <span class="chip">Xiaomi</span>
+            <span class="chip">Huawei</span>
+            <span class="chip">Google Pixel</span>
+            <span class="chip">Sony Xperia</span>
+            <span class="chip">Honor</span>
+            <span class="chip">realme</span>
+            <span class="chip">vivo</span>
+            <span class="chip">MacBook</span>
+            <span class="chip">iPad</span>
+            <span class="chip">PlayStation</span>
+            <span class="chip">Xbox</span>
+            <span class="chip">Nintendo Switch</span>
+            <span class="chip">Apple Watch</span>
+            <span class="chip">AirPods</span>
+          </div>
+          <div class="other-devices__actions">
+            <a href="./kontakt.html" class="btn btn-accent btn-lg magnetic" data-strength="0.2">
+              Nezávazná poptávka
+              <i class="ph ph-arrow-up-right" weight="bold"></i>
+            </a>
+            <a href="tel:+420733622017" class="btn btn-ghost btn-lg">
+              <i class="ph ph-phone" weight="bold"></i>
+              +420 733 622 017
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container container--tight">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Časté dotazy</span>
+          <h2>Co se nás <em class="text-gradient">ptáte</em></h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Proč u Android telefonů nejsou ceny?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Android telefonů jsou stovky modelů a variant. Místo zavádějícího „od XX Kč"
+              raději pošleme přesnou cenu pro váš konkrétní model do 2 hodin po vaší poptávce.
+              Stačí napsat značku, model a co se stalo.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Jak rychle dostanu cenu pro svůj iPhone?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              V pracovní době Po-Pá 8:00-18:00 odpovídáme do 2 hodin. Mimo ni nejpozději následující
+              pracovní den. Cena vám přijde e-mailem nebo SMS, podle toho, jak vás budeme kontaktovat.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Co je v ceně opravy displeje?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Cena zahrnuje samotný displej, práci technika, kalibraci (True Tone, Face ID,
+              3D Touch zůstávají funkční), test fungování a 12měsíční záruku. Žádné skryté
+              poplatky za rozebrání nebo „ekologii".
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Můžu si vybrat mezi originálem a alternativou?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Samozřejmě. Standardně doporučujeme originální díly, ale pokud chcete ušetřit, ukážeme
+              vám konkrétní alternativy a popíšeme rozdíly (kvalita zobrazení, výdrž, kompatibilita
+              s funkcemi). Volba je vždy na vás.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Účtujete poplatek za diagnostiku?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Diagnostika je u nás vždy zdarma - i v případě, že se nakonec rozhodnete
+              zařízení neopravovat. Cenu opravy znáte před tím, než se cokoliv začne dělat.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              <h3>Můžu zařízení poslat poštou?</h3>
+              <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
+            </summary>
+            <div class="faq-item__content">
+              Ano, můžete poslat přes Zásilkovnu nebo kurýrem po celé ČR. Po přijetí pošleme
+              potvrzení a pustíme se do diagnostiky. Zpět posíláme pojištěnou zásilkou.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next CTA -->
+    <section class="next-cta">
+      <div class="container next-cta__inner reveal">
+        <div>
+          <h2>Nenašli jste svůj <em>model?</em></h2>
+          <p>Napište nám značku, model a co se stalo - cenu pošleme do 2&nbsp;hodin.</p>
+        </div>
+        <div class="next-cta__actions">
+          <a href="./kontakt.html" class="btn btn-accent btn-xl magnetic" data-strength="0.2">
+            Nezávazná poptávka
+            <i class="ph ph-arrow-up-right" weight="bold"></i>
+          </a>
+          <a href="tel:+420733622017" class="btn btn-ghost btn-ghost--inverse btn-lg">
+            <i class="ph ph-phone" weight="bold"></i> +420 733 622 017
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="./index.html" class="footer__logo">
+            <img src="./images/phonetech-logo-white.svg" alt="PhoneTech" class="footer__logo-img">
+          </a>
+          <p>Profesionální servis mobilních telefonů a elektroniky. Jindřichův Hradec &amp; Praha - od roku 2018.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" weight="fill"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo" weight="fill"></i></a>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <strong>Navigace</strong>
+          <a href="./sluzby.html">Služby</a>
+          <a href="./cenik.html">Ceník</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./o-nas.html">O nás</a>
+          <a href="./recenze.html">Recenze</a>
+          <a href="./kontakt.html">Kontakt</a>
+        </nav>
+        <div class="footer__contact">
+          <strong>Kontakt</strong>
+          <a href="tel:+420733622017"><i class="ph ph-phone"></i> +420 733 622 017</a>
+          <a href="mailto:info@phonetech.cz"><i class="ph ph-envelope"></i> info@phonetech.cz</a>
+        </div>
+        <div class="footer__locations">
+          <strong>Pobočky</strong>
+          <address>
+            <p><strong>J. Hradec</strong>Jiráskovo předm. 636<br>377 01 Jindřichův Hradec</p>
+            <p><strong>Praha 3</strong>Jeseniova 1196/52<br>130 00 Praha</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <span>© 2026 PhoneTech - Tomáš Stoklasa. Všechna práva vyhrazena.</span>
+          <a href="#">Ochrana osobních údajů</a>
+        </div>
+      </div>
+    </div>
+  </footer><!-- Device pricing modal -->
+  <div class="modal" id="device-modal" hidden role="dialog" aria-modal="true" aria-labelledby="device-modal-title">
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__content" role="document">
+      <button class="modal__close" data-close aria-label="Zavřít">
+        <i class="ph ph-x" weight="bold"></i>
+      </button>
+      <div class="modal__header">
+        <span class="modal__brand"><i class="ph ph-apple-logo" weight="fill"></i> Apple iPhone</span>
+        <h2 class="modal__title" id="device-modal-title">iPhone</h2>
+        <p class="modal__subtitle">Apple · ceny za servis</p>
+      </div>
+      <ul class="modal__body" role="list"></ul>
+      <div class="modal__footer">
+        <p class="modal__note">
+          <i class="ph ph-info" weight="fill"></i>
+          Ceny jsou orientační. Přesnou kalkulaci pošleme do 2 hodin po nezávazné poptávce.
+        </p>
+        <div class="modal__actions">
+          <a href="./kontakt.html" class="btn btn-accent btn-lg modal__cta">
+            Objednat opravu
+            <i class="ph ph-arrow-right" weight="bold"></i>
+          </a>
+          <a href="tel:+420733622017" class="btn btn-ghost">
+            <i class="ph ph-phone" weight="bold"></i>
+            +420 733 622 017
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./src/scripts/navbar.js" type="module"></script>
+  <script src="./src/scripts/animations.js" type="module"></script>
+  <script src="./src/scripts/magnetic.js" type="module"></script>
+  <script src="./src/scripts/faq.js" type="module"></script>
+  <script src="./src/scripts/cenik-filter.js" type="module"></script>
+  <script src="./src/scripts/cenik-modal.js" type="module"></script>
+</body>
+</html>

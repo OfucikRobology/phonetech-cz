@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | PhoneTech - Napište nebo přijďte na pobočku</title>
+  <meta name="description" content="Kontaktujte PhoneTech. Dvě pobočky - Jindřichův Hradec a Praha. Nezávazná poptávka online, odpověď do 2 hodin.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span>
+        <i class="ph ph-map-pin-simple-area" weight="fill"></i>
+        Jindřichův Hradec &amp; Praha - <strong>Opravy na počkání</strong>
+      </span>
+      <a href="tel:+420733622017" class="announcement-bar__phone">
+        <i class="ph ph-phone" weight="fill"></i> +420 733 622 017
+      </a>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Hlavní navigace">
+    <div class="container navbar__inner">
+      <a href="./index.html" class="navbar__logo" aria-label="PhoneTech domů">
+        <img src="./images/phonetech-logo.svg" alt="PhoneTech" class="navbar__logo-img">
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="./sluzby.html" class="navbar__link">Služby</a></li>
+        <li><a href="./cenik.html" class="navbar__link">Ceník</a></li>
+        <li><a href="./blog.html" class="navbar__link">Blog</a></li>
+        <li><a href="./o-nas.html" class="navbar__link">O nás</a></li>
+        <li><a href="./recenze.html" class="navbar__link">Recenze</a></li>
+        <li><a href="./kontakt.html" class="navbar__link" aria-current="page">Kontakt</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="tel:+420733622017" class="navbar__phone-link">
+          <i class="ph ph-phone" weight="bold"></i> 733 622 017
+        </a>
+        <a href="mailto:info@phonetech.cz" class="btn btn-accent btn-sm magnetic" data-strength="0.25">
+          E-mail <i class="ph ph-envelope" weight="bold"></i>
+        </a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__drawer" id="nav-drawer" aria-hidden="true">
+      <ul role="list">
+        <li><a href="./sluzby.html">Služby</a></li>
+        <li><a href="./cenik.html">Ceník</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./o-nas.html">O nás</a></li>
+        <li><a href="./recenze.html">Recenze</a></li>
+        <li><a href="./kontakt.html">Kontakt</a></li>
+      </ul>
+      <a href="tel:+420733622017" class="btn btn-accent btn-full">Zavolat</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__inner">
+          <div class="page-hero__content reveal">
+            <nav class="breadcrumb">
+              <a href="./index.html">Domů</a>
+              <i class="ph ph-caret-right"></i>
+              <span aria-current="page">Kontakt</span>
+            </nav>
+            <h1 class="page-hero__title">
+              Napište <em>nebo</em> zavolejte.<br>Odpovíme do 2&nbsp;hodin.
+            </h1>
+            <p class="page-hero__desc">
+              Nezávazná poptávka online, telefonicky nebo osobně na pobočce. V pracovní době
+              reagujeme rychle, mimo ni nejpozději následující den.
+            </p>
+          </div>
+          <div class="page-hero__visual reveal reveal--from-right">
+            <img
+              src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=900&h=1100&fit=crop&q=80"
+              alt="Interiér prodejny PhoneTech"
+              loading="lazy"
+            >
+            <span class="page-hero__visual-tag">Odpověď do 2&nbsp;hodin</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick contact cards -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="bento stagger">
+          <a href="tel:+420733622017" class="bento-card bento-card--third">
+            <div class="icon-frame icon-frame--lg icon-frame--accent-deep"><i class="ph ph-phone" weight="fill"></i></div>
+            <h3>Telefon</h3>
+            <p>Pro rychlou konzultaci nebo potvrzení termínu.</p>
+            <strong style="color: var(--color-ink); font: 700 var(--text-xl) var(--font-display); letter-spacing: -0.02em;">+420 733 622 017</strong>
+          </a>
+
+          <a href="mailto:info@phonetech.cz" class="bento-card bento-card--third">
+            <div class="icon-frame icon-frame--lg"><i class="ph ph-envelope" weight="fill"></i></div>
+            <h3>E-mail</h3>
+            <p>Pro detailní popis závady nebo zaslání fotek zařízení.</p>
+            <strong style="color: var(--color-ink); font: 700 var(--text-xl) var(--font-display); letter-spacing: -0.02em;">info@phonetech.cz</strong>
+          </a>
+
+          <a href="https://wa.me/420733622017" target="_blank" rel="noopener" class="bento-card bento-card--third bento-card--dark">
+            <div class="icon-frame icon-frame--lg" style="background: rgba(255,107,43,0.15); color: var(--color-accent);"><i class="ph ph-chat-circle-dots" weight="fill"></i></div>
+            <h3>WhatsApp</h3>
+            <p>Pošlete fotku problému rovnou přes WhatsApp.</p>
+            <strong style="color: white; font: 700 var(--text-xl) var(--font-display); letter-spacing: -0.02em;">Otevřít chat →</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form + info -->
+    <section class="section" style="background: var(--color-bg-warm);">
+      <div class="container">
+        <div class="contact-section__grid">
+          <div class="contact-section__info reveal reveal--from-left">
+            <span class="eyebrow">Nezávazná poptávka</span>
+            <h2>Popište svou <em class="text-gradient">situaci</em></h2>
+            <p>Čím víc detailů nám napíšete, tím přesnější kalkulaci dostanete zpět. Ideálně model, rok pořízení a přesně to, co se stalo.</p>
+
+            <div class="contact-details" style="margin-top: var(--space-7);">
+              <div class="contact-detail">
+                <div class="contact-detail__icon"><i class="ph ph-clock" weight="fill"></i></div>
+                <div>
+                  <strong>Odpovídáme do 2 hodin</strong>
+                  <span>V pracovní době Po–Pá 8:00–18:00</span>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <div class="contact-detail__icon"><i class="ph ph-currency-circle-dollar" weight="fill"></i></div>
+                <div>
+                  <strong>Diagnostika zdarma</strong>
+                  <span>Cenu znáte před zahájením opravy</span>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <div class="contact-detail__icon"><i class="ph ph-package" weight="fill"></i></div>
+                <div>
+                  <strong>Zaslání Zásilkovnou</strong>
+                  <span>Nemusíte dojíždět - po celé ČR</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-section__form-wrapper reveal reveal--from-right">
+            <form
+              class="contact-form"
+              id="contact-form"
+              action="https://formspree.io/f/VÁŠE-FORMSPREE-ID"
+              method="POST"
+              novalidate
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Jméno a příjmení <span aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Jan Novák" required autocomplete="name">
+                  <span class="form-error" role="alert"></span>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Telefonní číslo <span aria-hidden="true">*</span></label>
+                  <input type="tel" id="phone" name="phone" placeholder="+420 xxx xxx xxx" required autocomplete="tel">
+                  <span class="form-error" role="alert"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="jan@email.cz" autocomplete="email">
+                <span class="form-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="device">Model zařízení <span aria-hidden="true">*</span></label>
+                <input type="text" id="device" name="device" placeholder="iPhone 14 Pro, Samsung S23..." required>
+                <span class="form-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="delivery">Způsob předání</label>
+                <select id="delivery" name="delivery">
+                  <option value="">Vyberte způsob...</option>
+                  <option value="osobne-jh">Osobně - J. Hradec</option>
+                  <option value="osobne-praha">Osobně - Praha 3</option>
+                  <option value="zasilkovna">Zásilkovna</option>
+                  <option value="kuryr">Kurýr</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Popis problému</label>
+                <textarea id="message" name="message" rows="5" placeholder="Rozbitý displej, nevypíná se, nefunguje kamera..."></textarea>
+                <span class="form-hint">Čím víc detailů, tím přesnější cena.</span>
+              </div>
+
+              <div class="form-group form-group--checkbox">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">Souhlasím se <a href="#" target="_blank">zpracováním osobních údajů</a></label>
+                <span class="form-error" role="alert"></span>
+              </div>
+
+              <button type="submit" class="btn btn-accent btn-full btn-lg magnetic" data-strength="0.15" id="submit-btn">
+                <span class="btn-text">Odeslat poptávku</span>
+                <i class="ph ph-paper-plane-right" weight="bold"></i>
+                <span class="btn-spinner" aria-hidden="true" hidden></span>
+              </button>
+
+              <div class="form-success" id="form-success" role="status" hidden>
+                <i class="ph ph-check-circle" weight="fill"></i>
+                Děkujeme! Formulář jsme v pořádku přijali. Ozveme se co nejdříve.
+              </div>
+              <div class="form-error-global" id="form-error-global" role="alert" hidden>
+                <i class="ph ph-warning-circle" weight="fill"></i>
+                Něco se pokazilo. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locations with maps -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow--center">Naše pobočky</span>
+          <h2>Kam <em class="text-gradient">dorazit</em></h2>
+          <p class="section-description">Dvě plně vybavené pobočky - v Jindřichově Hradci a v Praze 3.</p>
+        </div>
+
+        <div class="location-grid">
+          <div class="location-card reveal">
+            <div class="location-card__photo">
+              <img src="https://images.unsplash.com/photo-1758812818734-9c0bb9704ca6?w=900&h=520&fit=crop&q=80" alt="Pobočka Jindřichův Hradec - interiér" loading="lazy">
+            </div>
+            <div class="location-card__map">
+              <iframe
+                src="https://maps.google.com/maps?q=Jir%C3%A1skovo%20p%C5%99edm%C4%9Bst%C3%AD%20636%2C%20Jind%C5%99ich%C5%AFv%20Hradec&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                title="Mapa - Jindřichův Hradec"
+                loading="lazy"
+                allowfullscreen></iframe>
+            </div>
+            <div class="location-card__body">
+              <span class="location-card__tag">Hlavní pobočka</span>
+              <h3>Jindřichův Hradec</h3>
+              <address class="location-card__address">
+                Jiráskovo předměstí 636<br>
+                377 01 Jindřichův Hradec
+              </address>
+
+              <div class="location-card__hours">
+                <div class="location-card__hours-row"><span>Po–Pá</span><strong>8:00 – 18:00</strong></div>
+                <div class="location-card__hours-row"><span>Sobota</span><strong>9:00 – 13:00</strong></div>
+                <div class="location-card__hours-row"><span>Neděle</span><strong>Po domluvě</strong></div>
+              </div>
+
+              <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+                <a href="https://maps.google.com/?q=Jiráskovo+předměstí+636,+Jindřichův+Hradec" target="_blank" rel="noopener" class="btn btn-primary">
+                  <i class="ph ph-map-pin" weight="bold"></i> Navigovat
+                </a>
+                <a href="tel:+420733622017" class="btn btn-ghost">
+                  <i class="ph ph-phone" weight="bold"></i> Zavolat
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-card reveal">
+            <div class="location-card__photo">
+              <img src="https://images.unsplash.com/photo-1576613109753-27804de2cba8?w=900&h=520&fit=crop&q=80" alt="Pobočka Praha Žižkov - interiér" loading="lazy">
+            </div>
+            <div class="location-card__map">
+              <iframe
+                src="https://maps.google.com/maps?q=Jeseniova%201196%2F52%2C%20Praha%203&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                title="Mapa - Praha 3 Žižkov"
+                loading="lazy"
+                allowfullscreen></iframe>
+            </div>
+            <div class="location-card__body">
+              <span class="location-card__tag">Pobočka Praha</span>
+              <h3>Praha 3 - Žižkov</h3>
+              <address class="location-card__address">
+                Jeseniova 1196/52<br>
+                130 00 Praha 3
+              </address>
+
+              <div class="location-card__hours">
+                <div class="location-card__hours-row"><span>Po–Pá</span><strong>9:00 – 18:00</strong></div>
+                <div class="location-card__hours-row"><span>Sobota</span><strong>10:00 – 14:00</strong></div>
+                <div class="location-card__hours-row"><span>Neděle</span><strong>Zavřeno</strong></div>
+              </div>
+
+              <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
+                <a href="https://maps.google.com/?q=Jeseniova+1196/52,+Praha+3" target="_blank" rel="noopener" class="btn btn-primary">
+                  <i class="ph ph-map-pin" weight="bold"></i> Navigovat
+                </a>
+                <a href="tel:+420733622017" class="btn btn-ghost">
+                  <i class="ph ph-phone" weight="bold"></i> Zavolat
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="section" style="background: var(--color-bg-warm);">
+      <div class="container container--tight">
+        <div class="quote-block reveal">
+          <div class="quote-block__mark">"</div>
+          <blockquote>
+            Vždy říkáme: poctivá odpověď ještě před opravou je lepší než rychlá oprava bez odpovědi.
+          </blockquote>
+          <cite>- Tým PhoneTech</cite>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="./index.html" class="footer__logo">
+            <img src="./images/phonetech-logo-white.svg" alt="PhoneTech" class="footer__logo-img">
+          </a>
+          <p>Profesionální servis mobilních telefonů a elektroniky. Jindřichův Hradec &amp; Praha - od roku 2018.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" weight="fill"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo" weight="fill"></i></a>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <strong>Navigace</strong>
+          <a href="./sluzby.html">Služby</a>
+          <a href="./cenik.html">Ceník</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./o-nas.html">O nás</a>
+          <a href="./recenze.html">Recenze</a>
+          <a href="./kontakt.html">Kontakt</a>
+        </nav>
+        <div class="footer__contact">
+          <strong>Kontakt</strong>
+          <a href="tel:+420733622017"><i class="ph ph-phone"></i> +420 733 622 017</a>
+          <a href="mailto:info@phonetech.cz"><i class="ph ph-envelope"></i> info@phonetech.cz</a>
+        </div>
+        <div class="footer__locations">
+          <strong>Pobočky</strong>
+          <address>
+            <p><strong>J. Hradec</strong>Jiráskovo předm. 636<br>377 01 Jindřichův Hradec</p>
+            <p><strong>Praha 3</strong>Jeseniova 1196/52<br>130 00 Praha</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <span>© 2026 PhoneTech - Tomáš Stoklasa. Všechna práva vyhrazena.</span>
+          <a href="#">Ochrana osobních údajů</a>
+        </div>
+      </div>
+    </div>
+  </footer><script src="./src/scripts/navbar.js" type="module"></script>
+  <script src="./src/scripts/animations.js" type="module"></script>
+  <script src="./src/scripts/counter.js" type="module"></script>
+  <script src="./src/scripts/form.js" type="module"></script>
+  <script src="./src/scripts/magnetic.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (defensive — projekt zatím nepoužívá npm)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# Vercel
+.vercel
+
+# Claude Code lokální konfigurace
+.claude/

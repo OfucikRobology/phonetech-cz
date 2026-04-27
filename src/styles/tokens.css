@@ -1,0 +1,154 @@
+:root {
+  /* ─── BARVY — refined warm palette ────────────── */
+  --color-accent:         #FF6B2B;
+  --color-accent-deep:    #D4481C;
+  --color-accent-darker:  #A8370E;
+  --color-accent-soft:    #FFE8D6;
+  --color-accent-faint:   #FFF4EC;
+  --color-accent-glow:    rgba(255, 107, 43, 0.28);
+
+  --color-gold:           #B89968;
+  --color-gold-soft:      #F3ECDD;
+
+  --color-bg:             #F7F4EE;
+  --color-bg-warm:        #F3EEE3;
+  --color-surface:        #FFFFFF;
+  --color-surface-alt:    #FBF7EF;
+  --color-surface-elevated:#FFFDF8;
+
+  --color-ink:            #0F0E0C;
+  --color-ink-2:          #1E1C18;
+  --color-ink-3:          #2B2824;
+  --color-text:           #1E1C18;
+  --color-text-soft:      #4A463F;
+  --color-text-mute:      #847F76;
+  --color-text-faint:     #B8B3A9;
+  --color-text-inverse:   #FFFFFF;
+
+  --color-line:           #E8E2D4;
+  --color-line-strong:    #C9C2B1;
+  --color-line-faint:     rgba(15, 14, 12, 0.06);
+
+  --color-success:        #198F6D;
+  --color-error:          #D73A3A;
+
+  /* Backward compat aliases for existing rules */
+  --color-orange:         var(--color-accent);
+  --color-orange-dark:    var(--color-accent-deep);
+  --color-orange-light:   var(--color-accent-soft);
+  --color-orange-faint:   var(--color-accent-faint);
+  --color-text-primary:   var(--color-text);
+  --color-text-secondary: var(--color-text-soft);
+  --color-text-muted:     var(--color-text-mute);
+  --color-border:         var(--color-line);
+  --color-border-strong:  var(--color-line-strong);
+  --color-dark:           var(--color-ink);
+
+  /* ─── TYPOGRAFIE ────────────────────────────── */
+  --font-display: 'Syne', 'Helvetica Neue', sans-serif;
+  --font-body:    'Inter', 'Helvetica Neue', sans-serif;
+  --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
+
+  --text-2xs:  11px;
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   17px;
+  --text-lg:   19px;
+  --text-xl:   22px;
+  --text-2xl:  28px;
+  --text-3xl:  36px;
+  --text-4xl:  48px;
+  --text-5xl:  64px;
+  --text-6xl:  84px;
+  --text-7xl:  112px;
+
+  /* Fluid type for headings — sized for Czech copy length */
+  --fluid-h1:   clamp(38px, 4.6vw, 64px);
+  --fluid-h2:   clamp(30px, 4vw, 56px);
+  --fluid-h3:   clamp(22px, 2.6vw, 32px);
+  --fluid-hero: clamp(40px, 5vw, 68px);
+  --fluid-page: clamp(40px, 5.2vw, 76px);
+  --fluid-lead: clamp(17px, 1.3vw, 20px);
+
+  --lh-tight:    1.04;
+  --lh-snug:     1.15;
+  --lh-base:     1.55;
+  --lh-relaxed:  1.7;
+
+  --tracking-tightest: -0.04em;
+  --tracking-tight:    -0.02em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.04em;
+  --tracking-wider:    0.08em;
+  --tracking-widest:   0.18em;
+
+  /* ─── SPACING — extended scale ────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  24px;
+  --space-6:  32px;
+  --space-7:  40px;
+  --space-8:  48px;
+  --space-10: 64px;
+  --space-12: 80px;
+  --space-14: 96px;
+  --space-16: 112px;
+  --space-20: 144px;
+  --space-24: 180px;
+  --space-32: 240px;
+
+  /* ─── LAYOUT ────────────────────────────────── */
+  --container:       1320px;
+  --container-tight: 1080px;
+  --container-narrow: 800px;
+  --gutter:          clamp(20px, 4vw, 48px);
+
+  --radius-xs:    4px;
+  --radius-sm:    8px;
+  --radius-md:    14px;
+  --radius-lg:    20px;
+  --radius-xl:    28px;
+  --radius-2xl:   40px;
+  --radius-full:  9999px;
+
+  /* ─── SHADOWS — layered, warm ────────────────── */
+  --shadow-xs:  0 1px 2px rgba(15, 14, 12, 0.05);
+  --shadow-sm:  0 2px 6px rgba(15, 14, 12, 0.05), 0 1px 2px rgba(15, 14, 12, 0.04);
+  --shadow-md:  0 6px 20px rgba(15, 14, 12, 0.07), 0 2px 6px rgba(15, 14, 12, 0.04);
+  --shadow-lg:  0 18px 50px rgba(15, 14, 12, 0.10), 0 6px 16px rgba(15, 14, 12, 0.05);
+  --shadow-xl:  0 40px 90px rgba(15, 14, 12, 0.16), 0 12px 30px rgba(15, 14, 12, 0.06);
+  --shadow-accent: 0 12px 30px -6px rgba(255, 107, 43, 0.45), 0 4px 10px -2px rgba(255, 107, 43, 0.28);
+  --shadow-accent-lg: 0 26px 60px -12px rgba(255, 107, 43, 0.55), 0 8px 20px -4px rgba(255, 107, 43, 0.32);
+  --shadow-inner: inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(15,14,12,0.04);
+
+  /* ─── TRANSITIONS ───────────────────────────── */
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-soft:     cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-expo:     cubic-bezier(0.19, 1, 0.22, 1);
+
+  --duration-instant: 90ms;
+  --duration-fast:    180ms;
+  --duration-base:    280ms;
+  --duration-slow:    480ms;
+  --duration-slower:  720ms;
+  --duration-slowest: 1100ms;
+
+  /* ─── Z-INDEX ───────────────────────────────── */
+  --z-base:     1;
+  --z-overlay:  50;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-modal:    400;
+  --z-top:      500;
+  --z-cursor:   600;
+}
+
+/* Grainy background texture */
+:root {
+  --noise: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.15 0 0 0 0 0.14 0 0 0 0 0.1 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}

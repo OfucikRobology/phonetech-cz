@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kdy je čas vyměnit baterii v iPhonu? | PhoneTech Blog</title>
+  <meta name="description" content="Šest signálů, které ukazují, že baterie už dosluhuje. Jak zjistit její skutečný stav v iOS - bez aplikací třetích stran.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="../src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span>
+        <i class="ph ph-map-pin-simple-area" weight="fill"></i>
+        Jindřichův Hradec &amp; Praha - <strong>Opravy na počkání</strong>
+      </span>
+      <a href="tel:+420733622017" class="announcement-bar__phone">
+        <i class="ph ph-phone" weight="fill"></i> +420 733 622 017
+      </a>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Hlavní navigace">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo" aria-label="PhoneTech domů">
+        <img src="../images/phonetech-logo.svg" alt="PhoneTech" class="navbar__logo-img">
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="../sluzby.html" class="navbar__link">Služby</a></li>
+        <li><a href="../cenik.html" class="navbar__link">Ceník</a></li>
+        <li><a href="../blog.html" class="navbar__link" aria-current="page">Blog</a></li>
+        <li><a href="../o-nas.html" class="navbar__link">O nás</a></li>
+        <li><a href="../recenze.html" class="navbar__link">Recenze</a></li>
+        <li><a href="../kontakt.html" class="navbar__link">Kontakt</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="tel:+420733622017" class="navbar__phone-link">
+          <i class="ph ph-phone" weight="bold"></i> 733 622 017
+        </a>
+        <a href="../kontakt.html" class="btn btn-accent btn-sm magnetic" data-strength="0.25">
+          Poptávka <i class="ph ph-arrow-up-right" weight="bold"></i>
+        </a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__drawer" id="nav-drawer" aria-hidden="true">
+      <ul role="list">
+        <li><a href="../sluzby.html">Služby</a></li>
+        <li><a href="../cenik.html">Ceník</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../o-nas.html">O nás</a></li>
+        <li><a href="../recenze.html">Recenze</a></li>
+        <li><a href="../kontakt.html">Kontakt</a></li>
+      </ul>
+      <a href="../kontakt.html" class="btn btn-accent btn-full">Nezávazná poptávka</a>
+    </div>
+  </nav>
+
+  <main>
+    <article>
+      <header class="article-hero">
+        <div class="container">
+          <div class="article-hero__inner reveal">
+            <nav class="breadcrumb">
+              <a href="../index.html">Domů</a>
+              <i class="ph ph-caret-right"></i>
+              <a href="../blog.html">Blog</a>
+              <i class="ph ph-caret-right"></i>
+              <span aria-current="page">Kdy vyměnit baterii v iPhonu</span>
+            </nav>
+
+            <div class="article-hero__meta">
+              <span class="article-hero__category">Údržba</span>
+              <span><i class="ph ph-calendar"></i> 5. dubna 2026</span>
+              <span><i class="ph ph-clock"></i> 6 min čtení</span>
+              <span><i class="ph ph-user"></i> Tomáš Stoklasa</span>
+            </div>
+
+            <h1 class="article-hero__title">Kdy je čas vyměnit baterii v iPhonu?</h1>
+            <p class="article-hero__lead">
+              Baterie v moderních telefonech vydrží 2-3 roky intenzivního používání. Šest signálů,
+              které ukazují, že už dosluhuje - a jak zjistit její skutečný stav v iOS bez instalace aplikací.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <figure class="article-cover reveal">
+        <img src="https://images.unsplash.com/photo-1746005514011-ea00280f3b6e?w=1600&h=900&fit=crop&q=80" alt="iPhone baterie" loading="eager">
+      </figure>
+
+      <div class="article-body reveal">
+        <p>
+          Lithium-ion baterie nemají nekonečnou životnost. Každé nabíjení je „cyklus", a po cca 500 cyklech
+          (1,5-2 roky běžného používání) baterie ztrácí 15-20 % původní kapacity. Po 800 cyklech je často
+          čas na výměnu - jinak telefon začne dělat věci, které jsou frustrující a někdy nebezpečné.
+        </p>
+
+        <h2>Šest signálů, že baterie dosluhuje</h2>
+
+        <h3>1. Telefon se vypíná na 20-30 % kapacity</h3>
+        <p>
+          Klasický příznak. Procento ukazuje 30 %, telefon zhasne. Po nabití na 50 % zase pár minut funguje.
+          Důvod: <strong>vnitřní odpor baterie stoupl</strong> a nedokáže dodat dostatečný proud při zátěži.
+        </p>
+
+        <h3>2. Velký skok % po vypnutí a zapnutí</h3>
+        <p>
+          Telefon zhasne na 40 %, zapnete - ukáže 12 %. Nebo telefon nasedne na nabíječku v 5 %, za 5 minut
+          ukáže 70 %. Operační systém ztratil přehled o skutečné kapacitě a hádá. <strong>Kalibrace už nestačí.</strong>
+        </p>
+
+        <h3>3. Telefon se zahřívá při běžných úkolech</h3>
+        <p>
+          Listujete fotky a telefon je horký? Stará baterie odporuje proudu, energie se mění na teplo.
+          Kromě nepříjemnosti to také zkracuje životnost dalších komponent (CPU, modem).
+        </p>
+
+        <h3>4. Drasticky kratší výdrž oproti dřívější době</h3>
+        <p>
+          Před rokem vám stejné používání vydrželo do večera, dnes je telefon vybitý do oběda. Pokud jste si
+          nezměnili návyky a nemáte spoustu nových aplikací, je to znak <strong>významné degradace.</strong>
+        </p>
+
+        <h3>5. Vyboulený displej nebo zadní kryt</h3>
+        <p>
+          Bezpečnostní problém. Pokud je displej trochu vystouplý ze šasi, nebo se nedá zavřít, baterie se nafukuje.
+          <strong>Toto je urgentní</strong> - nepoužívejte zařízení a co nejdříve ho přineste do servisu.
+          Nafouklá baterie může selhat termickým útěkem.
+        </p>
+
+        <h3>6. iOS upozorní „Servis baterie"</h3>
+        <p>
+          V Nastavení → Baterie → Stav baterie. Když Apple ukáže žluté upozornění, kapacita klesla pod 80 %
+          a iOS aktivně omezuje výkon procesoru, aby se telefon nevypínal. <strong>Telefon „zpomalil" -
+          a nedělá to schválně.</strong>
+        </p>
+
+        <div class="article-callout">
+          <i class="ph ph-lightbulb" weight="fill"></i>
+          <div>
+            <strong>Mýtus o úmyslném zpomalování</strong>
+            <p>Apple v 2017 přiznal, že iOS aktivně snižuje výkon, aby kompenzoval starnoucí baterii. Není to konspirace -
+            je to bezpečnostní mechanismus. Po výměně baterie se výkon vrátí na 100 %.</p>
+          </div>
+        </div>
+
+        <h2>Jak zjistit skutečný stav baterie</h2>
+
+        <h3>Bez aplikací třetích stran</h3>
+        <p>
+          Apple v iOS nabízí dostupnou diagnostiku:
+        </p>
+
+        <ol>
+          <li>Otevřete <strong>Nastavení → Baterie → Stav baterie a&nbsp;nabíjení</strong>.</li>
+          <li>Najdete <strong>Maximální kapacitu</strong> - procento toho, kolik vaše baterie pojme oproti nové.</li>
+          <li>Vidíte také, jestli má <strong>špičkový výkon</strong> normální, nebo je omezen.</li>
+        </ol>
+
+        <p>
+          Co znamenají hodnoty:
+        </p>
+
+        <ul>
+          <li><strong>100 - 90 %</strong>: Skvělý stav, žádný důvod k obavám.</li>
+          <li><strong>90 - 80 %</strong>: Začíná degradace, ale výkon ještě OK.</li>
+          <li><strong>80 - 70 %</strong>: Zvažte výměnu - výdrž je už znatelně horší.</li>
+          <li><strong>Pod 70 %</strong>: Doporučujeme výměnu. iOS pravděpodobně omezuje výkon.</li>
+          <li><strong>Pod 50 %</strong>: Výměna je nutná pro bezpečné a stabilní používání.</li>
+        </ul>
+
+        <h3>Pro detailní info: aplikace nebo servis</h3>
+        <p>
+          Apple ukazuje jen kapacitu, ne počet cyklů (kromě iOS 17+ na iPhone 15+). Pokud vás zajímá víc detailů
+          (počet cyklů, datum prvního použití baterie), v servisu máme nástroje, které to přečtou.
+          U nás je to <strong>součást diagnostiky zdarma</strong>.
+        </p>
+
+        <h2>Co si vybrat: originál, premium nebo kopie</h2>
+
+        <p>
+          Stejně jako u displejů, i u baterií se na trhu nabízejí různé varianty. V čem se liší:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Originál Apple</strong> - skutečně Apple baterie z jiného iPhonu. Maximálně 95 % kapacity,
+            cena nejvyšší. Výhoda: 100% kompatibilní s iOS hlášeními.
+          </li>
+          <li>
+            <strong>PREMIUM (Refurbished)</strong> - nová baterie s originálním Apple čipem. Plná 100% kapacita,
+            iOS ji rozpozná jako originál. Nejlepší poměr ceny a kvality.
+          </li>
+          <li>
+            <strong>KOPIE</strong> - levnější, ale iOS hlásí „Důležitá zpráva o baterii". Funguje, ale ztratíte
+            přístup k zobrazení kapacity v Nastavení.
+          </li>
+        </ul>
+
+        <blockquote>
+          U baterie skoro vždy doporučujeme PREMIUM. Vrátí telefon do plného výkonu, je zlomkem ceny originálu
+          a 12měsíční záruka pokrývá vše. Originál má smysl jen u záručních zařízení nebo na zákaznický požadavek.
+          <cite>— Tomáš Stoklasa</cite>
+        </blockquote>
+
+        <h2>Co výměna stojí</h2>
+
+        <p>
+          Cena se liší podle modelu:
+        </p>
+
+        <ul>
+          <li>iPhone 8 / SE: <strong>od 690 Kč</strong></li>
+          <li>iPhone X / XR / XS: <strong>od 890 Kč</strong></li>
+          <li>iPhone 11 / 12 / 13: <strong>od 1 290 Kč</strong></li>
+          <li>iPhone 14 / 15 / 16: <strong>od 1 690 Kč</strong></li>
+          <li>iPhone 15 Pro / 16 Pro: <strong>od 1 699 Kč</strong></li>
+        </ul>
+
+        <p>
+          Doba výměny <strong>30-60 minut</strong>. U novějších modelů s pevnějším těsněním
+          to trvá o něco déle. Po výměně proběhne kalibrace a otestování - zařízení vám předáme,
+          až ověříme, že vše funguje.
+        </p>
+
+        <p>
+          Přesnou cenu pro váš konkrétní model najdete v <a href="../cenik.html">našem ceníku</a>
+          - klikněte na svůj iPhone a uvidíte ceny všech variant baterie.
+        </p>
+      </div>
+
+      <div class="article-footer-cta">
+        <h3>Baterie už nedrží?</h3>
+        <p>Najděte si svůj model v ceníku a objednejte se na výměnu - většinou stihnu na počkání.</p>
+        <a href="../cenik.html" class="btn btn-accent magnetic" data-strength="0.2">
+          Cena výměny baterie
+          <i class="ph ph-arrow-up-right" weight="bold"></i>
+        </a>
+      </div>
+    </article>
+
+    <!-- Related articles -->
+    <section class="article-related">
+      <div class="container">
+        <div class="section-header section-header--left reveal" style="margin-bottom: var(--space-7);">
+          <span class="eyebrow">Mohlo by vás zajímat</span>
+          <h2>Další <em class="text-gradient">články</em></h2>
+        </div>
+
+        <div class="article-related__grid stagger">
+          <a href="./jak-poznat-kvalitni-displej.html" class="article-card">
+            <div class="article-card__image">
+              <img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=800&h=500&fit=crop&q=80" alt="" loading="lazy">
+            </div>
+            <div class="article-card__body">
+              <div class="article-card__meta">
+                <span class="article-card__category">Návody</span>
+                <span class="dot"></span>
+                <span>5 min čtení</span>
+              </div>
+              <h3 class="article-card__title">Jak poznat kvalitní displej iPhonu</h3>
+              <p class="article-card__excerpt">Originál, OEM, kopie - co znamenají a v čem se liší.</p>
+              <span class="article-card__link">Číst dále <i class="ph ph-arrow-right" weight="bold"></i></span>
+            </div>
+          </a>
+
+          <a href="./telefon-spadl-do-vody.html" class="article-card">
+            <div class="article-card__image">
+              <img src="https://images.unsplash.com/photo-1550253594-4a24acce57eb?w=800&h=500&fit=crop&q=80" alt="" loading="lazy">
+            </div>
+            <div class="article-card__body">
+              <div class="article-card__meta">
+                <span class="article-card__category">První pomoc</span>
+                <span class="dot"></span>
+                <span>4 min čtení</span>
+              </div>
+              <h3 class="article-card__title">Telefon spadl do vody - co dělat hned teď</h3>
+              <p class="article-card__excerpt">První tři kroky, které mohou zachránit vaše zařízení.</p>
+              <span class="article-card__link">Číst dále <i class="ph ph-arrow-right" weight="bold"></i></span>
+            </div>
+          </a>
+
+          <a href="../cenik.html" class="article-card">
+            <div class="article-card__image">
+              <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=800&h=500&fit=crop&q=80" alt="" loading="lazy">
+            </div>
+            <div class="article-card__body">
+              <div class="article-card__meta">
+                <span class="article-card__category">Ceník</span>
+                <span class="dot"></span>
+                <span>Aktuální ceny</span>
+              </div>
+              <h3 class="article-card__title">Ceník oprav iPhone</h3>
+              <p class="article-card__excerpt">Vyberte svůj model a získejte přesnou cenu opravy.</p>
+              <span class="article-card__link">Prohlédnout <i class="ph ph-arrow-right" weight="bold"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../index.html" class="footer__logo">
+            <img src="../images/phonetech-logo-white.svg" alt="PhoneTech" class="footer__logo-img">
+          </a>
+          <p>Profesionální servis mobilních telefonů a elektroniky. Jindřichův Hradec &amp; Praha - od roku 2018.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo" weight="fill"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo" weight="fill"></i></a>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <strong>Navigace</strong>
+          <a href="../sluzby.html">Služby</a>
+          <a href="../cenik.html">Ceník</a>
+          <a href="../blog.html">Blog</a>
+          <a href="../o-nas.html">O nás</a>
+          <a href="../recenze.html">Recenze</a>
+          <a href="../kontakt.html">Kontakt</a>
+        </nav>
+        <div class="footer__contact">
+          <strong>Kontakt</strong>
+          <a href="tel:+420733622017"><i class="ph ph-phone"></i> +420 733 622 017</a>
+          <a href="mailto:info@phonetech.cz"><i class="ph ph-envelope"></i> info@phonetech.cz</a>
+        </div>
+        <div class="footer__locations">
+          <strong>Pobočky</strong>
+          <address>
+            <p><strong>J. Hradec</strong>Jiráskovo předm. 636<br>377 01 Jindřichův Hradec</p>
+            <p><strong>Praha 3</strong>Jeseniova 1196/52<br>130 00 Praha</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <span>© 2026 PhoneTech - Tomáš Stoklasa. Všechna práva vyhrazena.</span>
+          <a href="#">Ochrana osobních údajů</a>
+        </div>
+      </div>
+    </div>
+  </footer><script src="../src/scripts/navbar.js" type="module"></script>
+  <script src="../src/scripts/animations.js" type="module"></script>
+  <script src="../src/scripts/magnetic.js" type="module"></script>
+</body>
+</html>
