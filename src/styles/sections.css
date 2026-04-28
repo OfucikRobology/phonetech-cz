@@ -35,6 +35,25 @@
 }
 .announcement-bar__phone:hover { color: var(--color-accent); }
 
+.announcement-bar__socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+.announcement-bar__socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.7);
+  font-size: 16px;
+  line-height: 1;
+  transition: color var(--duration-fast) var(--ease-soft), transform var(--duration-fast) var(--ease-spring);
+}
+.announcement-bar__socials a:hover {
+  color: var(--color-accent);
+  transform: scale(1.15);
+}
+
 /* ═══════════════════════════════════════════════
    NAVBAR
 ═══════════════════════════════════════════════ */
@@ -85,17 +104,17 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
 }
 .navbar__logo:hover { transform: scale(1.03); }
 .navbar__logo-img {
-  height: 28px;
+  height: 36px;
   width: auto;
   display: block;
 }
-.navbar.scrolled .navbar__logo-img { height: 26px; }
+.navbar.scrolled .navbar__logo-img { height: 32px; }
 @media (max-width: 480px) {
-  .navbar__logo-img { height: 24px; }
+  .navbar__logo-img { height: 28px; }
 }
 /* Footer / dark backgrounds — white variant via separate file */
 .footer__logo-img {
-  height: 30px;
+  height: 36px;
   width: auto;
   display: block;
 }
