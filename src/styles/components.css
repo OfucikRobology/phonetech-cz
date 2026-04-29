@@ -150,16 +150,17 @@
   transition: color var(--duration-base) var(--ease-soft);
 }
 .btn-arrow__icon {
-  width: 44px; height: 44px;
+  width: 54px; height: 54px;
   border-radius: 50%;
   background: var(--color-accent);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 18px;
   transition: transform var(--duration-base) var(--ease-spring), background var(--duration-base) var(--ease-soft);
   box-shadow: var(--shadow-accent);
+  flex-shrink: 0;
 }
 .btn-arrow:hover .btn-arrow__icon { transform: translateX(4px) scale(1.08); background: var(--color-accent-deep); }
 
