@@ -448,6 +448,7 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
 .floating-card--tl { top: 8%; left: -12%; }
 .floating-card--tr { top: 40%; right: -14%; }
 .floating-card--br { bottom: 12%; right: 8%; }
+.floating-card--bl { bottom: 28%; left: -10%; }
 
 .floating-stat {
   position: absolute;
@@ -1343,6 +1344,7 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   .hero__title { font-size: clamp(44px, 7vw, 88px); }
   .floating-card--tl { left: -4%; }
   .floating-card--tr { right: -6%; }
+  .floating-card--bl { left: -2%; }
   .floating-stat { left: -16px; bottom: -24px; }
 }
 
