@@ -35,6 +35,11 @@
 }
 .announcement-bar__phone:hover { color: var(--color-accent); }
 
+.announcement-bar__right {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+}
 .announcement-bar__socials {
   display: inline-flex;
   align-items: center;
