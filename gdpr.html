@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ochrana osobních údajů | PhoneTech</title>
+  <meta name="description" content="Informace o zpracování osobních údajů PhoneTech - Tomáš Stoklasa, IČO 19065477. Zásady ochrany osobních údajů dle GDPR.">
+  <meta name="robots" content="index,follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span>
+        <i class="ph ph-map-pin-simple-area" weight="fill"></i>
+        Jindřichův Hradec &amp; Praha - <strong>Opravy na počkání</strong>
+      </span>
+      <div class="announcement-bar__socials">
+        <a href="https://www.facebook.com/phonetech.cz/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ph ph-facebook-logo" weight="fill"></i></a>
+        <a href="https://www.instagram.com/phonetech.cz/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ph ph-instagram-logo" weight="fill"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Hlavní navigace">
+    <div class="container navbar__inner">
+      <a href="./index.html" class="navbar__logo" aria-label="PhoneTech domů">
+        <img src="./images/phonetech-logo.svg" alt="PhoneTech" class="navbar__logo-img">
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="./sluzby.html" class="navbar__link">Služby</a></li>
+        <li><a href="./cenik.html" class="navbar__link">Ceník</a></li>
+        <li><a href="./blog.html" class="navbar__link">Blog</a></li>
+        <li><a href="./o-nas.html" class="navbar__link">O nás</a></li>
+        <li><a href="./recenze.html" class="navbar__link">Recenze</a></li>
+        <li><a href="./kontakt.html" class="navbar__link">Kontakt</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="tel:+420733622017" class="navbar__phone-link">
+          <i class="ph ph-phone" weight="bold"></i> 733 622 017
+        </a>
+        <a href="https://www.kupfoun.cz" target="_blank" rel="noopener" class="navbar__phone-link">
+          <i class="ph ph-storefront" weight="bold"></i> KupFoun e-shop
+        </a>
+        <a href="./kontakt.html" class="btn btn-accent btn-sm magnetic" data-strength="0.25">
+          Poptávka <i class="ph ph-arrow-up-right" weight="bold"></i>
+        </a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__drawer" id="nav-drawer" aria-hidden="true">
+      <ul role="list">
+        <li><a href="./sluzby.html">Služby</a></li>
+        <li><a href="./cenik.html">Ceník</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./o-nas.html">O nás</a></li>
+        <li><a href="./recenze.html">Recenze</a></li>
+        <li><a href="./kontakt.html">Kontakt</a></li>
+      </ul>
+      <a href="./kontakt.html" class="btn btn-accent btn-full">Nezávazná poptávka</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__inner">
+          <div class="page-hero__content reveal">
+            <nav class="breadcrumb">
+              <a href="./index.html">Domů</a>
+              <i class="ph ph-caret-right"></i>
+              <span aria-current="page">Ochrana osobních údajů</span>
+            </nav>
+            <h1 class="page-hero__title">
+              Ochrana <em>osobních</em> údajů
+            </h1>
+            <p class="page-hero__desc">
+              Informace o zpracování osobních údajů dle nařízení GDPR. Vaše soukromí bereme vážně - sbíráme jen to, co opravdu potřebujeme k provedení opravy a vyřízení poptávky.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container container--tight">
+        <article class="article-content reveal" style="max-width: 760px; margin: 0 auto;">
+
+          <h2>1. Správce osobních údajů</h2>
+          <p>
+            Správcem vašich osobních údajů je <strong>Tomáš Stoklasa - PhoneTech</strong>,
+            IČO: 19065477, se sídlem v Jindřichově Hradci.
+            Kontakt: <a href="mailto:info@phonetech.cz">info@phonetech.cz</a>,
+            telefon: <a href="tel:+420733622017">+420 733 622 017</a>.
+          </p>
+
+          <h2>2. Jaké údaje zpracováváme</h2>
+          <p>
+            V rámci poskytování služeb a vyřízení vaší nezávazné poptávky zpracováváme tyto kategorie osobních údajů:
+          </p>
+          <ul>
+            <li><strong>Identifikační údaje</strong> - jméno a příjmení</li>
+            <li><strong>Kontaktní údaje</strong> - telefonní číslo, e-mailová adresa</li>
+            <li><strong>Údaje o zařízení</strong> - značka, model a popis závady</li>
+            <li><strong>Údaje o opravě</strong> - cena, rozsah, datum a místo předání</li>
+            <li><strong>Komunikace</strong> - obsah zpráv, které si vyměníme přes formulář, e-mail nebo WhatsApp</li>
+          </ul>
+          <p>
+            Citlivé osobní údaje (např. údaje z vašeho zařízení, obsah souborů) nezpracováváme - opravy provádíme bez zásahu do uživatelských dat. Při výjimečných případech (záchrana dat) postupujeme vždy se souhlasem majitele.
+          </p>
+
+          <h2>3. Účely a právní důvody zpracování</h2>
+          <p>
+            Vaše osobní údaje zpracováváme pouze v rozsahu nezbytném k těmto účelům:
+          </p>
+          <ul>
+            <li><strong>Vyřízení poptávky a uzavření smlouvy o opravě</strong> (čl. 6 odst. 1 písm. b) GDPR)</li>
+            <li><strong>Plnění právních povinností</strong> - vystavení faktury, evidence reklamací (čl. 6 odst. 1 písm. c) GDPR)</li>
+            <li><strong>Oprávněný zájem</strong> - vedení záznamu o opravě pro účely záruky a možné reklamace (čl. 6 odst. 1 písm. f) GDPR)</li>
+            <li><strong>Souhlas</strong> - pokud nám výslovně udělíte souhlas, např. s odběrem novinek (čl. 6 odst. 1 písm. a) GDPR)</li>
+          </ul>
+
+          <h2>4. Jak dlouho údaje uchováváme</h2>
+          <ul>
+            <li>Údaje k poptávce: <strong>1 rok</strong> od poslední komunikace</li>
+            <li>Údaje k provedené opravě: <strong>3 roky</strong> (zákonná záruční doba + interní lhůta)</li>
+            <li>Daňové doklady a faktury: <strong>10 let</strong> dle zákona o účetnictví</li>
+            <li>Údaje na základě souhlasu: do odvolání souhlasu</li>
+          </ul>
+
+          <h2>5. Komu údaje předáváme</h2>
+          <p>
+            Vaše údaje nepředáváme třetím stranám pro marketingové účely. Předání může nastat pouze v nezbytných případech:
+          </p>
+          <ul>
+            <li><strong>Účetní</strong> - pro vedení účetnictví</li>
+            <li><strong>Přepravní služby</strong> - pokud zařízení posíláte kurýrem (jen jméno, adresa, telefon)</li>
+            <li><strong>Provozovatelé IT služeb</strong> - hosting webu, e-mailové schránky, formulářové systémy (zpracovatelé dle uzavřených smluv)</li>
+            <li><strong>Orgány veřejné moci</strong> - pouze pokud nám to ukládá zákon</li>
+          </ul>
+
+          <h2>6. Vaše práva</h2>
+          <p>V souvislosti se zpracováním vašich osobních údajů máte právo:</p>
+          <ul>
+            <li>na <strong>přístup</strong> k vašim osobním údajům</li>
+            <li>na <strong>opravu</strong> nepřesných nebo neúplných údajů</li>
+            <li>na <strong>výmaz</strong> („právo být zapomenut")</li>
+            <li>na <strong>omezení zpracování</strong></li>
+            <li>na <strong>přenositelnost</strong> údajů</li>
+            <li><strong>vznést námitku</strong> proti zpracování</li>
+            <li><strong>odvolat souhlas</strong> kdykoli (pokud zpracování probíhá na jeho základě)</li>
+            <li><strong>podat stížnost</strong> u Úřadu pro ochranu osobních údajů (<a href="https://www.uoou.cz" target="_blank" rel="noopener">www.uoou.cz</a>)</li>
+          </ul>
+          <p>
+            Svá práva můžete uplatnit zasláním žádosti na <a href="mailto:info@phonetech.cz">info@phonetech.cz</a>. Odpovíme nejpozději do 30 dní.
+          </p>
+
+          <h2>7. Cookies a webové statistiky</h2>
+          <p>
+            Web phonetech.cz nevyužívá reklamní ani sledovací cookies třetích stran. Pro vlastní fungování používáme pouze nezbytné cookies (např. preference jazyka). Návštěvnost webu měříme anonymně, bez spojení s konkrétní osobou.
+          </p>
+
+          <h2>8. Zabezpečení</h2>
+          <p>
+            Vaše údaje chráníme před neoprávněným přístupem, ztrátou a zneužitím. Komunikace přes web probíhá šifrovaně (HTTPS). Přístup k údajům má pouze majitel a osoby pověřené provedením opravy.
+          </p>
+
+          <h2>9. Změny zásad</h2>
+          <p>
+            Tyto zásady mohou být upraveny v reakci na změny právních předpisů nebo provozu. Aktuální verze je vždy dostupná na této stránce. Datum poslední aktualizace: <strong>duben 2026</strong>.
+          </p>
+
+          <hr style="margin: 3rem 0; border: none; border-top: 1px solid var(--color-border);">
+
+          <p style="color: var(--color-ink-muted); font-size: var(--text-sm);">
+            Máte další dotazy ohledně zpracování vašich osobních údajů? Napište nám na
+            <a href="mailto:info@phonetech.cz">info@phonetech.cz</a> nebo zavolejte
+            <a href="tel:+420733622017">+420 733 622 017</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Next CTA -->
+    <section class="next-cta">
+      <div class="container next-cta__inner reveal">
+        <div>
+          <h2>Máte <em>otázku?</em></h2>
+          <p>Napište nebo zavolejte. Rádi vše objasníme.</p>
+        </div>
+        <div class="next-cta__actions">
+          <a href="./kontakt.html" class="btn btn-accent btn-xl magnetic" data-strength="0.2">
+            Kontaktovat nás
+            <i class="ph ph-arrow-up-right" weight="bold"></i>
+          </a>
+          <a href="tel:+420733622017" class="btn btn-ghost btn-ghost--inverse btn-lg">
+            <i class="ph ph-phone" weight="bold"></i> +420 733 622 017
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="./index.html" class="footer__logo">
+            <img src="./images/phonetech-logo-white.svg" alt="PhoneTech" class="footer__logo-img">
+          </a>
+          <p>Profesionální servis mobilních telefonů a elektroniky. Jindřichův Hradec &amp; Praha - od roku 2020.</p>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/phonetech.cz/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ph ph-facebook-logo" weight="fill"></i></a>
+            <a href="https://www.instagram.com/phonetech.cz/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ph ph-instagram-logo" weight="fill"></i></a>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <strong>Navigace</strong>
+          <a href="./sluzby.html">Služby</a>
+          <a href="./cenik.html">Ceník</a>
+          <a href="./blog.html">Blog</a>
+          <a href="./o-nas.html">O nás</a>
+          <a href="./recenze.html">Recenze</a>
+          <a href="./kontakt.html">Kontakt</a>
+        </nav>
+        <div class="footer__contact">
+          <strong>Kontakt</strong>
+          <a href="tel:+420733622017"><i class="ph ph-phone"></i> +420 733 622 017</a>
+          <a href="mailto:info@phonetech.cz"><i class="ph ph-envelope"></i> info@phonetech.cz</a>
+        </div>
+        <div class="footer__locations">
+          <strong>Pobočky</strong>
+          <address>
+            <p><strong>J. Hradec</strong>Jiráskovo předm. 636<br>377 01 Jindřichův Hradec</p>
+            <p><strong>Praha 3</strong>Jeseniova 1196/52<br>130 00 Praha</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <span>© 2026 PhoneTech - Tomáš Stoklasa · IČO: 19065477. Všechna práva vyhrazena.</span>
+          <a href="./gdpr.html">Ochrana osobních údajů</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/scripts/navbar.js" type="module"></script>
+  <script src="./src/scripts/animations.js" type="module"></script>
+  <script src="./src/scripts/magnetic.js" type="module"></script>
+</body>
+</html>
