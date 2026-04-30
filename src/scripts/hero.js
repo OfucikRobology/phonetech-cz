@@ -13,7 +13,19 @@ window.addEventListener('load', () => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   if (typeof window.gsap === 'undefined') return;
 
-  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+  const tl = gsap.timeline({
+    defaults: { ease: 'power3.out' },
+    onComplete: () => {
+      // Clear any residual inline transforms left by GSAP that conflict
+      // with .btn / .btn-arrow CSS transitions on transform.
+      document.querySelectorAll('.hero__buttons > *, .hero__trust > *, .floating-card, .floating-stat').forEach((el) => {
+        el.style.transform = '';
+        el.style.translate = '';
+        el.style.rotate = '';
+        el.style.scale = '';
+      });
+    },
+  });
   tl.from('.hero__title', { opacity: 0, y: 28, duration: 0.7 })
     .from('.hero__description', { opacity: 0, y: 20, duration: 0.55 }, '-=0.35')
     .from('.hero__search', { opacity: 0, y: 16, duration: 0.5 }, '-=0.3')
