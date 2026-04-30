@@ -306,9 +306,15 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
 }
 .hero__buttons > .btn,
 .hero__buttons > .btn-arrow {
-  height: 56px;
   display: inline-flex;
   align-items: center;
+  min-height: 60px;
+  margin: 0;
+  vertical-align: middle;
+}
+.hero__buttons > .btn-arrow .btn-arrow__icon {
+  width: 60px;
+  height: 60px;
 }
 
 .hero__trust {
