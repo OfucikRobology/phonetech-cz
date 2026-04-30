@@ -313,6 +313,9 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   vertical-align: middle;
   font-size: var(--text-base);
   line-height: 1.4;
+  /* Don't run CSS transitions on transform - they fight with GSAP entrance
+     animation and leave the pill button stuck a few px off baseline. */
+  transition-property: background, color, border-color, box-shadow;
 }
 .hero__buttons > .btn-arrow .btn-arrow__icon {
   width: 60px;
