@@ -311,6 +311,8 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   min-height: 60px;
   margin: 0;
   vertical-align: middle;
+  font-size: var(--text-base);
+  line-height: 1.4;
 }
 .hero__buttons > .btn-arrow .btn-arrow__icon {
   width: 60px;
