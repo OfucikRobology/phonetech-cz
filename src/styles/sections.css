@@ -304,6 +304,12 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   flex-wrap: wrap;
   margin-bottom: var(--space-6);
 }
+.hero__buttons > .btn,
+.hero__buttons > .btn-arrow {
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+}
 
 .hero__trust {
   display: flex;
