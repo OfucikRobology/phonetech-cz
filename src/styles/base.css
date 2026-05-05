@@ -131,11 +131,11 @@ input, select, textarea {
 
 /* Section */
 .section {
-  padding: var(--space-20) 0;
+  padding: var(--space-16) 0;
   position: relative;
 }
-.section--tight { padding: var(--space-14) 0; }
-.section--loose { padding: var(--space-24) 0; }
+.section--tight { padding: var(--space-12) 0; }
+.section--loose { padding: var(--space-20) 0; }
 
 /* Eyebrow / kicker */
 .eyebrow {
@@ -169,7 +169,7 @@ input, select, textarea {
 /* Section header */
 .section-header {
   max-width: 720px;
-  margin: 0 auto var(--space-10);
+  margin: 0 auto var(--space-8);
   text-align: center;
 }
 .section-header--wide { max-width: 860px; }
