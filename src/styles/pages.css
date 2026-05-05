@@ -1492,12 +1492,12 @@
 .bento-card--half { grid-column: span 3; }
 .bento-card--third { grid-column: span 2; }
 .bento-card--dark {
-  background: var(--color-ink);
+  background: var(--color-ink-2);
   color: white;
-  border-color: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.12);
 }
 .bento-card--dark h3 { color: white; }
-.bento-card--dark p { color: rgba(255,255,255,0.85); }
+.bento-card--dark p { color: rgba(255,255,255,0.95); }
 .bento-card--accent {
   background: linear-gradient(155deg, var(--color-accent) 0%, var(--color-accent-deep) 100%);
   color: white;
