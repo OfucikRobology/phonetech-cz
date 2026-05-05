@@ -838,7 +838,7 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   color: white;
 }
 .process-section h2, .process-section .section-description { color: white; }
-.process-section .section-description { color: rgba(255,255,255,0.7); }
+.process-section .section-description { color: rgba(255,255,255,0.85); }
 
 .process-grid {
   display: grid;
@@ -1059,9 +1059,9 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   pointer-events: none;
 }
 .testimonials-section .section-header h2 { color: white; }
-.testimonials-section .section-description { color: rgba(255,255,255,.6); }
+.testimonials-section .section-description { color: rgba(255,255,255,.78); }
 
-.section-header--light .eyebrow { color: rgba(255,255,255,.5); }
+.section-header--light .eyebrow { color: rgba(255,255,255,.7); }
 .section-header--light .eyebrow::before { background: rgba(255,255,255,.3); }
 
 .testimonials-section__rating {
@@ -1122,7 +1122,7 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   flex-shrink: 0;
 }
 .testimonial-card__author cite { display: block; font: 500 var(--text-sm) var(--font-body); color: white; font-style: normal; }
-.testimonial-card__author span { font: 400 var(--text-xs) var(--font-body); color: rgba(255,255,255,.45); }
+.testimonial-card__author span { font: 400 var(--text-xs) var(--font-body); color: rgba(255,255,255,.65); }
 
 .testimonials-section__cta { text-align: center; margin-top: var(--space-8); }
 
@@ -1256,7 +1256,7 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   margin-bottom: var(--space-4);
 }
 .footer__cta h2 em { font-style: normal; color: var(--color-accent); }
-.footer__cta p { color: rgba(255,255,255,.65); font-size: var(--fluid-lead); max-width: 480px; }
+.footer__cta p { color: rgba(255,255,255,.78); font-size: var(--fluid-lead); max-width: 480px; }
 
 .footer__cta-actions {
   display: flex;
@@ -1274,7 +1274,7 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
 }
 .footer__logo { display: inline-flex; align-items: center; gap: 10px; }
 .footer .navbar__logo-text { color: white; }
-.footer__brand p { font-size: var(--text-sm); margin-top: var(--space-4); line-height: 1.65; max-width: 320px; color: rgba(255,255,255,.55); }
+.footer__brand p { font-size: var(--text-sm); margin-top: var(--space-4); line-height: 1.65; max-width: 320px; color: rgba(255,255,255,.72); }
 .footer__socials { display: flex; gap: var(--space-3); margin-top: var(--space-5); }
 .footer__socials a {
   width: 40px; height: 40px;
@@ -1317,7 +1317,7 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   flex-direction: column;
   gap: var(--space-4);
 }
-.footer__locations p { font-size: var(--text-sm); color: rgba(255,255,255,.55); line-height: 1.65; }
+.footer__locations p { font-size: var(--text-sm); color: rgba(255,255,255,.72); line-height: 1.65; }
 .footer__locations p strong {
   color: rgba(255,255,255,.85);
   font-weight: 600;
