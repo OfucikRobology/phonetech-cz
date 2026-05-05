@@ -1555,6 +1555,16 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   background: var(--color-ink);
 }
 
+/* Mobile pill button "Nezávazná poptávka" - vycentrovat text+icon */
+@media (max-width: 768px) {
+  .hero__buttons > .btn {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+  }
+}
+
 /* Mobile: hamburger doprava (přepnutí gridu na flex), uvnitř containeru */
 @media (max-width: 768px) {
   .navbar__inner {
