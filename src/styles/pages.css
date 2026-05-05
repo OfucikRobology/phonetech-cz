@@ -23,7 +23,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
   gap: var(--space-10);
-  align-items: end;
+  align-items: start;
 }
 .page-hero__content { max-width: 780px; }
 .page-hero__title {
