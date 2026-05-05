@@ -35,6 +35,16 @@
 }
 .announcement-bar__phone:hover { color: var(--color-accent); }
 
+.announcement-bar__hours {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,.78);
+}
+@media (max-width: 880px) {
+  .announcement-bar__hours { display: none; }
+}
+
 .announcement-bar__right {
   display: inline-flex;
   align-items: center;
