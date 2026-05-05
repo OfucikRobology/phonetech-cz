@@ -1462,3 +1462,105 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   .about-timeline { grid-template-columns: 1fr; }
   .contact-section__form-wrapper { padding: var(--space-5); }
 }
+
+/* ═══════════════════════════════════════════════
+   MOBILE COMPREHENSIVE FIXES (added in v=23)
+═══════════════════════════════════════════════ */
+
+/* Smaller phones: zjednodušit announcement bar */
+@media (max-width: 700px) {
+  .announcement-bar__hours,
+  .announcement-bar__phone,
+  .announcement-bar__socials,
+  .announcement-bar__right .lang-switch {
+    display: none !important;
+  }
+  .announcement-bar__inner span {
+    font-size: 11px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .announcement-bar__inner {
+    justify-content: center;
+  }
+}
+
+/* Mobil: hero a další sekce */
+@media (max-width: 768px) {
+  /* Container padding zmenšit */
+  .container { padding-left: 18px; padding-right: 18px; }
+
+  /* Hero - zabránit overflow */
+  .hero__title {
+    font-size: clamp(36px, 9vw, 56px);
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .hero__description {
+    font-size: 15px;
+    max-width: 100%;
+  }
+  .hero__content { max-width: 100%; }
+  .hero__visual { display: none; } /* Skryjeme image rámeček, floating-cards není potřeba na mobilu */
+
+  /* Trust stats - radši grid 3-up s menším paddingem */
+  .hero__trust {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .hero__trust-item { flex: 1 1 30%; min-width: 0; }
+  .hero__trust-num { font-size: clamp(24px, 8vw, 36px); }
+  .hero__trust-label { font-size: 10px; line-height: 1.2; }
+
+  /* Hero search box - prevent overflow */
+  .search-box__input { font-size: 14px; }
+  .search-box { padding-right: 8px; }
+
+  /* Page-hero subpage - menší font + kratší padding */
+  .page-hero {
+    padding-top: calc(62px + 38px + 24px);
+    padding-bottom: var(--space-8);
+  }
+  .page-hero__title {
+    font-size: clamp(36px, 9vw, 60px) !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word;
+  }
+  .page-hero__desc { font-size: 15px; }
+  .page-hero__inner { gap: var(--space-6); }
+  .page-hero__visual { display: none; } /* Skryt obrázek na mobilu - vytváří moc místa */
+}
+
+/* Velmi malé telefony */
+@media (max-width: 380px) {
+  .container { padding-left: 14px; padding-right: 14px; }
+  .hero__title { font-size: clamp(32px, 8vw, 44px); }
+  .page-hero__title { font-size: clamp(32px, 8vw, 48px) !important; }
+  .navbar__logo-img { height: 26px; }
+  .navbar.scrolled .navbar__logo-img { height: 26px; }
+  .hero__trust-num { font-size: 22px; }
+  .hero__trust-label { font-size: 9px; }
+}
+
+/* Drawer: add lang switcher */
+.navbar__drawer .lang-switch {
+  border-left: 0;
+  padding-left: 0;
+  margin-top: var(--space-4);
+  justify-content: center;
+  gap: 8px;
+}
+.navbar__drawer .lang-switch__btn {
+  color: var(--color-text-soft);
+  background: var(--color-surface-alt, #f5f2ec);
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+}
+.navbar__drawer .lang-switch__btn.lang-switch--active {
+  color: white;
+  background: var(--color-ink);
+}
