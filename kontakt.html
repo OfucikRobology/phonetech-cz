@@ -183,8 +183,8 @@
               </div>
 
               <div class="form-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="jan@email.cz" autocomplete="email">
+                <label for="email">E-mail <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="jan@email.cz" required autocomplete="email">
                 <span class="form-error" role="alert"></span>
               </div>
 
@@ -195,19 +195,21 @@
               </div>
 
               <div class="form-group">
-                <label for="delivery">Způsob předání</label>
-                <select id="delivery" name="delivery">
+                <label for="delivery">Způsob předání <span aria-hidden="true">*</span></label>
+                <select id="delivery" name="delivery" required>
                   <option value="">Vyberte způsob...</option>
                   <option value="osobne-jh">Osobně - J. Hradec</option>
                   <option value="osobne-praha">Osobně - Praha 3</option>
                   <option value="kuryr">Kurýr</option>
                 </select>
+                <span class="form-error" role="alert"></span>
               </div>
 
               <div class="form-group">
-                <label for="message">Popis problému</label>
-                <textarea id="message" name="message" rows="5" placeholder="Rozbitý displej, nejde zapnout, nefunguje kamera…"></textarea>
+                <label for="message">Popis problému <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" rows="5" placeholder="Rozbitý displej, nejde zapnout, nefunguje kamera…" required></textarea>
                 <span class="form-hint">Čím víc detailů, tím přesnější cena.</span>
+                <span class="form-error" role="alert"></span>
               </div>
 
               <div class="form-group form-group--checkbox">
