@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-  <link rel="stylesheet" href="./src/styles/main.css?v=3">
+  <link rel="stylesheet" href="./src/styles/main.css?v=5">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 </head>
 <body>
@@ -571,5 +571,15 @@
   <script src="./src/scripts/counter.js" type="module"></script>
   <script src="./src/scripts/magnetic.js" type="module"></script>
   <script src="./src/scripts/faq.js" type="module"></script>
+  <!-- Cookie banner -->
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Informace o cookies">
+    <div class="cookie-banner__icon"><i class="ph ph-cookie" weight="fill"></i></div>
+    <div class="cookie-banner__text">
+      Tento web používá pouze nezbytné cookies pro správné fungování. Více v sekci
+      <a href="./gdpr.html">Ochrana osobních údajů</a>.
+    </div>
+    <button type="button" class="cookie-banner__btn" data-cookie-accept>Rozumím</button>
+  </div>
+  <script src="./src/scripts/cookie-banner.js" type="module"></script>
 </body>
 </html>
