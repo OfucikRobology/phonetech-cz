@@ -2,7 +2,7 @@
 // kliknutí na přepínač. Používá data-i18n="path.to.key" atribut na elementech
 // a data-i18n-attr="attrName:key" pro atributy (placeholder, title, alt).
 
-import { translations } from '../data/translations.js?v=20';
+import { translations } from '../data/translations.js?v=21';
 
 const STORAGE_KEY = 'phonetech-lang';
 const DEFAULT_LANG = 'cs';

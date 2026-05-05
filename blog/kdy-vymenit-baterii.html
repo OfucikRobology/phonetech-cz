@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-  <link rel="stylesheet" href="../src/styles/main.css?v=20">
+  <link rel="stylesheet" href="../src/styles/main.css?v=21">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
@@ -81,22 +81,22 @@
         <div class="container">
           <div class="article-hero__inner reveal">
             <nav class="breadcrumb">
-              <a href="../index.html">Domů</a>
+              <a href="../index.html" data-i18n="sub.home">Domů</a>
               <i class="ph ph-caret-right"></i>
               <a href="../blog.html" data-i18n="nav.blog">Blog</a>
               <i class="ph ph-caret-right"></i>
-              <span aria-current="page">Kdy vyměnit baterii v iPhonu</span>
+              <span aria-current="page" data-i18n="articles.battery.crumb">Kdy vyměnit baterii v iPhonu</span>
             </nav>
 
             <div class="article-hero__meta">
-              <span class="article-hero__category">Údržba</span>
-              <span><i class="ph ph-calendar"></i> 5. dubna 2026</span>
-              <span><i class="ph ph-clock"></i> 6 min čtení</span>
+              <span class="article-hero__category" data-i18n="articles.battery.category">Údržba</span>
+              <span><i class="ph ph-calendar"></i> <span data-i18n="articles.battery.date">5. dubna 2026</span></span>
+              <span><i class="ph ph-clock"></i> <span data-i18n="articles.battery.read">6 min čtení</span></span>
               <span><i class="ph ph-user"></i> Tomáš Stoklasa</span>
             </div>
 
-            <h1 class="article-hero__title">Kdy je čas vyměnit baterii v iPhonu?</h1>
-            <p class="article-hero__lead">
+            <h1 class="article-hero__title" data-i18n="articles.battery.title">Kdy je čas vyměnit baterii v iPhonu?</h1>
+            <p class="article-hero__lead" data-i18n="articles.battery.lead">
               Baterie v moderních telefonech vydrží 2-3 roky intenzivního používání. Šest signálů,
               které ukazují, že už dosluhuje - a jak zjistit její skutečný stav v iOS bez instalace aplikací.
             </p>
@@ -109,47 +109,47 @@
       </figure>
 
       <div class="article-body reveal">
-        <p>
+        <p data-i18n="articles.battery.intro">
           Lithium-ion baterie nemají nekonečnou životnost. Každé nabíjení je „cyklus", a po cca 500 cyklech
           (1,5-2 roky běžného používání) baterie ztrácí 15-20 % původní kapacity. Po 800 cyklech je často
           čas na výměnu - jinak telefon začne dělat věci, které jsou frustrující a někdy nebezpečné.
         </p>
 
-        <h2>Šest signálů, že baterie dosluhuje</h2>
+        <h2 data-i18n="articles.battery.h2signals">Šest signálů, že baterie dosluhuje</h2>
 
-        <h3>1. Telefon se vypíná na 20-30 % kapacity</h3>
-        <p>
+        <h3 data-i18n="articles.battery.h3sig1">1. Telefon se vypíná na 20-30 % kapacity</h3>
+        <p data-i18n="articles.battery.sig1">
           Klasický příznak. Procento ukazuje 30 %, telefon zhasne. Po nabití na 50 % zase pár minut funguje.
           Důvod: <strong>vnitřní odpor baterie stoupl</strong> a nedokáže dodat dostatečný proud při zátěži.
         </p>
 
-        <h3>2. Velký skok % po vypnutí a zapnutí</h3>
-        <p>
+        <h3 data-i18n="articles.battery.h3sig2">2. Velký skok % po vypnutí a zapnutí</h3>
+        <p data-i18n="articles.battery.sig2">
           Telefon zhasne na 40 %, zapnete - ukáže 12 %. Nebo telefon nasedne na nabíječku v 5 %, za 5 minut
           ukáže 70 %. Operační systém ztratil přehled o skutečné kapacitě a hádá. <strong>Kalibrace už nestačí.</strong>
         </p>
 
-        <h3>3. Telefon se zahřívá při běžných úkolech</h3>
-        <p>
+        <h3 data-i18n="articles.battery.h3sig3">3. Telefon se zahřívá při běžných úkolech</h3>
+        <p data-i18n="articles.battery.sig3">
           Listujete fotky a telefon je horký? Stará baterie odporuje proudu, energie se mění na teplo.
           Kromě nepříjemnosti to také zkracuje životnost dalších komponent (CPU, modem).
         </p>
 
-        <h3>4. Drasticky kratší výdrž oproti dřívější době</h3>
-        <p>
+        <h3 data-i18n="articles.battery.h3sig4">4. Drasticky kratší výdrž oproti dřívější době</h3>
+        <p data-i18n="articles.battery.sig4">
           Před rokem vám stejné používání vydrželo do večera, dnes je telefon vybitý do oběda. Pokud jste si
           nezměnili návyky a nemáte spoustu nových aplikací, je to znak <strong>významné degradace.</strong>
         </p>
 
-        <h3>5. Vyboulený displej nebo zadní kryt</h3>
-        <p>
+        <h3 data-i18n="articles.battery.h3sig5">5. Vyboulený displej nebo zadní kryt</h3>
+        <p data-i18n="articles.battery.sig5">
           Bezpečnostní problém. Pokud je displej trochu vystouplý ze šasi, nebo se nedá zavřít, baterie se nafukuje.
           <strong>Toto je urgentní</strong> - nepoužívejte zařízení a co nejdříve ho přineste do servisu.
           Nafouklá baterie může selhat termickým útěkem.
         </p>
 
-        <h3>6. iOS upozorní „Servis baterie"</h3>
-        <p>
+        <h3 data-i18n="articles.battery.h3sig6">6. iOS upozorní „Servis baterie"</h3>
+        <p data-i18n="articles.battery.sig6">
           V Nastavení → Baterie → Stav baterie. Když Apple ukáže žluté upozornění, kapacita klesla pod 80 %
           a iOS aktivně omezuje výkon procesoru, aby se telefon nevypínal. <strong>Telefon „zpomalil" -
           a nedělá to schválně.</strong>
@@ -158,102 +158,102 @@
         <div class="article-callout">
           <i class="ph ph-lightbulb" weight="fill"></i>
           <div>
-            <strong>Mýtus o úmyslném zpomalování</strong>
-            <p>Apple v 2017 přiznal, že iOS aktivně snižuje výkon, aby kompenzoval starnoucí baterii. Není to konspirace -
+            <strong data-i18n="articles.battery.calloutTitle">Mýtus o úmyslném zpomalování</strong>
+            <p data-i18n="articles.battery.calloutText">Apple v 2017 přiznal, že iOS aktivně snižuje výkon, aby kompenzoval starnoucí baterii. Není to konspirace -
             je to bezpečnostní mechanismus. Po výměně baterie se výkon vrátí na 100 %.</p>
           </div>
         </div>
 
-        <h2>Jak zjistit skutečný stav baterie</h2>
+        <h2 data-i18n="articles.battery.h2state">Jak zjistit skutečný stav baterie</h2>
 
-        <h3>Bez aplikací třetích stran</h3>
-        <p>
+        <h3 data-i18n="articles.battery.h3noapps">Bez aplikací třetích stran</h3>
+        <p data-i18n="articles.battery.noappsP">
           Apple v iOS nabízí dostupnou diagnostiku:
         </p>
 
         <ol>
-          <li>Otevřete <strong>Nastavení → Baterie → Stav baterie a&nbsp;nabíjení</strong>.</li>
-          <li>Najdete <strong>Maximální kapacitu</strong> - procento toho, kolik vaše baterie pojme oproti nové.</li>
-          <li>Vidíte také, jestli má <strong>špičkový výkon</strong> normální, nebo je omezen.</li>
+          <li data-i18n="articles.battery.step1">Otevřete <strong>Nastavení → Baterie → Stav baterie a&nbsp;nabíjení</strong>.</li>
+          <li data-i18n="articles.battery.step2">Najdete <strong>Maximální kapacitu</strong> - procento toho, kolik vaše baterie pojme oproti nové.</li>
+          <li data-i18n="articles.battery.step3">Vidíte také, jestli má <strong>špičkový výkon</strong> normální, nebo je omezen.</li>
         </ol>
 
-        <p>
+        <p data-i18n="articles.battery.valuesIntro">
           Co znamenají hodnoty:
         </p>
 
         <ul>
-          <li><strong>100 - 90 %</strong>: Skvělý stav, žádný důvod k obavám.</li>
-          <li><strong>90 - 80 %</strong>: Začíná degradace, ale výkon ještě OK.</li>
-          <li><strong>80 - 70 %</strong>: Zvažte výměnu - výdrž je už znatelně horší.</li>
-          <li><strong>Pod 70 %</strong>: Doporučujeme výměnu. iOS pravděpodobně omezuje výkon.</li>
-          <li><strong>Pod 50 %</strong>: Výměna je nutná pro bezpečné a stabilní používání.</li>
+          <li data-i18n="articles.battery.val1"><strong>100 - 90 %</strong>: Skvělý stav, žádný důvod k obavám.</li>
+          <li data-i18n="articles.battery.val2"><strong>90 - 80 %</strong>: Začíná degradace, ale výkon ještě OK.</li>
+          <li data-i18n="articles.battery.val3"><strong>80 - 70 %</strong>: Zvažte výměnu - výdrž je už znatelně horší.</li>
+          <li data-i18n="articles.battery.val4"><strong>Pod 70 %</strong>: Doporučujeme výměnu. iOS pravděpodobně omezuje výkon.</li>
+          <li data-i18n="articles.battery.val5"><strong>Pod 50 %</strong>: Výměna je nutná pro bezpečné a stabilní používání.</li>
         </ul>
 
-        <h3>Pro detailní info: aplikace nebo servis</h3>
-        <p>
+        <h3 data-i18n="articles.battery.h3detail">Pro detailní info: aplikace nebo servis</h3>
+        <p data-i18n="articles.battery.detailP">
           Apple ukazuje jen kapacitu, ne počet cyklů (kromě iOS 17+ na iPhone 15+). Pokud vás zajímá víc detailů
           (počet cyklů, datum prvního použití baterie), v servisu máme nástroje, které to přečtou.
           U nás je to <strong>součást diagnostiky zdarma</strong>.
         </p>
 
-        <h2>Co si vybrat: originál, premium nebo kopie</h2>
+        <h2 data-i18n="articles.battery.h2choice">Co si vybrat: originál, premium nebo kopie</h2>
 
-        <p>
+        <p data-i18n="articles.battery.choiceIntro">
           Stejně jako u displejů, i u baterií se na trhu nabízejí různé varianty. V čem se liší:
         </p>
 
         <ul>
-          <li>
+          <li data-i18n="articles.battery.choice1">
             <strong>Originál Apple</strong> - skutečně Apple baterie z jiného iPhonu. Maximálně 95 % kapacity,
             cena nejvyšší. Výhoda: 100% kompatibilní s iOS hlášeními.
           </li>
-          <li>
+          <li data-i18n="articles.battery.choice2">
             <strong>PREMIUM (Refurbished)</strong> - nová baterie s originálním Apple čipem. Plná 100% kapacita,
             iOS ji rozpozná jako originál. Nejlepší poměr ceny a kvality.
           </li>
-          <li>
+          <li data-i18n="articles.battery.choice3">
             <strong>KOPIE</strong> - levnější, ale iOS hlásí „Důležitá zpráva o baterii". Funguje, ale ztratíte
             přístup k zobrazení kapacity v Nastavení.
           </li>
         </ul>
 
-        <blockquote>
+        <blockquote data-i18n="articles.battery.quote">
           U baterie skoro vždy doporučujeme PREMIUM. Vrátí telefon do plného výkonu, je zlomkem ceny originálu
           a 12měsíční záruka pokrývá vše. Originál má smysl jen u záručních zařízení nebo na zákaznický požadavek.
           <cite>— Tomáš Stoklasa</cite>
         </blockquote>
 
-        <h2>Co výměna stojí</h2>
+        <h2 data-i18n="articles.battery.h2price">Co výměna stojí</h2>
 
-        <p>
+        <p data-i18n="articles.battery.priceIntro">
           Cena se liší podle modelu:
         </p>
 
         <ul>
-          <li>iPhone 8 / SE: <strong>od 690 Kč</strong></li>
-          <li>iPhone X / XR / XS: <strong>od 890 Kč</strong></li>
-          <li>iPhone 11 / 12 / 13: <strong>od 1 290 Kč</strong></li>
-          <li>iPhone 14 / 15 / 16: <strong>od 1 690 Kč</strong></li>
-          <li>iPhone 15 Pro / 16 Pro: <strong>od 1 699 Kč</strong></li>
+          <li data-i18n="articles.battery.price1">iPhone 8 / SE: <strong>od 690 Kč</strong></li>
+          <li data-i18n="articles.battery.price2">iPhone X / XR / XS: <strong>od 890 Kč</strong></li>
+          <li data-i18n="articles.battery.price3">iPhone 11 / 12 / 13: <strong>od 1 290 Kč</strong></li>
+          <li data-i18n="articles.battery.price4">iPhone 14 / 15 / 16: <strong>od 1 690 Kč</strong></li>
+          <li data-i18n="articles.battery.price5">iPhone 15 Pro / 16 Pro: <strong>od 1 699 Kč</strong></li>
         </ul>
 
-        <p>
+        <p data-i18n="articles.battery.priceTime">
           Doba výměny <strong>30-60 minut</strong>. U novějších modelů s pevnějším těsněním
           to trvá o něco déle. Po výměně proběhne kalibrace a otestování - zařízení vám předáme,
           až ověříme, že vše funguje.
         </p>
 
-        <p>
+        <p data-i18n="articles.battery.priceLink">
           Přesnou cenu pro váš konkrétní model najdete v <a href="../cenik.html">našem ceníku</a>
           - klikněte na svůj iPhone a uvidíte ceny všech variant baterie.
         </p>
       </div>
 
       <div class="article-footer-cta">
-        <h3>Baterie už nedrží?</h3>
-        <p>Najděte si svůj model v ceníku a objednejte se na výměnu - většinou stihnu na počkání.</p>
+        <h3 data-i18n="articles.battery.ctaH">Baterie už nedrží?</h3>
+        <p data-i18n="articles.battery.ctaP">Najděte si svůj model v ceníku a objednejte se na výměnu - většinou stihnu na počkání.</p>
         <a href="../cenik.html" class="btn btn-accent magnetic" data-strength="0.2">
-          Cena výměny baterie
+          <span data-i18n="articles.battery.ctaBtn">Cena výměny baterie</span>
           <i class="ph ph-arrow-up-right" weight="bold"></i>
         </a>
       </div>
@@ -263,8 +263,8 @@
     <section class="article-related">
       <div class="container">
         <div class="section-header section-header--left reveal" style="margin-bottom: var(--space-7);">
-          <span class="eyebrow">Mohlo by vás zajímat</span>
-          <h2>Další <em class="text-gradient">články</em></h2>
+          <span class="eyebrow" data-i18n="articles.related.eyebrow">Mohlo by vás zajímat</span>
+          <h2 data-i18n="articles.related.heading">Další <em class="text-gradient">články</em></h2>
         </div>
 
         <div class="article-related__grid stagger">
@@ -274,13 +274,13 @@
             </div>
             <div class="article-card__body">
               <div class="article-card__meta">
-                <span class="article-card__category">Návody</span>
+                <span class="article-card__category" data-i18n="articles.related.displayCat">Návody</span>
                 <span class="dot"></span>
-                <span>5 min čtení</span>
+                <span data-i18n="articles.related.displayRead">5 min čtení</span>
               </div>
-              <h3 class="article-card__title">Jak poznat kvalitní displej iPhonu</h3>
-              <p class="article-card__excerpt">Originál, OEM, kopie - co znamenají a v čem se liší.</p>
-              <span class="article-card__link">Číst dále <i class="ph ph-arrow-right" weight="bold"></i></span>
+              <h3 class="article-card__title" data-i18n="articles.related.displayTitle">Jak poznat kvalitní displej iPhonu</h3>
+              <p class="article-card__excerpt" data-i18n="articles.related.displayExcerpt">Originál, OEM, kopie - co znamenají a v čem se liší.</p>
+              <span class="article-card__link"><span data-i18n="articles.related.readMore">Číst dále</span> <i class="ph ph-arrow-right" weight="bold"></i></span>
             </div>
           </a>
 
@@ -290,13 +290,13 @@
             </div>
             <div class="article-card__body">
               <div class="article-card__meta">
-                <span class="article-card__category">První pomoc</span>
+                <span class="article-card__category" data-i18n="articles.related.waterCat">První pomoc</span>
                 <span class="dot"></span>
-                <span>4 min čtení</span>
+                <span data-i18n="articles.related.waterRead">4 min čtení</span>
               </div>
-              <h3 class="article-card__title">Telefon spadl do vody - co dělat hned teď</h3>
-              <p class="article-card__excerpt">První tři kroky, které mohou zachránit vaše zařízení.</p>
-              <span class="article-card__link">Číst dále <i class="ph ph-arrow-right" weight="bold"></i></span>
+              <h3 class="article-card__title" data-i18n="articles.related.waterTitle">Telefon spadl do vody - co dělat hned teď</h3>
+              <p class="article-card__excerpt" data-i18n="articles.related.waterExcerpt">První tři kroky, které mohou zachránit vaše zařízení.</p>
+              <span class="article-card__link"><span data-i18n="articles.related.readMore">Číst dále</span> <i class="ph ph-arrow-right" weight="bold"></i></span>
             </div>
           </a>
 
@@ -306,13 +306,13 @@
             </div>
             <div class="article-card__body">
               <div class="article-card__meta">
-                <span class="article-card__category">Ceník</span>
+                <span class="article-card__category" data-i18n="articles.related.pricingCat">Ceník</span>
                 <span class="dot"></span>
-                <span>Aktuální ceny</span>
+                <span data-i18n="articles.related.pricingMeta">Aktuální ceny</span>
               </div>
-              <h3 class="article-card__title">Ceník oprav iPhone</h3>
-              <p class="article-card__excerpt">Vyberte svůj model a získejte přesnou cenu opravy.</p>
-              <span class="article-card__link">Prohlédnout <i class="ph ph-arrow-right" weight="bold"></i></span>
+              <h3 class="article-card__title" data-i18n="articles.related.pricingTitle">Ceník oprav iPhone</h3>
+              <p class="article-card__excerpt" data-i18n="articles.related.pricingExcerpt">Vyberte svůj model a získejte přesnou cenu opravy.</p>
+              <span class="article-card__link"><span data-i18n="articles.related.browse">Prohlédnout</span> <i class="ph ph-arrow-right" weight="bold"></i></span>
             </div>
           </a>
         </div>
@@ -375,6 +375,6 @@
     <button type="button" class="cookie-banner__btn" data-cookie-accept data-i18n="cookie.btn">Rozumím</button>
   </div>
   <script src="../src/scripts/cookie-banner.js" type="module"></script>
-  <script src="../src/scripts/i18n.js?v=20" type="module"></script>
+  <script src="../src/scripts/i18n.js?v=21" type="module"></script>
 </body>
 </html>

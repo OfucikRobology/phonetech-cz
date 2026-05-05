@@ -1,4 +1,4 @@
-import { getDevice, getServicesForDevice, formatPrice } from '../data/pricing.js?v=20';
+import { getDevice, getServicesForDevice, formatPrice } from '../data/pricing.js?v=21';
 
 // Mini i18n pro dynamicky generovaný obsah modalu (cs default, en variant)
 const LBL_EN = {
