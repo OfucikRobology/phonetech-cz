@@ -459,7 +459,7 @@
 }
 .next-cta h2 em { font-style: normal; color: var(--color-accent); }
 .next-cta p {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.85);
   font-size: var(--fluid-lead);
   max-width: 480px;
   line-height: 1.5;
@@ -837,7 +837,7 @@
   letter-spacing: var(--tracking-tight);
 }
 .article-footer-cta p {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.85);
   font-size: var(--text-sm);
   line-height: 1.55;
   max-width: 480px;
@@ -1497,7 +1497,7 @@
   border-color: rgba(255,255,255,0.08);
 }
 .bento-card--dark h3 { color: white; }
-.bento-card--dark p { color: rgba(255,255,255,0.7); }
+.bento-card--dark p { color: rgba(255,255,255,0.85); }
 .bento-card--accent {
   background: linear-gradient(155deg, var(--color-accent) 0%, var(--color-accent-deep) 100%);
   color: white;
