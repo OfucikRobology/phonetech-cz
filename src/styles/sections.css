@@ -1589,3 +1589,24 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
     order: 99;
   }
 }
+
+/* Tablet a menší - hero buttons stack vertikálně, full width */
+@media (max-width: 1024px) {
+  .hero__buttons {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+  }
+  .hero__buttons > .btn,
+  .hero__buttons > .btn-arrow {
+    width: 100% !important;
+  }
+  .hero__buttons > .btn {
+    justify-content: center !important;
+  }
+  /* btn-arrow: text vlevo, kruh úplně vpravo */
+  .hero__buttons > .btn-arrow {
+    justify-content: space-between !important;
+    padding: 0 !important;
+  }
+}
