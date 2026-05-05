@@ -1590,21 +1590,25 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   }
 }
 
-/* Tablet a menší - hero buttons stack vertikálně, full width */
-@media (max-width: 1024px) {
+/* Tablet, mobil i wider phones - hero buttons stack vertikálně,
+   full width, vždy zarovnané s okraji search boxu */
+@media (max-width: 1280px) {
   .hero__buttons {
     flex-direction: column !important;
     align-items: stretch !important;
     width: 100% !important;
+    max-width: 100% !important;
+    gap: 14px !important;
   }
   .hero__buttons > .btn,
   .hero__buttons > .btn-arrow {
     width: 100% !important;
+    max-width: 100% !important;
   }
   .hero__buttons > .btn {
     justify-content: center !important;
   }
-  /* btn-arrow: text vlevo, kruh úplně vpravo */
+  /* btn-arrow: text vlevo, kruh úplně vpravo, full width */
   .hero__buttons > .btn-arrow {
     justify-content: space-between !important;
     padding: 0 !important;
