@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-  <link rel="stylesheet" href="./src/styles/main.css?v=13">
+  <link rel="stylesheet" href="./src/styles/main.css?v=14">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 </head>
 <body>
@@ -106,23 +106,23 @@
         <div class="bento stagger">
           <a href="tel:+420733622017" class="bento-card bento-card--third">
             <div class="icon-frame icon-frame--lg icon-frame--accent-deep"><i class="ph ph-phone" weight="fill"></i></div>
-            <h3>Telefon</h3>
-            <p>Pro rychlou konzultaci nebo potvrzení termínu.</p>
+            <h3 data-i18n="contact.cardPhone">Telefon</h3>
+            <p data-i18n="contact.cardPhoneDesc">Pro rychlou konzultaci nebo potvrzení termínu.</p>
             <strong style="color: var(--color-ink); font: 700 var(--text-xl) var(--font-display); letter-spacing: -0.02em;">+420 733 622 017</strong>
           </a>
 
           <a href="mailto:info@phonetech.cz" class="bento-card bento-card--third">
             <div class="icon-frame icon-frame--lg"><i class="ph ph-envelope" weight="fill"></i></div>
-            <h3>E-mail</h3>
-            <p>Pro detailní popis závady nebo zaslání fotek zařízení.</p>
+            <h3 data-i18n="contact.cardEmail">E-mail</h3>
+            <p data-i18n="contact.cardEmailDesc">Pro detailní popis závady nebo zaslání fotek zařízení.</p>
             <strong style="color: var(--color-ink); font: 700 var(--text-xl) var(--font-display); letter-spacing: -0.02em;">info@phonetech.cz</strong>
           </a>
 
           <a href="https://wa.me/420733622017" target="_blank" rel="noopener" class="bento-card bento-card--third bento-card--dark">
             <div class="icon-frame icon-frame--lg" style="background: rgba(255,107,43,0.15); color: var(--color-accent);"><i class="ph ph-chat-circle-dots" weight="fill"></i></div>
-            <h3>WhatsApp</h3>
-            <p>Pošlete fotku problému rovnou přes WhatsApp.</p>
-            <strong style="color: white; font: 700 var(--text-xl) var(--font-display); letter-spacing: -0.02em;">Otevřít chat →</strong>
+            <h3 data-i18n="contact.cardWa">WhatsApp</h3>
+            <p data-i18n="contact.cardWaDesc">Pošlete fotku problému rovnou přes WhatsApp.</p>
+            <strong style="color: white; font: 700 var(--text-xl) var(--font-display); letter-spacing: -0.02em;" data-i18n="contact.cardWaCta">Otevřít chat →</strong>
           </a>
         </div>
       </div>
@@ -133,30 +133,30 @@
       <div class="container">
         <div class="contact-section__grid">
           <div class="contact-section__info reveal reveal--from-left">
-            <span class="eyebrow">Nezávazná poptávka</span>
-            <h2>Zanechte nám zařízení<br>do <em class="text-gradient">dobrých rukou</em></h2>
-            <p>Čím víc detailů nám napíšete, tím přesnější kalkulaci dostanete zpět. Ideálně model a přesně to, co se stalo.</p>
+            <span class="eyebrow" data-i18n="contact.formEyebrow">Nezávazná poptávka</span>
+            <h2 data-i18n="contact.formHeading">Zanechte nám zařízení<br>do <em class="text-gradient">dobrých rukou</em></h2>
+            <p data-i18n="contact.formIntro">Čím víc detailů nám napíšete, tím přesnější kalkulaci dostanete zpět. Ideálně model a přesně to, co se stalo.</p>
 
             <div class="contact-details" style="margin-top: var(--space-7);">
               <div class="contact-detail">
                 <div class="contact-detail__icon"><i class="ph ph-clock" weight="fill"></i></div>
                 <div>
-                  <strong>Odpovídáme co nejrychleji (24/7)</strong>
-                  <span>Ideálně napište model a co se stalo</span>
+                  <strong data-i18n="contact.detail1">Odpovídáme co nejrychleji (24/7)</strong>
+                  <span data-i18n="contact.detail1sub">Ideálně napište model a co se stalo</span>
                 </div>
               </div>
               <div class="contact-detail">
                 <div class="contact-detail__icon"><i class="ph ph-currency-circle-dollar" weight="fill"></i></div>
                 <div>
-                  <strong>Diagnostika zdarma</strong>
-                  <span>Cenu znáte před zahájením opravy</span>
+                  <strong data-i18n="contact.detail2">Diagnostika zdarma</strong>
+                  <span data-i18n="contact.detail2sub">Cenu znáte před zahájením opravy</span>
                 </div>
               </div>
               <div class="contact-detail">
                 <div class="contact-detail__icon"><i class="ph ph-package" weight="fill"></i></div>
                 <div>
-                  <strong>Zaslání kurýrem</strong>
-                  <span>Nemusíte dojíždět - po celé ČR</span>
+                  <strong data-i18n="contact.detail3">Zaslání kurýrem</strong>
+                  <span data-i18n="contact.detail3sub">Nemusíte dojíždět - po celé ČR</span>
                 </div>
               </div>
             </div>
@@ -172,66 +172,66 @@
             >
               <div class="form-row">
                 <div class="form-group">
-                  <label for="name">Jméno a příjmení <span aria-hidden="true">*</span></label>
-                  <input type="text" id="name" name="name" placeholder="Jan Novák" required autocomplete="name">
+                  <label for="name" data-i18n="contact.lblNameReq">Jméno a příjmení <span aria-hidden="true">*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Jan Novák" data-i18n-attr="placeholder:contact.phName" required autocomplete="name">
                   <span class="form-error" role="alert"></span>
                 </div>
                 <div class="form-group">
-                  <label for="phone">Telefonní číslo <span aria-hidden="true">*</span></label>
+                  <label for="phone" data-i18n="contact.lblPhoneReq">Telefonní číslo <span aria-hidden="true">*</span></label>
                   <input type="tel" id="phone" name="phone" placeholder="+420 xxx xxx xxx" required autocomplete="tel">
                   <span class="form-error" role="alert"></span>
                 </div>
               </div>
 
               <div class="form-group">
-                <label for="email">E-mail <span aria-hidden="true">*</span></label>
-                <input type="email" id="email" name="email" placeholder="jan@email.cz" required autocomplete="email">
+                <label for="email" data-i18n="contact.lblEmailReq">E-mail <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="jan@email.cz" data-i18n-attr="placeholder:contact.phEmail" required autocomplete="email">
                 <span class="form-error" role="alert"></span>
               </div>
 
               <div class="form-group">
-                <label for="device">Model zařízení <span aria-hidden="true">*</span></label>
-                <input type="text" id="device" name="device" placeholder="iPhone 14 Pro, Samsung S23..." required>
+                <label for="device" data-i18n="contact.lblDeviceReq">Model zařízení <span aria-hidden="true">*</span></label>
+                <input type="text" id="device" name="device" placeholder="iPhone 14 Pro, Samsung S23..." data-i18n-attr="placeholder:contact.phDevice" required>
                 <span class="form-error" role="alert"></span>
               </div>
 
               <div class="form-group">
-                <label for="delivery">Způsob předání <span aria-hidden="true">*</span></label>
+                <label for="delivery" data-i18n="contact.lblDeliveryReq">Způsob předání <span aria-hidden="true">*</span></label>
                 <select id="delivery" name="delivery" required>
-                  <option value="">Vyberte způsob...</option>
-                  <option value="osobne-jh">Osobně - J. Hradec</option>
-                  <option value="osobne-praha">Osobně - Praha 3</option>
-                  <option value="kuryr">Kurýr</option>
+                  <option value="" data-i18n="contact.delvSelect">Vyberte způsob...</option>
+                  <option value="osobne-jh" data-i18n="contact.delvJh">Osobně - J. Hradec</option>
+                  <option value="osobne-praha" data-i18n="contact.delvPraha">Osobně - Praha 3</option>
+                  <option value="kuryr" data-i18n="contact.delvKuryr">Kurýr</option>
                 </select>
                 <span class="form-error" role="alert"></span>
               </div>
 
               <div class="form-group">
-                <label for="message">Popis problému <span aria-hidden="true">*</span></label>
-                <textarea id="message" name="message" rows="5" placeholder="Rozbitý displej, nejde zapnout, nefunguje kamera…" required></textarea>
-                <span class="form-hint">Čím víc detailů, tím přesnější cena.</span>
+                <label for="message" data-i18n="contact.lblMessageReq">Popis problému <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" rows="5" placeholder="Rozbitý displej, nejde zapnout, nefunguje kamera…" data-i18n-attr="placeholder:contact.phMessage" required></textarea>
+                <span class="form-hint" data-i18n="contact.hintMsg">Čím víc detailů, tím přesnější cena.</span>
                 <span class="form-error" role="alert"></span>
               </div>
 
               <div class="form-group form-group--checkbox">
                 <input type="checkbox" id="consent" name="consent" required>
-                <label for="consent">Souhlasím se <a href="./gdpr.html" target="_blank">zpracováním osobních údajů</a></label>
+                <label for="consent" data-i18n="contact.consentReq">Souhlasím se <a href="./gdpr.html" target="_blank">zpracováním osobních údajů</a></label>
                 <span class="form-error" role="alert"></span>
               </div>
 
               <button type="submit" class="btn btn-accent btn-full btn-lg magnetic" data-strength="0.15" id="submit-btn">
-                <span class="btn-text">Odeslat poptávku</span>
+                <span class="btn-text" data-i18n="contact.submit">Odeslat poptávku</span>
                 <i class="ph ph-paper-plane-right" weight="bold"></i>
                 <span class="btn-spinner" aria-hidden="true" hidden></span>
               </button>
 
               <div class="form-success" id="form-success" role="status" hidden>
                 <i class="ph ph-check-circle" weight="fill"></i>
-                Děkujeme! Formulář jsme v pořádku přijali. Ozveme se co nejdříve.
+                <span data-i18n="contact.success">Děkujeme! Formulář jsme v pořádku přijali. Ozveme se co nejdříve.</span>
               </div>
               <div class="form-error-global" id="form-error-global" role="alert" hidden>
                 <i class="ph ph-warning-circle" weight="fill"></i>
-                Něco se pokazilo. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.
+                <span data-i18n="contact.errorGlobal">Něco se pokazilo. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.</span>
               </div>
             </form>
           </div>
@@ -243,9 +243,9 @@
     <section class="section">
       <div class="container">
         <div class="section-header reveal">
-          <span class="eyebrow eyebrow--center">Naše pobočky</span>
-          <h2>Kam <em class="text-gradient">dorazit</em></h2>
-          <p class="section-description">Dvě plně vybavené pobočky - v Jindřichově Hradci a v Praze 3.</p>
+          <span class="eyebrow eyebrow--center" data-i18n="contact.branchesEyebrow">Naše pobočky</span>
+          <h2 data-i18n="contact.branchesHeading">Kam <em class="text-gradient">dorazit</em></h2>
+          <p class="section-description" data-i18n="contact.branchesDesc">Dvě plně vybavené pobočky - v Jindřichově Hradci a v Praze 3.</p>
         </div>
 
         <div class="location-grid">
@@ -258,23 +258,23 @@
                 allowfullscreen></iframe>
             </div>
             <div class="location-card__body">
-              <span class="location-card__tag">Hlavní pobočka</span>
-              <h3>Jindřichův Hradec</h3>
-              <address class="location-card__address">
+              <span class="location-card__tag" data-i18n="contact.branchTag1">Hlavní pobočka</span>
+              <h3 data-i18n="contact.branch1Name">Jindřichův Hradec</h3>
+              <address class="location-card__address" data-i18n="contact.branch1Addr">
                 Jiráskovo předměstí 636<br>
                 377 01 Jindřichův Hradec
               </address>
 
               <div class="location-card__hours">
-                <div class="location-card__hours-row"><span>Otevírací doba</span><strong>Dle telefonické domluvy</strong></div>
+                <div class="location-card__hours-row"><span data-i18n="contact.hoursLabel">Otevírací doba</span><strong data-i18n="contact.hoursValue">Dle telefonické domluvy</strong></div>
               </div>
 
               <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
                 <a href="https://www.google.com/maps/place/PhoneTech+%7C+Servis+mobiln%C3%ADch+telefon%C5%AF+a+jin%C3%A9+elektroniky/@49.130561,15.0156928,17z/data=!3m1!4b1!4m6!3m5!1s0x470cd1ebc92c80b7:0x4a75c3efbaf3b114!8m2!3d49.130561!4d15.0182731!16s%2Fg%2F11sjk1wlnj" target="_blank" rel="noopener" class="btn btn-primary">
-                  <i class="ph ph-map-pin" weight="bold"></i> Navigovat
+                  <i class="ph ph-map-pin" weight="bold"></i> <span data-i18n="contact.btnNav">Navigovat</span>
                 </a>
                 <a href="tel:+420733622017" class="btn btn-ghost">
-                  <i class="ph ph-phone" weight="bold"></i> Zavolat
+                  <i class="ph ph-phone" weight="bold"></i> <span data-i18n="contact.btnCall">Zavolat</span>
                 </a>
               </div>
             </div>
@@ -289,23 +289,23 @@
                 allowfullscreen></iframe>
             </div>
             <div class="location-card__body">
-              <span class="location-card__tag">Pobočka Praha</span>
-              <h3>Praha 3 - Žižkov</h3>
-              <address class="location-card__address">
+              <span class="location-card__tag" data-i18n="contact.branchTag2">Pobočka Praha</span>
+              <h3 data-i18n="contact.branch2Name">Praha 3 - Žižkov</h3>
+              <address class="location-card__address" data-i18n="contact.branch2Addr">
                 Jeseniova 1196/52<br>
                 130 00 Praha 3
               </address>
 
               <div class="location-card__hours">
-                <div class="location-card__hours-row"><span>Otevírací doba</span><strong>Dle telefonické domluvy</strong></div>
+                <div class="location-card__hours-row"><span data-i18n="contact.hoursLabel">Otevírací doba</span><strong data-i18n="contact.hoursValue">Dle telefonické domluvy</strong></div>
               </div>
 
               <div style="display: flex; gap: var(--space-3); flex-wrap: wrap;">
                 <a href="https://www.google.com/maps/place/KupFoun+%7C+Prodej+mobiln%C3%ADch+telefon%C5%AF+a+p%C5%99%C3%ADslu%C5%A1enstv%C3%AD/@50.0869282,14.4590056,17z/data=!3m1!4b1!4m6!3m5!1s0x470cd1179db027bf:0x151e02289cdbfeeb!8m2!3d50.0869282!4d14.4615859!16s%2Fg%2F11x0gg2kmh" target="_blank" rel="noopener" class="btn btn-primary">
-                  <i class="ph ph-map-pin" weight="bold"></i> Navigovat
+                  <i class="ph ph-map-pin" weight="bold"></i> <span data-i18n="contact.btnNav">Navigovat</span>
                 </a>
                 <a href="tel:+420733622017" class="btn btn-ghost">
-                  <i class="ph ph-phone" weight="bold"></i> Zavolat
+                  <i class="ph ph-phone" weight="bold"></i> <span data-i18n="contact.btnCall">Zavolat</span>
                 </a>
               </div>
             </div>
@@ -319,10 +319,10 @@
       <div class="container container--tight">
         <div class="quote-block reveal">
           <div class="quote-block__mark">"</div>
-          <blockquote>
+          <blockquote data-i18n="contact.quote">
             Vždy říkáme: poctivá odpověď ještě před opravou je lepší než rychlá oprava bez odpovědi.
           </blockquote>
-          <cite>- Tým PhoneTech</cite>
+          <cite data-i18n="contact.quoteCite">- Tým PhoneTech</cite>
         </div>
       </div>
     </section>
