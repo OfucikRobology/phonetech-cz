@@ -1615,24 +1615,26 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   }
 }
 
-/* Hero buttons - stronger override (always full width, no inline-flex shrink) */
-.hero__buttons {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: stretch;
-  gap: 14px;
-}
-.hero__buttons > .btn,
-.hero__buttons > .btn-arrow {
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
-}
-.hero__buttons > .btn {
-  justify-content: center;
-}
-.hero__buttons > .btn-arrow {
-  justify-content: space-between;
-  padding: 0;
+/* Hero buttons - na mobilu/tabletu full-width column, na desktopu inline */
+@media (max-width: 1024px) {
+  .hero__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+    gap: 14px;
+  }
+  .hero__buttons > .btn,
+  .hero__buttons > .btn-arrow {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .hero__buttons > .btn {
+    justify-content: center;
+  }
+  .hero__buttons > .btn-arrow {
+    justify-content: space-between;
+    padding: 0;
+  }
 }
