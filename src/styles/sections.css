@@ -1506,28 +1506,6 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   .hero__content { max-width: 100%; }
   .hero__visual { display: none; } /* Skryjeme image rámeček, floating-cards není potřeba na mobilu */
 
-  /* Trust stats - 3 sloupce zarovnané k okrajům containeru */
-  .hero__trust {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
-    justify-content: stretch;
-  }
-  .hero__trust-item { min-width: 0; }
-  .hero__trust-item:nth-child(1) { align-items: flex-start; }
-  .hero__trust-item:nth-child(2) { align-items: center; text-align: center; }
-  .hero__trust-item:nth-child(3) { align-items: flex-end; text-align: right; }
-  .hero__trust-num { font-size: clamp(24px, 8vw, 36px); }
-  .hero__trust-label { font-size: 10px; line-height: 1.2; }
-
-  /* Btn-arrow "Prohlédnout služby" na mobilu - text vlevo, arrow vpravo,
-     zarovnané s okraji jako pill button + search box */
-  .hero__buttons .btn-arrow {
-    width: 100%;
-    justify-content: space-between !important;
-    padding: 0 !important;
-  }
-
   /* Hero search box - prevent overflow */
   .search-box__input { font-size: 14px; }
   .search-box { padding-right: 8px; }
@@ -1590,51 +1568,3 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   }
 }
 
-/* Tablet, mobil i wider phones - hero buttons stack vertikálně,
-   full width, vždy zarovnané s okraji search boxu */
-@media (max-width: 1280px) {
-  .hero__buttons {
-    flex-direction: column !important;
-    align-items: stretch !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    gap: 14px !important;
-  }
-  .hero__buttons > .btn,
-  .hero__buttons > .btn-arrow {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  .hero__buttons > .btn {
-    justify-content: center !important;
-  }
-  /* btn-arrow: text vlevo, kruh úplně vpravo, full width */
-  .hero__buttons > .btn-arrow {
-    justify-content: space-between !important;
-    padding: 0 !important;
-  }
-}
-
-/* Hero buttons - na mobilu/tabletu full-width column, na desktopu inline */
-@media (max-width: 1024px) {
-  .hero__buttons {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: stretch;
-    gap: 14px;
-  }
-  .hero__buttons > .btn,
-  .hero__buttons > .btn-arrow {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .hero__buttons > .btn {
-    justify-content: center;
-  }
-  .hero__buttons > .btn-arrow {
-    justify-content: space-between;
-    padding: 0;
-  }
-}
