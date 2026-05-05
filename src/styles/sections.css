@@ -1555,16 +1555,19 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   background: var(--color-ink);
 }
 
-/* Mobile: hamburger doprava (přepnutí gridu na flex) */
+/* Mobile: hamburger doprava (přepnutí gridu na flex), uvnitř containeru */
 @media (max-width: 768px) {
   .navbar__inner {
     display: flex !important;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
   }
   .navbar__hamburger {
     margin-left: auto;
+    margin-right: 0;
     order: 99;
+    flex-shrink: 0;
   }
 }
 
