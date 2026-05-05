@@ -1506,15 +1506,27 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   .hero__content { max-width: 100%; }
   .hero__visual { display: none; } /* Skryjeme image rámeček, floating-cards není potřeba na mobilu */
 
-  /* Trust stats - radši grid 3-up s menším paddingem */
+  /* Trust stats - 3 sloupce zarovnané k okrajům containeru */
   .hero__trust {
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    justify-content: stretch;
   }
-  .hero__trust-item { flex: 1 1 30%; min-width: 0; }
+  .hero__trust-item { min-width: 0; }
+  .hero__trust-item:nth-child(1) { align-items: flex-start; }
+  .hero__trust-item:nth-child(2) { align-items: center; text-align: center; }
+  .hero__trust-item:nth-child(3) { align-items: flex-end; text-align: right; }
   .hero__trust-num { font-size: clamp(24px, 8vw, 36px); }
   .hero__trust-label { font-size: 10px; line-height: 1.2; }
+
+  /* Btn-arrow "Prohlédnout služby" na mobilu - text vlevo, arrow vpravo,
+     zarovnané s okraji jako pill button + search box */
+  .hero__buttons .btn-arrow {
+    width: 100%;
+    justify-content: space-between !important;
+    padding: 0 !important;
+  }
 
   /* Hero search box - prevent overflow */
   .search-box__input { font-size: 14px; }
