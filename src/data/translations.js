@@ -296,6 +296,8 @@ export const translations = {
       ctaText: 'Napište nám značku, model a co se stalo - cenu pošleme co nejdříve.',
       modalNote: 'Většinu dílů na iPhone máme skladem - oprava na počkání.',
       modalCta: 'Objednat opravu',
+      getCenu: 'Získat cenu',
+      modalSubtitle: 'Apple · ceny za servis',
     },
     // About
     about: {
@@ -774,6 +776,8 @@ export const translations = {
       ctaText: 'Write us the brand, model and what happened - we\'ll send the price ASAP.',
       modalNote: 'Most iPhone parts in stock - same-day repair.',
       modalCta: 'Order repair',
+      getCenu: 'Get price',
+      modalSubtitle: 'Apple · service pricing',
     },
     about: {
       breadcrumb: 'About',

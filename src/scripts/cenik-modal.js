@@ -1,4 +1,47 @@
-import { getDevice, getServicesForDevice, formatPrice } from '../data/pricing.js';
+import { getDevice, getServicesForDevice, formatPrice } from '../data/pricing.js?v=18';
+
+// Mini i18n pro dynamicky generovaný obsah modalu (cs default, en variant)
+const LBL_EN = {
+  display_original: 'Display replacement',
+  display_premium: 'Display replacement',
+  battery_original: 'Battery replacement',
+  battery_premium: 'Battery replacement',
+  charging_port: 'Charging port replacement',
+  earpiece: 'Earpiece replacement',
+  speaker: 'Speaker replacement',
+  rear_camera: 'Rear camera replacement',
+  back_glass: 'Back glass replacement',
+  face_id: 'Face ID repair',
+  tempered_premium: 'Tempered glass installation',
+  screen_protector: 'Screen protector installation',
+  other: 'Other repairs',
+};
+const STR_EN = {
+  subtitleYear: (y) => `Apple · ${y} · service pricing`,
+  subtitleNoYear: 'Apple · service pricing',
+  fallback: 'Device',
+  byArrangement: 'By arrangement',
+  onRequest: 'Price on request',
+};
+const STR_CS = {
+  subtitleYear: (y) => `Apple · ${y} · ceny za servis`,
+  subtitleNoYear: 'Apple · ceny za servis',
+  fallback: 'Zařízení',
+  byArrangement: 'Dle dohody',
+  onRequest: 'Cena na dotaz',
+};
+
+const getLang = () => (localStorage.getItem('phonetech-lang') === 'en' ? 'en' : 'cs');
+
+const localizeLabel = (svc) => getLang() === 'en' ? (LBL_EN[svc.id] || svc.label) : svc.label;
+const localizePrice = (price) => {
+  if (price == null) return getLang() === 'en' ? STR_EN.onRequest : STR_CS.onRequest;
+  if (typeof price === 'string') {
+    if (price === 'Dle dohody' && getLang() === 'en') return STR_EN.byArrangement;
+    return price;
+  }
+  return formatPrice(price);
+};
 
 const modal = document.getElementById('device-modal');
 if (modal) {
@@ -8,15 +51,19 @@ if (modal) {
   const ctaEl = modal.querySelector('.modal__cta');
   const closeButtons = modal.querySelectorAll('[data-close]');
   let lastFocus = null;
+  let currentDeviceId = null;
 
   const open = (deviceId, fallbackName) => {
+    currentDeviceId = deviceId;
     const dev = getDevice(deviceId);
     const services = getServicesForDevice(deviceId);
-    const name = dev?.name || fallbackName || 'Zařízení';
+    const lang = getLang();
+    const STR = lang === 'en' ? STR_EN : STR_CS;
+    const name = dev?.name || fallbackName || STR.fallback;
     const year = dev?.year ?? '';
 
     titleEl.textContent = name;
-    subtitleEl.textContent = year ? `Apple · ${year} · ceny za servis` : 'Apple · ceny za servis';
+    subtitleEl.textContent = year ? STR.subtitleYear(year) : STR.subtitleNoYear;
 
     const slug = (str) => str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
     bodyEl.innerHTML = services
@@ -24,10 +71,10 @@ if (modal) {
         <li class="repair-item">
           <div class="repair-item__icon"><i class="ph ${s.icon}" weight="duotone"></i></div>
           <div class="repair-item__label">
-            <strong>${s.label}</strong>
+            <strong>${localizeLabel(s)}</strong>
             ${s.variant ? `<span class="repair-item__variant repair-item__variant--${slug(s.variant)}">${s.variant}</span>` : ''}
           </div>
-          <span class="repair-item__price ${s.price == null ? 'repair-item__price--muted' : ''}">${formatPrice(s.price)}</span>
+          <span class="repair-item__price ${s.price == null ? 'repair-item__price--muted' : ''}">${localizePrice(s.price)}</span>
         </li>
       `).join('');
 
@@ -54,6 +101,15 @@ if (modal) {
   closeButtons.forEach((b) => b.addEventListener('click', close));
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !modal.hasAttribute('hidden')) close();
+  });
+
+  // Re-render modal content if language changes while modal is open
+  document.querySelectorAll('[data-lang-switch]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (currentDeviceId && !modal.hasAttribute('hidden')) {
+        setTimeout(() => open(currentDeviceId), 50);
+      }
+    });
   });
 
   // Hook into device-card clicks
