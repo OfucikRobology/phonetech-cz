@@ -10,16 +10,14 @@ export const services = [
   { id: 'rear_camera',       group: 'camera',   label: 'Výměna zadní kamery',       icon: 'ph-camera' },
   { id: 'back_glass',        group: 'parts',    label: 'Výměna zadního skla',       icon: 'ph-square' },
   { id: 'face_id',           group: 'parts',    label: 'Oprava Face ID',            icon: 'ph-scan' },
-  { id: 'tempered_2d',       group: 'glass',    label: 'Nalepení tvrzeného skla',   variant: '2D',       icon: 'ph-shield' },
-  { id: 'tempered_3d',       group: 'glass',    label: 'Nalepení tvrzeného skla',   variant: '3D',       icon: 'ph-shield-check' },
+  { id: 'tempered_premium',  group: 'glass',    label: 'Nalepení tvrzeného skla',   variant: 'PREMIUM',  icon: 'ph-shield-check' },
   { id: 'screen_protector',  group: 'glass',    label: 'Nalepení ochranné fólie',   icon: 'ph-sticker' },
   { id: 'other',             group: 'other',    label: 'Ostatní opravy',            icon: 'ph-gear-six' },
 ];
 
 // Společné položky které platí pro všechny modely
 const COMMON = {
-  tempered_2d: 299,
-  tempered_3d: 399,
+  tempered_premium: 399,
   screen_protector: 499,
   other: 'Dle dohody',
 };
