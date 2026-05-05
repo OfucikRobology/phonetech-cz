@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-  <link rel="stylesheet" href="./src/styles/main.css?v=15">
+  <link rel="stylesheet" href="./src/styles/main.css?v=17">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 </head>
 <body>
@@ -399,12 +399,12 @@
         </div>
         <nav class="footer__nav">
           <strong data-i18n="footer.navHeading">Navigace</strong>
-          <a href="./sluzby.html">Služby</a>
-          <a href="./cenik.html">Ceník</a>
-          <a href="./blog.html">Blog</a>
-          <a href="./o-nas.html">O nás</a>
-          <a href="./recenze.html">Recenze</a>
-          <a href="./kontakt.html">Kontakt</a>
+          <a href="./sluzby.html" data-i18n="nav.services">Služby</a>
+          <a href="./cenik.html" data-i18n="nav.pricing">Ceník</a>
+          <a href="./blog.html" data-i18n="nav.blog">Blog</a>
+          <a href="./o-nas.html" data-i18n="nav.about">O nás</a>
+          <a href="./recenze.html" data-i18n="nav.reviews">Recenze</a>
+          <a href="./kontakt.html" data-i18n="nav.contact">Kontakt</a>
         </nav>
         <div class="footer__contact">
           <strong data-i18n="footer.contactHeading">Kontakt</strong>
@@ -434,13 +434,12 @@
   <!-- Cookie banner -->
   <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Informace o cookies">
     <div class="cookie-banner__icon"><i class="ph ph-cookie" weight="fill"></i></div>
-    <div class="cookie-banner__text">
-      Tento web používá pouze nezbytné cookies pro správné fungování. Více v sekci
-      <a href="./gdpr.html" data-i18n="footer.privacy">Ochrana osobních údajů</a>.
+    <div class="cookie-banner__text" data-i18n="cookie.text">
+      Tento web používá pouze nezbytné cookies pro správné fungování. Více v sekci <a href="./gdpr.html">Ochrana osobních údajů</a>.
     </div>
     <button type="button" class="cookie-banner__btn" data-cookie-accept data-i18n="cookie.btn">Rozumím</button>
   </div>
   <script src="./src/scripts/cookie-banner.js" type="module"></script>
-  <script src="./src/scripts/i18n.js?v=12" type="module"></script>
+  <script src="./src/scripts/i18n.js?v=17" type="module"></script>
 </body>
 </html>
