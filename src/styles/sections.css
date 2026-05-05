@@ -97,8 +97,9 @@ body.nav-hidden .navbar {
 body.nav-hidden .announcement-bar { transform: translateY(-100%); }
 body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
 .navbar.scrolled {
-  /* top zůstává 38px — nepřekrývat announcement bar */
-  height: 64px;
+  /* top zůstává 38px — nepřekrývat announcement bar.
+     Velikost zůstává stejná, jen se přidá blur backdrop pro
+     lepší čitelnost přes obsah. */
   background: rgba(247, 244, 238, 0.92);
   backdrop-filter: blur(24px) saturate(1.4);
   -webkit-backdrop-filter: blur(24px) saturate(1.4);
@@ -124,7 +125,7 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   width: auto;
   display: block;
 }
-.navbar.scrolled .navbar__logo-img { height: 32px; }
+/* Logo zachovává plnou velikost i po scrollování. */
 @media (max-width: 480px) {
   .navbar__logo-img { height: 28px; }
 }
@@ -1413,7 +1414,6 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   .section { padding: var(--space-14) 0; }
 
   .navbar { height: 62px; }
-  .navbar.scrolled { height: 56px; }
   .navbar__links,
   .navbar__actions { display: none; }
   .navbar__hamburger { display: flex; }
