@@ -223,12 +223,18 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
 }
 .navbar__drawer.open { display: flex; transform: translateY(0); opacity: 1; }
 .navbar__drawer ul { display: flex; flex-direction: column; gap: 0; }
-.navbar__drawer a {
+.navbar__drawer ul a {
   display: block;
   font: 600 var(--text-xl) var(--font-display);
   color: var(--color-ink);
   padding: var(--space-3) 0;
   border-bottom: 1px solid var(--color-line);
+}
+/* Orange CTA button v drawer používá vlastní btn font - menší, fits */
+.navbar__drawer > a.btn {
+  font: 600 var(--text-base) var(--font-body);
+  letter-spacing: 0.01em;
+  padding: 14px 22px;
 }
 
 /* ═══════════════════════════════════════════════
