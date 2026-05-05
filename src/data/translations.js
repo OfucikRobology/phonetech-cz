@@ -659,7 +659,7 @@ export const translations = {
     },
     services: {
       breadcrumb: 'Services',
-      title: 'Repairs with&nbsp;a&nbsp;<em>warranty</em>.<br>Pricing without surprises.',
+      title: 'Repairs with <em>warranty</em>.<br>Pricing without surprises.',
       desc: 'Service for phones, tablets, laptops, gaming consoles and smartwatches. Original parts, 12-month warranty, transparent prices.',
       tag: 'Service · since 2020',
       listEyebrow: 'What we repair',
@@ -781,7 +781,7 @@ export const translations = {
     },
     about: {
       breadcrumb: 'About',
-      title: 'We started in&nbsp;an attic.<br>Today we help <em>thousands</em>.',
+      title: 'We started in an attic.<br>Today we help <em>thousands</em>.',
       desc: 'PhoneTech is the story of one belief: that electronics service can be done honestly, fast and with respect - even in a small town.',
       tag: 'Since 2020',
       storyEyebrow: 'Our story',
