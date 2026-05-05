@@ -1491,6 +1491,9 @@
 .bento-card--wide { grid-column: span 4; }
 .bento-card--half { grid-column: span 3; }
 .bento-card--third { grid-column: span 2; }
+.bento-card h3 { font-size: var(--text-2xl); letter-spacing: var(--tracking-tight); }
+.bento-card p { font-size: var(--text-sm); color: var(--color-text-soft); line-height: 1.65; }
+
 .bento-card--dark {
   background: var(--color-ink-2);
   color: white;
@@ -1504,10 +1507,7 @@
   border-color: transparent;
 }
 .bento-card--accent h3 { color: white; }
-.bento-card--accent p { color: rgba(255,255,255,0.9); }
-
-.bento-card h3 { font-size: var(--text-2xl); letter-spacing: var(--tracking-tight); }
-.bento-card p { font-size: var(--text-sm); color: var(--color-text-soft); line-height: 1.65; }
+.bento-card--accent p { color: rgba(255,255,255,0.95); }
 
 /* ═══════════════════════════════════════════════
    QUOTE BLOCK
