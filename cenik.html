@@ -72,7 +72,7 @@
 
   <main>
     <!-- Page hero -->
-    <section class="page-hero">
+    <section class="page-hero" style="padding-bottom: var(--space-8);">
       <div class="container">
         <div class="page-hero__inner">
           <div class="page-hero__content reveal">
@@ -102,10 +102,15 @@
       </div>
     </section>
 
-    <!-- Search + disclaimer -->
-    <section class="section section--tight" style="padding-top: var(--space-8); padding-bottom: var(--space-6);">
-      <div class="container container--tight">
-        <div class="device-search-wrap reveal">
+    <!-- iPhone search + device grid -->
+    <section class="section section--tight" id="iphone" aria-labelledby="iphone-heading" style="padding-top: var(--space-4);">
+      <div class="container">
+        <div class="section-header section-header--left reveal" style="margin-bottom: var(--space-5);">
+          <span class="eyebrow">Apple</span>
+          <h2 id="iphone-heading">Vyberte svůj <em class="text-gradient">iPhone</em></h2>
+        </div>
+
+        <div class="device-search-wrap reveal" style="margin-bottom: var(--space-6);">
           <div class="search-box">
             <i class="ph ph-magnifying-glass search-box__icon"></i>
             <input
@@ -124,24 +129,6 @@
             <i class="ph ph-cursor-click"></i>
             Klikněte na model pro získání ceny
           </p>
-        </div>
-
-        <div class="cenik-disclaimer reveal">
-          <i class="ph ph-info" weight="fill"></i>
-          <div>
-            <strong>Vzhledem k rozmanitosti Android telefonů a ostatních zařízení na trhu není možné poskytnout jednotný ceník.</strong>
-            Kontaktujte nás pro přesnou kalkulaci opravy vašeho konkrétního zařízení - cenu pošleme co nejdříve.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- iPhone device grid -->
-    <section class="section section--tight" id="iphone" aria-labelledby="iphone-heading">
-      <div class="container">
-        <div class="section-header section-header--left reveal" style="margin-bottom: var(--space-7);">
-          <span class="eyebrow">Apple</span>
-          <h2 id="iphone-heading">Vyberte svůj <em class="text-gradient">iPhone</em></h2>
         </div>
 
         <div class="device-grid stagger" id="device-grid">
