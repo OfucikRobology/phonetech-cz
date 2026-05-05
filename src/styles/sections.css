@@ -1564,3 +1564,16 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   color: white;
   background: var(--color-ink);
 }
+
+/* Mobile: hamburger doprava (přepnutí gridu na flex) */
+@media (max-width: 768px) {
+  .navbar__inner {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar__hamburger {
+    margin-left: auto;
+    order: 99;
+  }
+}
