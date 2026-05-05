@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-  <link rel="stylesheet" href="./src/styles/main.css?v=19">
+  <link rel="stylesheet" href="./src/styles/main.css?v=20">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 </head>
 <body>
@@ -498,64 +498,54 @@
     <section class="section">
       <div class="container container--tight">
         <div class="section-header reveal">
-          <span class="eyebrow eyebrow--center">Časté dotazy</span>
+          <span class="eyebrow eyebrow--center" data-i18n="pricing.faqEyebrow">Časté dotazy</span>
           <h2 data-i18n="pricing.faqHeading">Co se nás <em class="text-gradient">ptáte</em></h2>
         </div>
 
         <div class="faq-list">
           <details class="faq-item reveal">
             <summary>
-              <h3>Proč u Android telefonů nejsou ceny?</h3>
+              <h3 data-i18n="pricing.faq1q">Proč u Android telefonů nejsou ceny?</h3>
               <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
             </summary>
-            <div class="faq-item__content">
-              Android telefonů jsou stovky modelů a variant. Místo zavádějícího „od XX Kč"
+            <div class="faq-item__content" data-i18n="pricing.faq1a">Android telefonů jsou stovky modelů a variant. Místo zavádějícího „od XX Kč"
               raději pošleme přesnou cenu pro váš konkrétní model co nejdříve po vaší poptávce.
-              Stačí napsat značku, model a co se stalo.
-            </div>
+              Stačí napsat značku, model a co se stalo.</div>
           </details>
 
           <details class="faq-item reveal">
             <summary>
-              <h3>Co je v ceně opravy displeje?</h3>
+              <h3 data-i18n="pricing.faq2q">Co je v ceně opravy displeje?</h3>
               <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
             </summary>
-            <div class="faq-item__content">
-              Cena zahrnuje samotný displej, práci technika, kalibraci, test funkcí a 12měsíční záruku. Žádné skryté poplatky za rozebrání nebo „ekologii".
-            </div>
+            <div class="faq-item__content" data-i18n="pricing.faq2a">Cena zahrnuje samotný displej, práci technika, kalibraci, test funkcí a 12měsíční záruku. Žádné skryté poplatky za rozebrání nebo „ekologii".</div>
           </details>
 
           <details class="faq-item reveal">
             <summary>
-              <h3>Můžu si vybrat mezi originálem a alternativou?</h3>
+              <h3 data-i18n="pricing.faq3q">Můžu si vybrat mezi originálem a alternativou?</h3>
               <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
             </summary>
-            <div class="faq-item__content">
-              Samozřejmě. Standardně doporučujeme originální díly, ale pokud chcete ušetřit, ukážeme
+            <div class="faq-item__content" data-i18n="pricing.faq3a">Samozřejmě. Standardně doporučujeme originální díly, ale pokud chcete ušetřit, ukážeme
               vám konkrétní alternativy a popíšeme rozdíly (kvalita zobrazení, výdrž, kompatibilita
-              s funkcemi). Volba je vždy na vás.
-            </div>
+              s funkcemi). Volba je vždy na vás.</div>
           </details>
 
           <details class="faq-item reveal">
             <summary>
-              <h3>Účtujete poplatek za diagnostiku?</h3>
+              <h3 data-i18n="pricing.faq4q">Účtujete poplatek za diagnostiku?</h3>
               <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
             </summary>
-            <div class="faq-item__content">
-              Diagnostika je u nás vždy zdarma - i v případě, že se nakonec rozhodnete
-              zařízení neopravovat. Cenu opravy znáte před tím, než se cokoliv začne dělat.
-            </div>
+            <div class="faq-item__content" data-i18n="pricing.faq4a">Diagnostika je u nás vždy zdarma - i v případě, že se nakonec rozhodnete
+              zařízení neopravovat. Cenu opravy znáte před tím, než se cokoliv začne dělat.</div>
           </details>
 
           <details class="faq-item reveal">
             <summary>
-              <h3>Můžu zařízení poslat poštou?</h3>
+              <h3 data-i18n="pricing.faq5q">Můžu zařízení poslat poštou?</h3>
               <span class="faq-item__icon"><i class="ph ph-plus" weight="bold"></i></span>
             </summary>
-            <div class="faq-item__content">
-              Ano, můžete poslat kurýrem po celé ČR. Po přijetí pošleme potvrzení a pustíme se do diagnostiky. Zpět posíláme pojištěnou zásilkou.
-            </div>
+            <div class="faq-item__content" data-i18n="pricing.faq5a">Ano, můžete poslat kurýrem po celé ČR. Po přijetí pošleme potvrzení a pustíme se do diagnostiky. Zpět posíláme pojištěnou zásilkou.</div>
           </details>
         </div>
       </div>
@@ -661,7 +651,7 @@
   <script src="./src/scripts/magnetic.js" type="module"></script>
   <script src="./src/scripts/faq.js" type="module"></script>
   <script src="./src/scripts/cenik-filter.js" type="module"></script>
-  <script src="./src/scripts/cenik-modal.js?v=19" type="module"></script>
+  <script src="./src/scripts/cenik-modal.js?v=20" type="module"></script>
   <!-- Cookie banner -->
   <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Informace o cookies">
     <div class="cookie-banner__icon"><i class="ph ph-cookie" weight="fill"></i></div>
@@ -671,6 +661,6 @@
     <button type="button" class="cookie-banner__btn" data-cookie-accept data-i18n="cookie.btn">Rozumím</button>
   </div>
   <script src="./src/scripts/cookie-banner.js" type="module"></script>
-  <script src="./src/scripts/i18n.js?v=19" type="module"></script>
+  <script src="./src/scripts/i18n.js?v=20" type="module"></script>
 </body>
 </html>
