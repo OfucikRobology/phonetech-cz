@@ -478,3 +478,34 @@
   }
   .cookie-banner__btn { align-self: stretch; padding: 12px; }
 }
+
+/* ═══════════════════════════════════════════════
+   LANGUAGE SWITCHER (in announcement bar)
+═══════════════════════════════════════════════ */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(255,255,255,0.15);
+}
+.lang-switch__btn {
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.55);
+  padding: 4px 8px;
+  font: 600 11px var(--font-body);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: color 180ms ease, background 180ms ease;
+}
+.lang-switch__btn:hover { color: rgba(255,255,255,0.95); }
+.lang-switch__btn.lang-switch--active {
+  color: white;
+  background: rgba(255,255,255,0.1);
+}
+@media (max-width: 600px) {
+  .lang-switch__btn { padding: 4px 6px; font-size: 10px; }
+}
