@@ -25,6 +25,11 @@ body {
   position: relative;
   width: 100%;
 }
+/* Main element clip - reveal--from-left/right transforms slide content
+   40px ven z viewport před animací; tento clip zabrání bílému pruhu. */
+main {
+  overflow-x: clip;
+}
 
 body::before {
   content: '';
