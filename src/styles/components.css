@@ -307,8 +307,20 @@
 }
 
 .form-group--checkbox { flex-direction: row; align-items: flex-start; gap: 12px; }
-.form-group--checkbox input { width: 18px; height: 18px; margin-top: 4px; accent-color: var(--color-accent); }
-.form-group--checkbox label { font-weight: 400; color: var(--color-text-soft); font-size: var(--text-sm); line-height: 1.5; }
+.form-group--checkbox input[type="checkbox"] {
+  width: 20px; height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  padding: 0;
+  border: 1.5px solid var(--color-line-strong);
+  border-radius: 5px;
+  background: var(--color-surface);
+  accent-color: var(--color-accent);
+  -webkit-appearance: auto;
+  appearance: auto;
+  cursor: pointer;
+}
+.form-group--checkbox label { font-weight: 400; color: var(--color-text-soft); font-size: var(--text-sm); line-height: 1.5; cursor: pointer; }
 .form-group--checkbox label a { color: var(--color-accent); text-decoration: underline; }
 
 .form-error { font-size: var(--text-xs); color: var(--color-error); min-height: 16px; }

@@ -93,6 +93,8 @@ export const translations = {
       svcSellF2Li: '<i class="ph ph-check" weight="bold"></i> Výkup iPhonů i dalších značek',
       svcSellF3Li: '<i class="ph ph-check" weight="bold"></i> Protiúčet při koupi nového',
       svcSellF4Li: '<i class="ph ph-check" weight="bold"></i> Vyřízení na místě nebo online',
+      svcSellF5Li: '<i class="ph ph-check" weight="bold"></i> Garance kondice baterie 85%+',
+      svcSellF6Li: '<i class="ph ph-check" weight="bold"></i> Doprava zdarma nad 2000 Kč',
       // about photo quote on home
       aboutPhotoQuote: 'Pan Stoklasa a jeho přístup je pro mě příjemným zjištěním, že když budu potřebovat opravit telefon nebo počítač, mám se na koho obrátit a vím, že nešlápnu vedle. Ještě jednou děkuji za vstřícné a korektní jednání.',
       aboutPhotoCite: '- Luboš Širůček, věrný zákazník',
@@ -792,6 +794,8 @@ export const translations = {
       svcSellF2Li: '<i class="ph ph-check" weight="bold"></i> Trade-in of iPhones &amp; other brands',
       svcSellF3Li: '<i class="ph ph-check" weight="bold"></i> Credit when buying a new device',
       svcSellF4Li: '<i class="ph ph-check" weight="bold"></i> Handled in person or online',
+      svcSellF5Li: '<i class="ph ph-check" weight="bold"></i> Battery health 85%+ guarantee',
+      svcSellF6Li: '<i class="ph ph-check" weight="bold"></i> Free shipping over 2000 CZK',
       // about photo quote on home
       aboutPhotoQuote: 'Mr. Stoklasa and his approach reassure me that whenever I need to fix a phone or computer, I have someone reliable to turn to. Thanks again for the friendly, professional service.',
       aboutPhotoCite: '- Luboš Širůček, loyal customer',
