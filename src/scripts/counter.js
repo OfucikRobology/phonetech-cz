@@ -8,6 +8,13 @@ const animateCounter = (el) => {
   const start = performance.now();
   const isInteger = target % 1 === 0;
 
+  // Reserve final width to prevent layout shift during count
+  const finalText = isInteger ? String(target) : target.toFixed(1);
+  el.style.minWidth = `${finalText.length}ch`;
+  el.style.display = 'inline-block';
+  el.style.textAlign = 'left';
+  el.style.fontVariantNumeric = 'tabular-nums';
+
   const update = (now) => {
     const elapsed = now - start;
     const progress = Math.min(elapsed / duration, 1);
