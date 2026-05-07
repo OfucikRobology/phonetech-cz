@@ -347,11 +347,11 @@ export const translations = {
       galleryEyebrow: 'Fotky z&nbsp;dílny',
       galleryHeading: 'Kde se&nbsp;<em class="text-gradient">odehrává</em>&nbsp;ta&nbsp;pečlivá&nbsp;práce',
       // big quote
-      bigQuote: 'Mám raději poctivou opravu za rozumnou cenu než prodaný nový telefon. Když to zní jako byznys plán, je to spíš vyznání.',
+      bigQuote: 'Mám raději poctivou opravu za rozumnou cenu než prodaný nový telefon. I když to zní jako byznys plán, je to spíš vyznání.',
       bigQuoteCite: '- Tomáš Stoklasa, zakladatel PhoneTech',
       // timeline
       tlEyebrow: 'Naše cesta',
-      tlHeading: 'Milníky, kterými jsme <em class="text-accent">prošli</em>',
+      tlHeading: 'Milníky, kterými jsme si <em class="text-accent">prošli</em>',
       tl1Year: '2020',
       tl1Title: 'Začátek',
       tl1Text: 'Dílna v podkroví v Jarošově nad Nežárkou.',
@@ -372,7 +372,7 @@ export const translations = {
       stat3Label: 'Pobočky',
       stat4Label: 'Google recenze',
       // next CTA
-      ctaHeading: 'Zanechte nám&nbsp;zařízení <em>v&nbsp;dobrých&nbsp;rukou</em>',
+      ctaHeading: 'Zanechte zařízení <em>v&nbsp;dobrých&nbsp;rukou</em>',
       ctaText: 'Poctivě, rychle, se zárukou. Napište nebo přijďte - rádi vám pomůžeme.',
       ctaBtn1: 'Kontakt &amp; poptávka',
       ctaBtn2: 'Co o&nbsp;nás říkají',
@@ -381,7 +381,7 @@ export const translations = {
     reviews: {
       breadcrumb: 'Recenze',
       title: 'Důvěra, která se <em>zaslouží</em>.<br>Ne slibuje.',
-      desc: 'Přes 200 ověřených recenzí na Google s průměrem 5.0. Každá hvězda znamená jednoho spokojeného zákazníka - a jednu poctivě provedenou opravu.',
+      desc: 'Přes 200 ověřených recenzí na Google s průměrem 5.0. Každá hvězda znamená minimálně jednoho spokojeného zákazníka.',
       tag: '200+ recenzí · 5.0★',
       summaryLabel: 'Průměrné hodnocení na',
       summaryReviews: '200+ recenzí',
