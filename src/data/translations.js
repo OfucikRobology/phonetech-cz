@@ -336,7 +336,7 @@ export const translations = {
       val2Title: 'Transparentní ceny',
       val2Text: 'Cena, kterou vám řekneme před opravou, je cena, kterou zaplatíte. Žádné „nečekané" dodatečné poplatky, žádné drobné písmo.',
       val3Title: 'Kvalitní díly',
-      val3Text: 'Primárně originální díly a OEM komponenty. Pokud hledáte úsporu, nabídneme prověřené alternativy - vždy s popisem rozdílů.',
+      val3Text: 'Primárně originální díly a PREMIUM komponenty. Pokud hledáte úsporu, nabídneme prověřené alternativy - vždy s popisem rozdílů.',
       val4Title: 'Záruka, která něco znamená',
       val4Text: '12 měsíců na díly i na práci. Když se něco pokazí, napravíme to bez otázek. Stačí donést opravené zařízení a fakturu.',
       val5Title: 'Komunikace',
