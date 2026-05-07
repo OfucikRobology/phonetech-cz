@@ -9,9 +9,6 @@ const selectors = [
 ];
 
 // threshold: 0 - spustí se hned jak vrchol elementu vstoupí do viewportu
-// (předtím 0.12 znamenalo 12% velikosti elementu, což pro velmi
-// velké elementy jako .stagger device-grid (6900px) znamenalo, že
-// se nikdy nezobrazí na mobilech protože 12% > výška viewportu).
 // rootMargin -60px aby se animace spustila krátce před tím, než
 // element zcela vplul do viewportu.
 const observer = new IntersectionObserver(
@@ -26,7 +23,25 @@ const observer = new IntersectionObserver(
   { threshold: 0, rootMargin: '0px 0px -60px 0px' }
 );
 
-document.querySelectorAll(selectors.join(',')).forEach((el) => observer.observe(el));
+const allTargets = document.querySelectorAll(selectors.join(','));
+allTargets.forEach((el) => observer.observe(el));
+
+// Safety net: po krátkém delay zkontroluj, jestli některé elementy
+// neměly trigger (bug v iOS Safari nebo jiný edge case). Pokud je
+// element částečně viditelný a stále nemá .is-visible, force-add ho.
+const safetyCheck = () => {
+  const winH = window.innerHeight;
+  allTargets.forEach((el) => {
+    if (el.classList.contains('is-visible')) return;
+    const r = el.getBoundingClientRect();
+    if (r.top < winH && r.bottom > 0) {
+      el.classList.add('is-visible');
+      observer.unobserve(el);
+    }
+  });
+};
+window.addEventListener('load', () => setTimeout(safetyCheck, 800));
+window.addEventListener('scroll', safetyCheck, { passive: true });
 
 // Scroll progress bar
 const progress = document.getElementById('scroll-progress');
