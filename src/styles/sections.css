@@ -16,12 +16,15 @@
   will-change: transform;
 }
 .announcement-bar__inner {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: var(--space-4);
   width: 100%;
 }
+.announcement-bar__inner > :nth-child(1) { justify-self: start; }
+.announcement-bar__inner > .announcement-bar__hours { justify-self: center; }
+.announcement-bar__inner > .announcement-bar__right { justify-self: end; }
 .announcement-bar__inner span { display: inline-flex; align-items: center; gap: 8px; }
 .announcement-bar__inner strong { color: white; font-weight: 600; }
 .announcement-bar i { color: var(--color-accent); font-size: 14px; }
