@@ -330,7 +330,7 @@ export const translations = {
       storyQuoteAuthor: '- Tomáš Stoklasa, zakladatel',
       // values
       valuesEyebrow: 'Naše hodnoty',
-      valuesHeading: 'Jak&nbsp;<em class="text-gradient">přemýšlíme</em>&nbsp;o&nbsp;servisu',
+      valuesHeading: 'Jak <em class="text-gradient">přemýšlíme</em> o servisu',
       valuesDesc: 'Šest principů, kterými se řídíme každý den.',
       val1Title: 'Osobní přístup',
       val1Text: 'Každý zákazník dostává osobní péči. Víme, že telefon je dnes víc než nástroj - je to paměť, adresář a brána k blízkým. Zachází se s ním tak.',
@@ -1018,7 +1018,7 @@ export const translations = {
       storyQuote: 'A phone is a personal thing. We treat it like one.',
       storyQuoteAuthor: '- Tomáš Stoklasa, founder',
       valuesEyebrow: 'Our values',
-      valuesHeading: 'How we&nbsp;<em class="text-gradient">think</em>&nbsp;about&nbsp;service',
+      valuesHeading: 'How we <em class="text-gradient">think</em> about service',
       valuesDesc: 'Six principles we follow every day.',
       val1Title: 'Personal approach',
       val1Text: 'Every customer gets personal care. We know a phone today is more than a tool - it\'s memory, contacts and a gateway to loved ones. We treat it that way.',
