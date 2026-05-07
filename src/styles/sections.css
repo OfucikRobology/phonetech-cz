@@ -1551,7 +1551,9 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   .hero__visual { display: none; } /* Skryjeme image rámeček, floating-cards není potřeba na mobilu */
 
   /* Hero search box - prevent overflow */
-  .search-box__input { font-size: 14px; }
+  /* iOS Safari zoomuje když font-size < 16px na input. Použijeme 16px
+     a kompenzujeme paddingem aby vizuálně zůstalo menší. */
+  .search-box__input { font-size: 16px; }
   .search-box { padding-right: 8px; }
 
   /* Page-hero subpage - menší font + kratší padding */

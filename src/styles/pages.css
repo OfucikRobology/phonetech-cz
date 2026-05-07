@@ -965,9 +965,27 @@
   padding: var(--space-3) var(--space-7);
   list-style: none;
   margin: 0;
+  /* Vždy viditelný scrollbar (i na mobilech) - vizuální nudge */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
+  /* Spodní gradient mask pro indikaci že je víc obsahu pod foldem */
+  -webkit-mask-image: linear-gradient(180deg, black 0%, black 90%, transparent 100%);
+          mask-image: linear-gradient(180deg, black 0%, black 90%, transparent 100%);
 }
-.modal__body::-webkit-scrollbar { width: 6px; }
-.modal__body::-webkit-scrollbar-thumb { background: var(--color-line-strong); border-radius: 3px; }
+.modal__body::-webkit-scrollbar {
+  width: 8px;
+  -webkit-appearance: auto;
+}
+.modal__body::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 4px;
+}
+.modal__body::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.modal__body::-webkit-scrollbar-thumb:hover { background: var(--color-accent-deep); }
 
 .repair-item {
   display: grid;
