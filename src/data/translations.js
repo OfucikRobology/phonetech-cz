@@ -285,7 +285,7 @@ export const translations = {
       breadcrumb: 'Ceník',
       title: 'Ceník<br><em>oprav iPhone</em>.',
       desc: 'Vyberte svůj model a obratem vám pošleme přesnou cenu opravy. Originální díly, 12 měsíců záruka. Pro Android a další zařízení nás prosím kontaktujte přímo.',
-      tag: 'Top ceny a rychlost',
+      tag: 'Apple servis od 2020',
       eyebrow: 'Apple',
       heading: 'Vyberte svůj <em class="text-gradient">iPhone</em>',
       searchPh: 'Najít model: iPhone 15 Pro, iPhone 13, iPhone 12 Mini…',
@@ -309,7 +309,7 @@ export const translations = {
       modalNote: 'Většinu dílů na iPhony máme skladem - oprava na počkání.',
       modalCta: 'Objednat opravu',
       getCenu: 'Získat cenu',
-      modalSubtitle: 'Apple · ceny za servis',
+      modalSubtitle: 'Pro další opravy skroluj dolů',
     },
     // About
     about: {
@@ -974,7 +974,7 @@ export const translations = {
       breadcrumb: 'Pricing',
       title: 'iPhone<br><em>repair pricing</em>.',
       desc: 'Pick your model and we\'ll send you the exact repair price. Original parts, 12-month warranty. For Android and other devices please contact us directly.',
-      tag: 'Top prices and speed',
+      tag: 'Apple service since 2020',
       eyebrow: 'Apple',
       heading: 'Pick your <em class="text-gradient">iPhone</em>',
       searchPh: 'Find model: iPhone 15 Pro, iPhone 13, iPhone 12 Mini…',
@@ -998,7 +998,7 @@ export const translations = {
       modalNote: 'Most iPhone parts in stock - same-day repair.',
       modalCta: 'Order repair',
       getCenu: 'Get price',
-      modalSubtitle: 'Apple · service pricing',
+      modalSubtitle: 'Scroll down for more repairs',
     },
     about: {
       breadcrumb: 'About',

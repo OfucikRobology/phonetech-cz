@@ -1,4 +1,4 @@
-import { getDevice, getServicesForDevice, formatPrice } from '../data/pricing.js?v=23';
+import { getDevice, getServicesForDevice, formatPrice } from '../data/pricing.js?v=46';
 
 // Mini i18n pro dynamicky generovaný obsah modalu (cs default, en variant)
 const LBL_EN = {
@@ -17,15 +17,15 @@ const LBL_EN = {
   other: 'Other repairs',
 };
 const STR_EN = {
-  subtitleYear: (y) => `Apple · ${y} · service pricing`,
-  subtitleNoYear: 'Apple · service pricing',
+  subtitleYear: () => 'Scroll down for more repairs',
+  subtitleNoYear: 'Scroll down for more repairs',
   fallback: 'Device',
   byArrangement: 'By arrangement',
   onRequest: 'Price on request',
 };
 const STR_CS = {
-  subtitleYear: (y) => `Apple · ${y} · ceny za servis`,
-  subtitleNoYear: 'Apple · ceny za servis',
+  subtitleYear: () => 'Pro další opravy skroluj dolů',
+  subtitleNoYear: 'Pro další opravy skroluj dolů',
   fallback: 'Zařízení',
   byArrangement: 'Dle dohody',
   onRequest: 'Cena na dotaz',
