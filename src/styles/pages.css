@@ -327,8 +327,14 @@
   text-align: center;
   margin-bottom: var(--space-12);
 }
+.reviews-summary__google {
+  display: block;
+  margin: 0 auto var(--space-5);
+  height: clamp(40px, 5vw, 64px);
+  width: auto;
+}
 .reviews-summary__score {
-  font: 800 clamp(80px, 10vw, 140px) var(--font-display);
+  font: 800 clamp(72px, 10vw, 140px) var(--font-display);
   color: var(--color-accent);
   line-height: 0.9;
   letter-spacing: var(--tracking-tightest);
