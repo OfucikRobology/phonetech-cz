@@ -738,6 +738,8 @@ export const translations = {
       branchesHeading: 'Branches',
       hours: '<i class="ph ph-clock"></i> Opening hours: By phone arrangement',
       hoursTxt: 'Opening hours: By phone arrangement',
+      hoursLabel: 'Opening hours:',
+      hoursValue: 'By phone arrangement',
       copy: '© 2026 PhoneTech - Tomáš Stoklasa · ID: 19065477. All rights reserved.',
       privacy: 'Privacy policy',
       ctaBtn: 'Get a quote',
