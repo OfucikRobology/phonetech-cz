@@ -43,6 +43,7 @@ export const translations = {
       text: 'Tento web používá pouze nezbytné cookies pro správné fungování. Více v sekci <a href="./gdpr.html">Ochrana osobních údajů</a>.',
       textNested: 'Tento web používá pouze nezbytné cookies pro správné fungování. Více v sekci <a href="../gdpr.html">Ochrana osobních údajů</a>.',
       btn: 'Rozumím',
+      btnReject: 'Odmítnout',
     },
     // Home / hero
     home: {
@@ -748,6 +749,7 @@ export const translations = {
       text: 'This site uses only essential cookies for proper functioning. More in <a href="./gdpr.html">Privacy policy</a>.',
       textNested: 'This site uses only essential cookies for proper functioning. More in <a href="../gdpr.html">Privacy policy</a>.',
       btn: 'Got it',
+      btnReject: 'Reject',
     },
     home: {
       title: 'Your device <em class="text-gradient">in safe hands</em>.',

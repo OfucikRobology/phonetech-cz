@@ -521,3 +521,27 @@
 @media (max-width: 600px) {
   .lang-switch__btn { padding: 4px 6px; font-size: 10px; }
 }
+
+/* Cookie banner - reject button + actions wrapper */
+.cookie-banner__actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+.cookie-banner__btn--ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.65);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.cookie-banner__btn--ghost:hover {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.95);
+  transform: translateY(-1px);
+}
+@media (max-width: 600px) {
+  .cookie-banner__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  .cookie-banner__btn { padding: 12px; }
+}
