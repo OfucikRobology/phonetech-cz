@@ -20,6 +20,13 @@ if (form) {
   const formSuccess = document.getElementById('form-success');
   const formErrorGlobal = document.getElementById('form-error-global');
 
+  // Accept various Czech phone formats: +420 123 456 789, 00420123456789,
+  // 123 456 789, 123456789, with/without spaces/dashes/parens.
+  const isValidPhone = (raw) => {
+    const cleaned = raw.replace(/[\s\-().]/g, '');
+    return /^(\+420|00420)?\d{9}$/.test(cleaned);
+  };
+
   const validate = () => {
     let isValid = true;
     form.querySelectorAll('[required]').forEach((field) => {
@@ -32,6 +39,10 @@ if (form) {
       } else if (field.type === 'email' && !/\S+@\S+\.\S+/.test(field.value)) {
         field.classList.add('error');
         if (errorEl) errorEl.textContent = 'Zadejte platný e-mail.';
+        isValid = false;
+      } else if (field.type === 'tel' && !isValidPhone(field.value)) {
+        field.classList.add('error');
+        if (errorEl) errorEl.textContent = 'Zadejte platné telefonní číslo (9 číslic, +420 volitelné).';
         isValid = false;
       } else {
         field.classList.remove('error');
