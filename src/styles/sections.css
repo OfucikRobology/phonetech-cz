@@ -832,13 +832,14 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
 .stat-card:hover { background: var(--color-accent-faint); }
 .stat-card__number {
   display: block;
-  font: 800 clamp(40px, 4.5vw, 60px) var(--font-display);
+  font: 800 clamp(36px, 4.5vw, 60px) var(--font-display);
   color: var(--color-ink);
   letter-spacing: var(--tracking-tightest);
   line-height: 0.95;
   margin-bottom: var(--space-2);
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum" 1, "lnum" 1;
+  white-space: nowrap;
 }
 .stat-card__number .counter {
   display: inline-block;

@@ -8,11 +8,13 @@ const animateCounter = (el) => {
   const start = performance.now();
   const isInteger = target % 1 === 0;
 
-  // Reserve final width to prevent layout shift during count
+  // Reserve final width to prevent layout shift during count.
+  // display: inline-flex spolu s min-width zaručí, že:
+  // 1. Counter má rezervovanou šířku finálního textu (žádný skok)
+  // 2. Sourozenci v rodiči (např. "+") zůstanou na stejném řádku
   const finalText = isInteger ? String(target) : target.toFixed(1);
   el.style.minWidth = `${finalText.length}ch`;
   el.style.display = 'inline-block';
-  el.style.textAlign = 'left';
   el.style.fontVariantNumeric = 'tabular-nums';
 
   const update = (now) => {
