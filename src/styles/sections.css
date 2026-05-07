@@ -251,7 +251,10 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   padding-top: calc(76px + 38px + var(--space-7));
   padding-bottom: var(--space-10);
   position: relative;
-  overflow: hidden;
+  /* clip horizontálně (bg-blob přesahuje), ale vertikálně visible
+     aby search-results dropdown mohl jít pod hero sekci */
+  overflow-x: clip;
+  overflow-y: visible;
   background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-warm) 100%);
 }
 .hero__bg-blob {
