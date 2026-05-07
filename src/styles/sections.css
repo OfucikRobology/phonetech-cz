@@ -1128,6 +1128,14 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   font: 400 var(--text-sm) var(--font-body);
   color: rgba(255,255,255,.6);
   flex-wrap: wrap;
+  text-align: center;
+}
+.testimonials-section__rating > * { flex: 0 0 auto; }
+@media (max-width: 600px) {
+  .testimonials-section__rating {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
 }
 .stars { color: var(--color-accent); font-size: 20px; letter-spacing: 2px; }
 
