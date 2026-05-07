@@ -62,7 +62,7 @@ export const translations = {
       // services section
       svcEyebrow: 'Naše služby',
       svcHeading: 'Co pro vás <em class="text-gradient">uděláme</em>',
-      svcDesc: 'Ať potřebujete rychlou opravu nebo výhodnou výměnu zařízení, jsme tu pro vás.',
+      svcDesc: 'Ať potřebujete rychlou opravu nebo výhodnou výměnu zařízení, jsme tu pro&nbsp;vás.',
       svcRepairTag: 'Nejpopulárnější',
       svcRepairSubtitle: 'Servis &amp; opravy',
       svcRepairTitle: 'Servis mobilů, notebooků a elektroniky',
