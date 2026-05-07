@@ -306,7 +306,7 @@ export const translations = {
       faq5a: 'Ano, můžete poslat kurýrem po celé ČR. Po přijetí pošleme potvrzení a pustíme se do diagnostiky. Zpět posíláme pojištěnou zásilkou.',
       ctaHeading: 'Nenašli jste svůj <em>model?</em>',
       ctaText: 'Napište nám značku, model a co se stalo - cenu pošleme co nejdříve.',
-      modalNote: 'Většinu dílů na iPhone máme skladem - oprava na počkání.',
+      modalNote: 'Většinu dílů na iPhony máme skladem - oprava na počkání.',
       modalCta: 'Objednat opravu',
       getCenu: 'Získat cenu',
       modalSubtitle: 'Apple · ceny za servis',
