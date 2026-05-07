@@ -13,7 +13,8 @@ if (input && results) {
     if (!items.length) {
       results.innerHTML = `<div class="search-results__empty">Žádný iPhone neodpovídá. <a href="./kontakt.html">Kontaktujte nás</a> - opravujeme i Android a další zařízení.</div>`;
     } else {
-      results.innerHTML = items.slice(0, 8).map((d) => {
+      const moreCount = Math.max(0, items.length - 5);
+      results.innerHTML = items.slice(0, 5).map((d) => {
         const list = getServicesForDevice(d.id);
         const displayOg = list.find((s) => s.id === 'display_original');
         const priceText = displayOg ? formatPrice(displayOg.price) : 'Cena na dotaz';
@@ -29,7 +30,9 @@ if (input && results) {
             <i class="ph ph-arrow-right search-results__arrow"></i>
           </a>
         `;
-      }).join('');
+      }).join('') + (moreCount > 0
+        ? `<a href="./cenik.html" class="search-results__more">Zobrazit dalších ${moreCount} <i class="ph ph-arrow-right"></i></a>`
+        : '');
     }
     results.removeAttribute('hidden');
   };
