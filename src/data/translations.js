@@ -105,7 +105,7 @@ export const translations = {
       proc1Title: 'Nezávazná poptávka',
       proc1Text: 'Napište nám model a co se stalo. Co nejrychleji zašleme odhad ceny a termínu.',
       proc2Title: 'Přineste nebo pošlete',
-      proc2Text: 'Osobně na pobočku v J. Hradci či Praze, nebo pošlete přes kurýra.',
+      proc2Text: 'Osobně na pobočku v Jindřichově Hradci či Praze, nebo pošlete přes kurýra.',
       proc3Title: 'Oprava se zárukou',
       proc3Text: 'Diagnostika, oprava s originálními díly a testování.',
       proc4Title: 'Vyzvednutí zpět',
