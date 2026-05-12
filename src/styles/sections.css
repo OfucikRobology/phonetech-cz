@@ -1430,10 +1430,13 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
 ═══════════════════════════════════════════════ */
 @media (max-width: 1200px) {
   .hero__title { font-size: clamp(44px, 7vw, 88px); }
-  .floating-card--tl { left: -4%; }
-  .floating-card--tr { right: -6%; }
-  .floating-card--bl { left: -2%; }
-  .floating-stat { left: -16px; bottom: -24px; }
+  /* Na užších laptop displejích (XPS 1280px atd.) ať floating cards
+     zůstanou uvnitř hero containeru, neuříznou se. */
+  .floating-card--tl { left: 0; }
+  .floating-card--tr { right: 0; }
+  .floating-card--bl { left: 0; }
+  .floating-card--br { right: 0; }
+  .floating-stat { left: 0; bottom: -16px; }
 }
 
 @media (max-width: 1024px) {
