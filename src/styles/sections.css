@@ -1508,6 +1508,11 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   .about-photo__badge { right: 0; }
 
   .section-header { text-align: center; }
+  .section-header .eyebrow { justify-content: center; display: inline-flex; }
+  .section-header .section-description,
+  .section-header p { text-align: center; }
+  .why-section .section-header { text-align: center; }
+  .why-section .section-header .section-description { text-align: center; margin-left: auto; margin-right: auto; }
 }
 
 @media (max-width: 480px) {
