@@ -40,8 +40,8 @@ export const translations = {
     },
     // Cookie banner
     cookie: {
-      text: 'Tento web používá pouze nezbytné cookies pro správné fungování. Více v sekci <a href="./gdpr.html">Ochrana osobních údajů</a>.',
-      textNested: 'Tento web používá pouze nezbytné cookies pro správné fungování. Více v sekci <a href="../gdpr.html">Ochrana osobních údajů</a>.',
+      text: 'Tento web používá pouze nezbytné cookies pro správné fungování.',
+      textNested: 'Tento web používá pouze nezbytné cookies pro správné fungování.',
       btn: 'Rozumím',
       btnReject: 'Odmítnout',
     },
@@ -746,8 +746,8 @@ export const translations = {
       ctaBtn: 'Get a quote',
     },
     cookie: {
-      text: 'This site uses only essential cookies for proper functioning. More in <a href="./gdpr.html">Privacy policy</a>.',
-      textNested: 'This site uses only essential cookies for proper functioning. More in <a href="../gdpr.html">Privacy policy</a>.',
+      text: 'This site uses only essential cookies for proper functioning.',
+      textNested: 'This site uses only essential cookies for proper functioning.',
       btn: 'Got it',
       btnReject: 'Reject',
     },
