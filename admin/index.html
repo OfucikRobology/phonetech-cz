@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PhoneTech CMS</title>
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <!-- Explicit config path (Vercel stripá trailing slash z /admin/ → /admin,
+       což by jinak Decap nutilo hledat config.yml v rootu) -->
+  <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url">
 </head>
 <body>
   <!-- Decap CMS skript -->
