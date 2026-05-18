@@ -310,7 +310,7 @@ export const translations = {
       modalNote: 'Většinu dílů na iPhony máme skladem - oprava na počkání.',
       modalCta: 'Objednat opravu',
       getCenu: 'Získat cenu',
-      modalSubtitle: 'Pro další opravy skroluj dolů',
+      modalSubtitle: 'Pro další opravy skrolujte dolů',
     },
     // About
     about: {

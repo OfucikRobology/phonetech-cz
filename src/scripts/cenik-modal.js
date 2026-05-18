@@ -24,8 +24,8 @@ const STR_EN = {
   onRequest: 'Price on request',
 };
 const STR_CS = {
-  subtitleYear: () => 'Pro další opravy skroluj dolů',
-  subtitleNoYear: 'Pro další opravy skroluj dolů',
+  subtitleYear: () => 'Pro další opravy skrolujte dolů',
+  subtitleNoYear: 'Pro další opravy skrolujte dolů',
   fallback: 'Zařízení',
   byArrangement: 'Dle dohody',
   onRequest: 'Cena na dotaz',
