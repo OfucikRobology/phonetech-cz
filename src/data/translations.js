@@ -114,7 +114,7 @@ export const translations = {
       // why us
       whyEyebrow: 'Proč si nás vybrat',
       whyHeading: 'Kvalita, kterou <em class="text-gradient">poznáte</em>',
-      whyDesc: 'Osobní přístup, kvalita, férové ceny, rychlost a 12 měsíců záruka. To není marketing - to je u nás standard.',
+      whyDesc: 'Osobní přístup, kvalita, férové ceny, rychlost a 12 měsíců záruka.<br>To není marketing - to je u nás standard.',
       whyStat1: 'Dokončených oprav',
       whyStat2: 'Záruka na práci',
       whyStat3: 'Pobočky v ČR',
