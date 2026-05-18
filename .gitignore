@@ -9,11 +9,11 @@
 *.swo
 *~
 
-# Node (defensive — projekt zatím nepoužívá npm)
+# Node
 node_modules/
 npm-debug.log
 yarn-error.log
-package-lock.json
+# package-lock.json se commituje pro reprodukovatelný build na Vercelu
 
 # Vercel
 .vercel

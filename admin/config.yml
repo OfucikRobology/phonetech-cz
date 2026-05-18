@@ -1,0 +1,72 @@
+# ──────────────────────────────────────────────────────────────
+#  PhoneTech CMS — konfigurace
+# ──────────────────────────────────────────────────────────────
+#  Editor: https://phonetech.cz/admin/
+#  Obsah: ukládá se jako Markdown do /content/blog/
+#  Po publish: Vercel automaticky redeployuje web (~30s)
+# ──────────────────────────────────────────────────────────────
+
+backend:
+  name: github
+  repo: OfucikRobology/phonetech-cz
+  branch: main
+  base_url: https://phonetech.cz       # vlastní OAuth proxy
+  auth_endpoint: api/auth
+
+# Kam Decap nahrává obrázky uploadnuté z editoru
+media_folder: "images/blog/uploads"
+public_folder: "/images/blog/uploads"
+
+# Lokalizace editoru
+locale: 'cs'
+
+# Logo v editoru
+logo_url: https://phonetech.cz/images/phonetech-logo.svg
+
+# Site URL pro náhled
+site_url: https://phonetech.cz
+display_url: https://phonetech.cz
+
+collections:
+  # ── BLOG ČLÁNKY ──────────────────────────────────────────
+  - name: "blog"
+    label: "Blog články"
+    label_singular: "Článek"
+    folder: "content/blog"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}} ({{date | date('DD.MM.YYYY')}})"
+    sortable_fields: ['date', 'title']
+    view_filters:
+      - label: "Návody"
+        field: category
+        pattern: "Návody"
+      - label: "Údržba"
+        field: category
+        pattern: "Údržba"
+      - label: "První pomoc"
+        field: category
+        pattern: "První pomoc"
+    fields:
+      - {label: "Titulek", name: "title", widget: "string", hint: "Hlavní nadpis článku"}
+      - {label: "Datum publikace", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false}
+      - label: "Kategorie"
+        name: "category"
+        widget: "select"
+        options: ["Návody", "Údržba", "První pomoc", "Tipy", "Novinky"]
+        default: "Návody"
+      - {label: "Doba čtení (minuty)", name: "readTime", widget: "number", default: 5, min: 1, max: 30}
+      - {label: "Náhledový obrázek", name: "thumbnail", widget: "image", hint: "Doporučený rozměr: 1200×800px"}
+      - {label: "Alt text obrázku", name: "thumbnailAlt", widget: "string", required: false, hint: "Krátký popis obrázku pro přístupnost"}
+      - {label: "Perex (krátký popis)", name: "excerpt", widget: "text", hint: "2-3 věty, zobrazuje se v náhledu článku"}
+      - {label: "Doporučený článek", name: "featured", widget: "boolean", default: false, hint: "Pokud zapnuto, článek se zobrazí jako hlavní"}
+      - {label: "Autor", name: "author", widget: "string", default: "PhoneTech"}
+      - label: "Obsah článku"
+        name: "body"
+        widget: "markdown"
+        hint: "Hlavní text. Můžete používat nadpisy, odkazy, obrázky, seznamy."
+        buttons: ['bold', 'italic', 'code', 'link', 'heading-two', 'heading-three', 'quote', 'bulleted-list', 'numbered-list']
+        editor_components: ['image', 'code-block']
