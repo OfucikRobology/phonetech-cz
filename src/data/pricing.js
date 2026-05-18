@@ -10,7 +10,7 @@ export const services = [
   { id: 'rear_camera',       group: 'camera',   label: 'Výměna zadní kamery',       icon: 'ph-camera' },
   { id: 'back_glass',        group: 'parts',    label: 'Výměna zadního skla',       icon: 'ph-square' },
   { id: 'face_id',           group: 'parts',    label: 'Oprava Face ID',            icon: 'ph-scan' },
-  { id: 'tempered_premium',  group: 'glass',    label: 'Nalepení tvrzeného skla',   variant: 'PREMIUM',  icon: 'ph-shield-check' },
+  { id: 'tempered_premium',  group: 'glass',    label: 'Nalepení tvrzeného skla',   icon: 'ph-shield-check' },
   { id: 'screen_protector',  group: 'glass',    label: 'Nalepení ochranné fólie',   icon: 'ph-sticker' },
   { id: 'other',             group: 'other',    label: 'Ostatní opravy',            icon: 'ph-gear-six' },
 ];
