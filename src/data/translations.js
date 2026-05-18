@@ -279,7 +279,7 @@ export const translations = {
       faq8q: 'Vykupujete staré telefony?',
       faq8a: 'Ano, nabízíme výkup hlavně iPhonů. Cenu stanovíme po prohlédnutí. Můžete využít i protiúčet při koupi jiného zařízení z naší nabídky na eshopu KupFoun.',
       faq9q: 'Přijdu o data při opravě?',
-      faq9a: 'Za data neručíme, proto doporučujeme si před opravou zálohovat. Při standardních opravách (displej, baterie, konektor) ale zůstává software bez dotyku - data jsou naprosto v pořádku. Pokud si nejste jisti, rádi vám s zálohou poradíme.',
+      faq9a: 'Za data neručíme, proto doporučujeme si před opravou zálohovat. Při standardních opravách (displej, baterie, konektor) ale zůstává software bez dotyku - data jsou naprosto v pořádku. Pokud si nejste jisti, rádi vám se zálohou poradíme.',
     },
     // Pricing
     pricing: {
