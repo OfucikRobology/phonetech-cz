@@ -505,7 +505,7 @@ export const translations = {
     blog: {
       breadcrumb: 'Blog',
       title: 'Návody a tipy<br><em>z naší dílny</em>.',
-      desc: 'Praktické články o opravách, údržbě a výběru správných dílů. Sdílíme to, co se za roky práce naučili - bez marketingových frází.',
+      desc: 'Praktické články o opravách, údržbě a výběru správných dílů. Sdílíme to, co jsme se za roky práce naučili - bez marketingových frází.',
       tag: 'Tipy &amp; návody',
       // Featured article
       featBadge: 'Doporučujeme',
