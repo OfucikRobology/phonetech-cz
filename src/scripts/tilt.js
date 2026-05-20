@@ -17,6 +17,12 @@ if (matchMedia('(hover: hover)').matches) {
         raf = requestAnimationFrame(step);
       } else {
         raf = 0;
+        // Pokud cíl je identity (po mouseleave), vyčisti inline transform,
+        // ať CSS :hover { transform: translateY(-6px) } může znovu fungovat
+        // při následujících hoverech bez kurzorového pohybu.
+        if (target.rx === 0 && target.ry === 0) {
+          el.style.transform = '';
+        }
       }
     };
 
