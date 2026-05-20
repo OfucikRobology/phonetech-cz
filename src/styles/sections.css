@@ -636,10 +636,6 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
   scrollbar-color: var(--color-line-strong) transparent;
-  /* Spodní gradient fade - indikace že je víc obsahu pod foldem
-     (stejně jako v ceník modal) */
-  -webkit-mask-image: linear-gradient(180deg, black 0%, black 88%, transparent 100%);
-          mask-image: linear-gradient(180deg, black 0%, black 88%, transparent 100%);
 }
 .search-results::-webkit-scrollbar { width: 6px; }
 .search-results::-webkit-scrollbar-track { background: transparent; }
