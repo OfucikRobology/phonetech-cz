@@ -170,10 +170,17 @@
             <form
               class="contact-form"
               id="contact-form"
-              action="https://formspree.io/f/VÁŠE-FORMSPREE-ID"
+              action="https://api.web3forms.com/submit"
               method="POST"
               novalidate
             >
+              <!-- Web3Forms config -->
+              <input type="hidden" name="access_key" value="1057aaef-e76e-4f73-9c4e-33bc9836984b">
+              <input type="hidden" name="subject" value="Nová poptávka z phonetech.cz">
+              <input type="hidden" name="from_name" value="PhoneTech web">
+              <!-- Honeypot proti spam botům (musí zůstat prázdné) -->
+              <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
               <div class="form-row">
                 <div class="form-group">
                   <label for="name" data-i18n="contact.lblNameReq">Jméno a příjmení <span aria-hidden="true">*</span></label>
@@ -380,7 +387,7 @@
   </footer><script src="./src/scripts/navbar.js" type="module"></script>
   <script src="./src/scripts/animations.js?v=55" type="module"></script>
   <script src="./src/scripts/counter.js?v=42" type="module"></script>
-  <script src="./src/scripts/form.js?v=50" type="module"></script>
+  <script src="./src/scripts/form.js?v=51" type="module"></script>
   <script src="./src/scripts/magnetic.js" type="module"></script>
   <!-- Cookie banner -->
   <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Informace o cookies">

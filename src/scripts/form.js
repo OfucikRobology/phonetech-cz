@@ -77,32 +77,21 @@ if (form) {
     if (formErrorGlobal) formErrorGlobal.hidden = true;
 
     try {
-      const action = form.action || '';
-      const isFormspree = action.includes('formspree.io');
-
-      if (!isFormspree || action.includes('VÁŠE-FORMSPREE-ID')) {
-        // Demo režim — simulace úspěšného odeslání
-        await new Promise((r) => setTimeout(r, 900));
+      // Web3Forms (https://web3forms.com) — POST FormData, očekává JSON response.
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.success !== false) {
         form.reset();
         if (formSuccess) {
           formSuccess.hidden = false;
           formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
       } else {
-        const res = await fetch(action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' },
-        });
-        if (res.ok) {
-          form.reset();
-          if (formSuccess) {
-            formSuccess.hidden = false;
-            formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }
-        } else {
-          throw new Error('Server error');
-        }
+        throw new Error(data.message || 'Server error');
       }
     } catch {
       if (formErrorGlobal) formErrorGlobal.hidden = false;
