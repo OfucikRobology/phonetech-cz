@@ -251,7 +251,9 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   padding-top: calc(76px + 38px + var(--space-7));
   padding-bottom: var(--space-10);
   position: relative;
-  z-index: 5;
+  /* vysoko nad brands-strip (z=1) a dalšími sekcemi (z=2 z base.css),
+     aby search-results dropdown přetékal viditelně přes ně */
+  z-index: 100;
   /* clip horizontálně (bg-blob přesahuje), ale vertikálně visible
      aby search-results dropdown mohl jít pod hero sekci */
   overflow-x: clip;
@@ -326,7 +328,7 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   margin-bottom: var(--space-5);
   max-width: 520px;
   position: relative;
-  z-index: 50;
+  z-index: 500; /* dropdown musí být nad brand-strip i ostatními sekcemi */
 }
 
 .hero__buttons {
