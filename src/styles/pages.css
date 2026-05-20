@@ -638,6 +638,11 @@
 }
 @media (max-width: 640px) {
   .blog-grid { grid-template-columns: 1fr; }
+  .blog-featured__body { padding: var(--space-6) var(--space-5); gap: var(--space-3); }
+  .blog-featured__meta { flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-1); }
+  .blog-featured__title { font-size: 22px; line-height: 1.15; }
+  .blog-featured__excerpt { font-size: var(--text-base); line-height: 1.55; }
+  .blog-featured__image { min-height: 200px; }
 }
 
 /* ═══════════════════════════════════════════════
