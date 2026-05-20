@@ -772,6 +772,20 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   border-color: var(--color-accent-soft);
 }
 .service-card:hover::before { opacity: 1; }
+
+/* Service cards uvnitř .stagger gridu: bypass stagger reveal initial state.
+   Stagger nastaví transform: translateY(24px) + transition-delay :nth-child,
+   což v kombinaci s :hover transform + tilt JS způsobovalo, že druhá karta
+   zůstávala zaseknutá v pre-delay fázi (fill: backwards) a vůbec se nehýbala.
+   Karta je viditelná hned, hover lift + tilt rotace fungují normálně. */
+.services-grid.stagger > .service-card {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0s;
+}
+.services-grid.stagger > .service-card:hover {
+  transform: translateY(-6px);
+}
 .service-card__header {
   display: flex;
   justify-content: space-between;
