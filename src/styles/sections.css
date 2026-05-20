@@ -830,7 +830,9 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
 ═══════════════════════════════════════════════ */
 .stats-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* minmax(0, 1fr) místo 1fr - jinak by counter elementy s min-width: Nch
+     (např. "1500+") natáhly svůj sloupec a divider by nebyl na středu. */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0;
   margin-bottom: var(--space-12);
   border-top: 1px solid var(--color-line);
@@ -1510,7 +1512,7 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   .service-card { padding: var(--space-6); }
   .service-card__features { grid-template-columns: 1fr; }
 
-  .stats-row { grid-template-columns: 1fr 1fr; }
+  .stats-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stat-card { border-bottom: 1px solid var(--color-line); }
   .stat-card:nth-child(2n) { border-right: 0; }
   .stat-card:nth-last-child(-n+2) { border-bottom: 0; }
@@ -1531,7 +1533,7 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
 
 @media (max-width: 480px) {
   .features-grid { grid-template-columns: 1fr; }
-  .stats-row { grid-template-columns: 1fr 1fr; }
+  .stats-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .process-grid { grid-template-columns: 1fr; }
   .about-timeline { grid-template-columns: 1fr; }
   .contact-section__form-wrapper { padding: var(--space-5); }
