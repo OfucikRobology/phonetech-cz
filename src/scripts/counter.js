@@ -8,12 +8,9 @@ const animateCounter = (el) => {
   const start = performance.now();
   const isInteger = target % 1 === 0;
 
-  // Reserve final width to prevent layout shift during count.
-  // display: inline-flex spolu s min-width zaručí, že:
-  // 1. Counter má rezervovanou šířku finálního textu (žádný skok)
-  // 2. Sourozenci v rodiči (např. "+") zůstanou na stejném řádku
-  const finalText = isInteger ? String(target) : target.toFixed(1);
-  el.style.minWidth = `${finalText.length}ch`;
+  // Tabular nums - každý znak stejně široký, eliminuje skoky během počítání.
+  // min-width: Nch dříve rezervoval finální šířku, ale na úzkých mobilech
+  // způsoboval ořezávání obsahu - radši mírný shift než clipping.
   el.style.display = 'inline-block';
   el.style.fontVariantNumeric = 'tabular-nums';
 
