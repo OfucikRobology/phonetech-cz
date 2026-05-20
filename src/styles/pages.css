@@ -1089,16 +1089,28 @@
 @media (max-width: 540px) {
   .modal { padding: 0; align-items: flex-end; }
   .modal__content {
-    max-height: 90vh;
+    /* dvh = dynamic viewport height — respektuje iOS Safari URL bar */
+    max-height: 92dvh;
+    max-height: 92vh; /* fallback */
     border-radius: var(--radius-xl) var(--radius-xl) 0 0;
     transform: translateY(100%);
   }
   .modal.open .modal__content { transform: translateY(0) scale(1); }
   .modal__header { padding: var(--space-6) var(--space-5) var(--space-4); }
   .modal__body { padding: 0 var(--space-5); }
-  .modal__footer { padding: var(--space-4) var(--space-5) var(--space-6); }
+  /* Bottom padding respektuje iOS home indicator (safe-area-inset-bottom) */
+  .modal__footer {
+    padding: var(--space-4) var(--space-5);
+    padding-bottom: max(var(--space-6), calc(var(--space-4) + env(safe-area-inset-bottom)));
+  }
   .modal__actions { flex-direction: column; }
   .modal__actions .btn { width: 100%; }
+  /* Vypnout vzhled tap-highlight kroužku na close X (iOS Safari) */
+  .modal__close {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .modal__close:focus { outline: none; }
+  .modal__close:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
 }
 
 /* ═══════════════════════════════════════════════
