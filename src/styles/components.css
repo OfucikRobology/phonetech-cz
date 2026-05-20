@@ -307,18 +307,49 @@
 }
 
 .form-group--checkbox { flex-direction: row; align-items: flex-start; gap: 12px; }
+/* Custom checkbox — vypadá stejně na desktopu i mobilu (Safari/Chrome/FF).
+   Nativní vzhled vypnut přes appearance:none, vlastní border/box + SVG check. */
 .form-group--checkbox input[type="checkbox"] {
-  width: 20px; height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px; height: 22px;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin: 1px 0 0;
   padding: 0;
   border: 1.5px solid var(--color-line-strong);
-  border-radius: 5px;
+  border-radius: 6px;
   background: var(--color-surface);
-  accent-color: var(--color-accent);
-  -webkit-appearance: auto;
-  appearance: auto;
   cursor: pointer;
+  display: inline-grid;
+  place-content: center;
+  transition: background var(--duration-fast) var(--ease-soft),
+              border-color var(--duration-fast) var(--ease-soft),
+              transform var(--duration-fast) var(--ease-spring);
+}
+.form-group--checkbox input[type="checkbox"]::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: white;
+  transform: scale(0);
+  transition: transform var(--duration-fast) var(--ease-spring);
+  /* SVG checkmark v bílé barvě, vystředěná v boxu */
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='3,8 7,12 13,4'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='3,8 7,12 13,4'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.form-group--checkbox input[type="checkbox"]:hover {
+  border-color: var(--color-accent);
+}
+.form-group--checkbox input[type="checkbox"]:checked {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+.form-group--checkbox input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+.form-group--checkbox input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }
 .form-group--checkbox label { font-weight: 400; color: var(--color-text-soft); font-size: var(--text-sm); line-height: 1.5; cursor: pointer; }
 .form-group--checkbox label a { color: var(--color-accent); text-decoration: underline; }
