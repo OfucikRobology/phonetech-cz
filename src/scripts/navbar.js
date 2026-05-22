@@ -46,13 +46,11 @@ window.addEventListener(
   },
   { passive: true }
 );
-// Defer initial scroll read past first paint - eliminuje forced reflow.
-// window.load místo modul-init, počká až prohlížeč dokončí layout.
-if (document.readyState === 'complete') {
-  requestAnimationFrame(updateScroll);
-} else {
-  window.addEventListener('load', () => requestAnimationFrame(updateScroll), { once: true });
-}
+// Synchronní init: navbar musí mít .scrolled class HNED když user
+// přistane na stránce už scrollovaný (např. anchor link, refresh,
+// browser restore). Bez toho by navbar byl průhledný a překryl hero text.
+// Cost: ~150ms forced reflow při loadu (přijatelné vs UX bug).
+updateScroll();
 
 hamburger?.addEventListener('click', () => {
   const isOpen = hamburger.classList.toggle('open');
