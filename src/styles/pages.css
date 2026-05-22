@@ -638,9 +638,9 @@
 }
 @media (max-width: 640px) {
   .blog-grid { grid-template-columns: 1fr; }
-  /* Velmi kompaktní spacing - obrázek hned přechází do badge */
-  .blog-featured__body { padding: var(--space-3) var(--space-5) var(--space-5); gap: var(--space-2); }
-  .blog-featured__meta { flex-wrap: wrap; gap: var(--space-2); margin-bottom: 0; }
+  /* Skoro žádná mezera mezi obrázkem a badge */
+  .blog-featured__body { padding: 4px var(--space-5) var(--space-5); gap: var(--space-2); }
+  .blog-featured__meta { flex-wrap: wrap; gap: var(--space-2); margin-bottom: 0; margin-top: 0; }
   .blog-featured__title { font-size: 22px; line-height: 1.15; margin: 0; }
   .blog-featured__excerpt { font-size: var(--text-base); line-height: 1.55; margin: 0; }
   .blog-featured__link { margin-top: var(--space-1); }
