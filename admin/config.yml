@@ -1,7 +1,7 @@
 # ──────────────────────────────────────────────────────────────
 #  PhoneTech CMS — konfigurace
 # ──────────────────────────────────────────────────────────────
-#  Editor: https://phonetech-cz.vercel.app/admin/
+#  Editor: https://www.phonetech.cz/admin/
 #  Obsah: ukládá se jako Markdown do /content/blog/
 #  Po publish: Vercel automaticky redeployuje web (~30s)
 # ──────────────────────────────────────────────────────────────
@@ -10,7 +10,7 @@ backend:
   name: github
   repo: OfucikRobology/phonetech-cz
   branch: main
-  base_url: https://phonetech-cz.vercel.app       # vlastní OAuth proxy
+  base_url: https://www.phonetech.cz       # vlastní OAuth proxy
   auth_endpoint: api/auth
 
 # Kam Decap nahrává obrázky uploadnuté z editoru
@@ -21,11 +21,11 @@ public_folder: "/images/blog/uploads"
 locale: 'cs'
 
 # Logo v editoru
-logo_url: https://phonetech-cz.vercel.app/images/phonetech-logo.svg
+logo_url: https://www.phonetech.cz/images/phonetech-logo.svg
 
 # Site URL pro náhled
-site_url: https://phonetech-cz.vercel.app
-display_url: https://phonetech-cz.vercel.app
+site_url: https://www.phonetech.cz
+display_url: https://www.phonetech.cz
 
 collections:
   # ── BLOG ČLÁNKY ──────────────────────────────────────────
