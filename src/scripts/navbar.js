@@ -2,22 +2,11 @@ const navbar = document.getElementById('navbar');
 const hamburger = document.getElementById('hamburger');
 const drawer = document.getElementById('nav-drawer');
 
-// lastScrollY se inicializuje LAZY v 1. updateScroll volání,
-// abychom se vyhnuli forced reflow při loadu modulu (Lighthouse hlásil 162ms).
-let lastScrollY = 0;
+let lastScrollY = window.scrollY;
 let ticking = false;
-let initialized = false;
 
 const updateScroll = () => {
   const currentY = window.scrollY;
-  // Při prvním volání jen ulož baseline - vyhne se "false" delta při loadu
-  if (!initialized) {
-    lastScrollY = currentY;
-    initialized = true;
-    navbar?.classList.toggle('scrolled', currentY > 10);
-    ticking = false;
-    return;
-  }
   const delta = currentY - lastScrollY;
 
   // Visual state přechod (background blur)
@@ -46,13 +35,7 @@ window.addEventListener(
   },
   { passive: true }
 );
-// Defer initial scroll read past first paint - eliminuje forced reflow.
-// window.load místo modul-init, počká až prohlížeč dokončí layout.
-if (document.readyState === 'complete') {
-  requestAnimationFrame(updateScroll);
-} else {
-  window.addEventListener('load', () => requestAnimationFrame(updateScroll), { once: true });
-}
+updateScroll();
 
 hamburger?.addEventListener('click', () => {
   const isOpen = hamburger.classList.toggle('open');
