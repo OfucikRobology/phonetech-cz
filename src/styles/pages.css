@@ -638,10 +638,12 @@
 }
 @media (max-width: 640px) {
   .blog-grid { grid-template-columns: 1fr; }
-  .blog-featured__body { padding: var(--space-4) var(--space-5) var(--space-6); gap: var(--space-3); }
+  /* Velmi kompaktní spacing - obrázek hned přechází do badge */
+  .blog-featured__body { padding: var(--space-3) var(--space-5) var(--space-5); gap: var(--space-2); }
   .blog-featured__meta { flex-wrap: wrap; gap: var(--space-2); margin-bottom: 0; }
-  .blog-featured__title { font-size: 22px; line-height: 1.15; }
-  .blog-featured__excerpt { font-size: var(--text-base); line-height: 1.55; }
+  .blog-featured__title { font-size: 22px; line-height: 1.15; margin: 0; }
+  .blog-featured__excerpt { font-size: var(--text-base); line-height: 1.55; margin: 0; }
+  .blog-featured__link { margin-top: var(--space-1); }
   .blog-featured__image { min-height: 200px; }
 }
 
@@ -1097,14 +1099,13 @@
   .modal { padding: 0; align-items: stretch; }
   .modal__overlay { display: none; } /* žádný překryv - modal kryje vše */
   .modal__content {
-    /* svh = small viewport (vždy bez browser chrome) - zaručeně se
-       vejde i v iOS Chrome kde dvh nezahrnuje bottom toolbar */
-    max-height: 100svh;
-    max-height: 100vh; /* fallback pro starší browsery */
-    height: 100svh;
+    /* Fallback NEJDŘÍV, modernější PŘEPÍŠOU starou hodnotu */
+    max-height: 100vh;
+    max-height: 100svh; /* svh = vždy nejmenší viewport, vejde se */
     height: 100vh;
+    height: 100svh;
     max-width: 100vw;
-    border-radius: 0; /* žádné zaoblené rohy - jako stránka */
+    border-radius: 0;
     transform: translateY(100%);
     display: flex;
     flex-direction: column;
