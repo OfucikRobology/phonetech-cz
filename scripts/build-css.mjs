@@ -19,18 +19,30 @@ const ORDER = [
 
 console.log('🎨 Bundling CSS…');
 
-const bundle = ORDER
+const raw = ORDER
   .map((file) => {
     const filePath = path.join(STYLES_DIR, file);
     const content = fs.readFileSync(filePath, 'utf8');
     // Odstranit lokální @import statements (už nepotřebujeme)
-    const cleaned = content.replace(/@import\s+url\(['"]?\.\/[^'"]+['"]?\);?\s*/g, '');
-    return `/* ─── ${file} ──────────────── */\n${cleaned}`;
+    return content.replace(/@import\s+url\(['"]?\.\/[^'"]+['"]?\);?\s*/g, '');
   })
-  .join('\n\n');
+  .join('\n');
 
+// Minifikace - zachová funkčnost, odstraní whitespace/komentáře.
+// Záměrně NEpoužívá tooling (cssnano/esbuild) - jednoduchý regex stačí.
+const minify = (css) => css
+  .replace(/\/\*[\s\S]*?\*\//g, '')          // /* komentáře */
+  .replace(/\s+/g, ' ')                        // multi-whitespace → space
+  .replace(/\s*([{}:;,>+~])\s*/g, '$1')        // mezery kolem interpunkce
+  .replace(/;}/g, '}')                          // poslední ; před }
+  .replace(/\s*\n\s*/g, '')                    // newlines
+  .trim();
+
+const minified = minify(raw);
 const bundlePath = path.join(STYLES_DIR, 'bundle.css');
-fs.writeFileSync(bundlePath, bundle);
+fs.writeFileSync(bundlePath, minified);
 
-const sizeKB = (bundle.length / 1024).toFixed(1);
-console.log(`   ✓ bundle.css vygenerován (${sizeKB} KB)`);
+const sizeRaw = (raw.length / 1024).toFixed(1);
+const sizeMin = (minified.length / 1024).toFixed(1);
+const saved = (((raw.length - minified.length) / raw.length) * 100).toFixed(0);
+console.log(`   ✓ bundle.css (${sizeRaw} KB → ${sizeMin} KB, ušetřeno ${saved}%)`);
