@@ -1092,12 +1092,17 @@
 .modal__actions .btn { flex: 1; justify-content: center; min-width: 160px; }
 
 @media (max-width: 540px) {
-  .modal { padding: 0; align-items: flex-end; }
+  /* Fullscreen modal na mobilu - vypadá jako celá stránka, ne pop-up.
+     Eliminuje rušivý scroll bleed pozadí a vizuální zlom modal/web. */
+  .modal { padding: 0; align-items: stretch; }
+  .modal__overlay { display: none; } /* žádný překryv - modal kryje vše */
   .modal__content {
-    /* dvh = dynamic viewport height — respektuje iOS Safari URL bar */
-    max-height: 92dvh;
-    max-height: 92vh; /* fallback */
-    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    max-height: 100dvh;
+    max-height: 100vh; /* fallback */
+    height: 100dvh;
+    height: 100vh;
+    max-width: 100vw;
+    border-radius: 0; /* žádné zaoblené rohy - jako stránka */
     transform: translateY(100%);
   }
   .modal.open .modal__content { transform: translateY(0) scale(1); }

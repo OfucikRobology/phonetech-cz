@@ -83,7 +83,17 @@ if (modal) {
     lastFocus = document.activeElement;
     modal.removeAttribute('hidden');
     requestAnimationFrame(() => modal.classList.add('open'));
-    document.body.style.overflow = 'hidden';
+
+    // iOS-safe scroll lock: position: fixed trick (overflow: hidden samo
+    // nestačí, iOS Safari ignoruje na body+html). Uložíme aktuální scrollY,
+    // při close obnovíme.
+    const scrollY = window.scrollY;
+    document.body.dataset.scrollLockY = String(scrollY);
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.style.width = '100%';
 
     const closeBtn = modal.querySelector('.modal__close');
     closeBtn?.focus();
@@ -91,7 +101,17 @@ if (modal) {
 
   const close = () => {
     modal.classList.remove('open');
-    document.body.style.overflow = '';
+
+    // Obnovit scroll pozici z body.dataset.scrollLockY
+    const scrollY = parseInt(document.body.dataset.scrollLockY || '0', 10);
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    document.body.style.width = '';
+    delete document.body.dataset.scrollLockY;
+    window.scrollTo(0, scrollY);
+
     setTimeout(() => {
       modal.setAttribute('hidden', '');
       lastFocus?.focus();
