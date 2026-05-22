@@ -12,7 +12,7 @@ author: Tomáš Stoklasa
 ---
 Každý druhý zákazník se nás při výměně displeje ptá to samé: „Bude to **originál?**" Otázka jednoduchá, odpověď ne tak úplně. Trh nabízí čtyři odlišné kategorie displejů, a rozdíl v kvalitě i ceně je propastný. Tady je krátký, ale poctivý průvodce.
 
-## Čtyři kategorie displejů - test
+## Čtyři kategorie displejů
 
 Apple do svých zařízení od ledna 2024 oficiálně poskytuje servisní díly pouze autorizovaným servisům. V neautorizovaném (ale legálním) servisu se proto setkáte s těmito variantami:
 
