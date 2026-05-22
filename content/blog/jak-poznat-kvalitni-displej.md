@@ -5,14 +5,14 @@ category: Návody
 readTime: 5
 thumbnail: https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=1200&h=800&fit=crop&q=80
 thumbnailAlt: Detail iPhone displeje
-excerpt: Originál, OEM, kopie - co znamenají všechny ty pojmy a v čem se liší? Praktický průvodce, podle kterého poznáte, co vám servis skutečně instaluje.
+excerpt: Originál, OEM, kopie - co znamenají všechny ty pojmy a v čem se liší?
+  Praktický průvodce, podle kterého poznáte, co vám servis skutečně instaluje.
 featured: true
 author: Tomáš Stoklasa
 ---
-
 Každý druhý zákazník se nás při výměně displeje ptá to samé: „Bude to **originál?**" Otázka jednoduchá, odpověď ne tak úplně. Trh nabízí čtyři odlišné kategorie displejů, a rozdíl v kvalitě i ceně je propastný. Tady je krátký, ale poctivý průvodce.
 
-## Čtyři kategorie displejů
+## Čtyři kategorie displejů test
 
 Apple do svých zařízení od ledna 2024 oficiálně poskytuje servisní díly pouze autorizovaným servisům. V neautorizovaném (ale legálním) servisu se proto setkáte s těmito variantami:
 
