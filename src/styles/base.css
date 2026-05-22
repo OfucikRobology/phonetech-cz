@@ -175,6 +175,13 @@ input, select, textarea {
   background: var(--color-accent);
   display: inline-block;
 }
+/* Na tmavých sekcích eyebrow--center zachová oranžové čárky z obou stran
+   (jinak by section-header--light/eyebrow--inverse přebily ::before na šedou
+   ale ::after by zůstala oranžová → vizuálně nesymetrické). */
+.eyebrow--center.eyebrow--inverse::before,
+.section-header--light .eyebrow--center::before {
+  background: var(--color-accent);
+}
 .eyebrow--accent { color: var(--color-accent-deep); }
 .eyebrow--inverse { color: rgba(255,255,255,0.55); }
 .eyebrow--inverse::before { background: rgba(255,255,255,0.3); }
