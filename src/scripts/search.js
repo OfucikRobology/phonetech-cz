@@ -24,8 +24,8 @@ if (input && results) {
               <i class="ph ph-device-mobile" weight="fill"></i>
             </div>
             <div>
-              <strong>Apple ${d.name}</strong>
-              <span>Displej od ${priceText} · ${d.year}</span>
+              <strong>${d.name}</strong>
+              <span>Displej od ${priceText}</span>
             </div>
             <i class="ph ph-arrow-right search-results__arrow"></i>
           </a>
