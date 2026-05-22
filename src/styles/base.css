@@ -172,7 +172,7 @@ input, select, textarea {
   content: '';
   width: 24px;
   height: 1px;
-  background: var(--color-line-strong);
+  background: var(--color-accent);
   display: inline-block;
 }
 .eyebrow--accent { color: var(--color-accent-deep); }
