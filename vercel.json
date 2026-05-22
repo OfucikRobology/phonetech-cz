@@ -4,5 +4,31 @@
   "outputDirectory": ".",
   "framework": null,
   "trailingSlash": false,
-  "cleanUrls": false
+  "cleanUrls": false,
+  "headers": [
+    {
+      "source": "/src/(styles|scripts)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(images|logos)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(svg|webp|jpg|jpeg|png|gif|ico|woff2)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
+  ]
 }

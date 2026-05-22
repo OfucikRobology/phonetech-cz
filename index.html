@@ -16,10 +16,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <script defer src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <!-- Swiper CSS: non-blocking load (testimonials carousel není above-the-fold) -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
 
-  <link rel="stylesheet" href="./src/styles/main.css?v=78">
+  <link rel="stylesheet" href="./src/styles/bundle.css?v=79">
   <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 
   <script type="application/ld+json">

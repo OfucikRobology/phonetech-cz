@@ -5,8 +5,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-blog.mjs",
-    "dev": "node scripts/build-blog.mjs"
+    "build": "node scripts/build-css.mjs && node scripts/build-blog.mjs",
+    "dev": "node scripts/build-css.mjs && node scripts/build-blog.mjs"
   },
   "devDependencies": {
     "gray-matter": "^4.0.3",
