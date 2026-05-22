@@ -845,12 +845,16 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   text-align: center;
   border-right: 1px solid var(--color-line);
   transition: background var(--duration-base) var(--ease-soft);
+  overflow: hidden; /* zabrání aby "+" v "1500+" zasahovalo do sousední buňky */
+  min-width: 0; /* respektuje minmax(0, 1fr) v parent gridu */
 }
 .stat-card:last-child { border-right: 0; }
 .stat-card:hover { background: var(--color-accent-faint); }
 .stat-card__number {
   display: block;
-  font: 800 clamp(36px, 4.5vw, 60px) var(--font-display);
+  /* Sníženo max z 60px na 52px - "1500+" pak nikdy nepřesáhne šířku buňky
+     ani na nejširším desktopu (1280-1600px viewport). */
+  font: 800 clamp(36px, 4vw, 52px) var(--font-display);
   color: var(--color-ink);
   letter-spacing: var(--tracking-tightest);
   line-height: 0.95;
