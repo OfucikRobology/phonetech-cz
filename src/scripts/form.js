@@ -86,10 +86,10 @@ if (form) {
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.success !== false) {
         form.reset();
-        if (formSuccess) {
-          formSuccess.hidden = false;
-          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
+        // Redirect na thank-you page (důležité pro FB Pixel "Lead" conversion
+        // tracking - dedikovaná URL slouží jako konverzní URL ve FB Ads).
+        window.location.href = './dekujeme.html';
+        return;
       } else {
         throw new Error(data.message || 'Server error');
       }

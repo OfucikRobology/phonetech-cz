@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Děkujeme | PhoneTech - Vaše poptávka byla odeslána</title>
+  <meta name="description" content="Vaše poptávka byla úspěšně odeslána. Ozveme se vám co nejdříve s odhadem ceny a dalším postupem.">
+  <meta name="robots" content="noindex,follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="./src/styles/main.css?v=78">
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,"script",
+  "https://connect.facebook.net/en_US/fbevents.js");
+  fbq("init", "523836163777542");
+  fbq("track", "PageView");
+  // Conversion event - Lead (formulář byl úspěšně odeslán)
+  fbq("track", "Lead");
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=523836163777542&ev=PageView&noscript=1"
+  /></noscript>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=523836163777542&ev=Lead&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <div class="announcement-bar">
+    <div class="container announcement-bar__inner">
+      <span>
+        <i class="ph ph-map-pin-simple-area" weight="fill"></i>
+        <span data-i18n="announce.location">Jindřichův Hradec &amp; Praha -</span> <strong data-i18n="announce.tag">Opravy na počkání</strong>
+      </span>
+      <span class="announcement-bar__hours"><i class="ph ph-clock" weight="bold"></i> <span data-i18n="announce.hours">Otevírací doba: Dle telefonické domluvy</span></span>
+      <div class="announcement-bar__right">
+        <div class="lang-switch">
+          <button type="button" class="lang-switch__btn" data-lang-switch="cs" aria-label="Čeština">CS</button>
+          <button type="button" class="lang-switch__btn" data-lang-switch="en" aria-label="English">EN</button>
+        </div>
+        <a href="tel:+420733622017" class="announcement-bar__phone"><i class="ph ph-phone" weight="bold"></i> 733 622 017</a>
+        <div class="announcement-bar__socials">
+          <a href="https://www.facebook.com/phonetech.cz/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ph ph-facebook-logo" weight="fill"></i></a>
+          <a href="https://www.instagram.com/phonetech.cz/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ph ph-instagram-logo" weight="fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Hlavní navigace">
+    <div class="container navbar__inner">
+      <a href="./index.html" class="navbar__logo" aria-label="PhoneTech domů">
+        <img src="./images/phonetech-logo.svg" alt="PhoneTech" class="navbar__logo-img">
+      </a>
+      <ul class="navbar__links" role="list">
+        <li><a href="./sluzby.html" class="navbar__link"><span data-i18n="nav.services">Služby</span></a></li>
+        <li><a href="./cenik.html" class="navbar__link"><span data-i18n="nav.pricing">Ceník</span></a></li>
+        <li><a href="./blog.html" class="navbar__link"><span data-i18n="nav.blog">Blog</span></a></li>
+        <li><a href="./o-nas.html" class="navbar__link"><span data-i18n="nav.about">O nás</span></a></li>
+        <li><a href="./recenze.html" class="navbar__link"><span data-i18n="nav.reviews">Recenze</span></a></li>
+        <li><a href="./kontakt.html" class="navbar__link"><span data-i18n="nav.contact">Kontakt</span></a></li>
+        <li><a href="https://www.kupfoun.cz" target="_blank" rel="noopener" class="navbar__link"><span data-i18n="nav.eshop">E-shop</span></a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="./kontakt.html" class="btn btn-accent btn-sm magnetic" data-strength="0.25">
+          <span data-i18n="nav.cta">Poptávka</span> <i class="ph ph-arrow-up-right" weight="bold"></i>
+        </a>
+      </div>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__drawer" id="nav-drawer" aria-hidden="true">
+      <ul role="list">
+        <li><a href="./sluzby.html"><span data-i18n="nav.services">Služby</span></a></li>
+        <li><a href="./cenik.html"><span data-i18n="nav.pricing">Ceník</span></a></li>
+        <li><a href="./blog.html"><span data-i18n="nav.blog">Blog</span></a></li>
+        <li><a href="./o-nas.html"><span data-i18n="nav.about">O nás</span></a></li>
+        <li><a href="./recenze.html"><span data-i18n="nav.reviews">Recenze</span></a></li>
+        <li><a href="./kontakt.html"><span data-i18n="nav.contact">Kontakt</span></a></li>
+        <li><a href="https://www.kupfoun.cz" target="_blank" rel="noopener"><span data-i18n="nav.eshop">E-shop</span></a></li>
+      </ul>
+      <a href="./kontakt.html" class="btn btn-accent btn-full" data-i18n="nav.ctaLong">Nezávazná poptávka</a>
+      <div class="lang-switch">
+        <button type="button" class="lang-switch__btn" data-lang-switch="cs">CS</button>
+        <button type="button" class="lang-switch__btn" data-lang-switch="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero" style="padding-bottom: var(--space-12);">
+      <div class="container">
+        <div class="page-hero__content reveal" style="text-align: center; max-width: 720px; margin: 0 auto;">
+          <div style="display: inline-flex; align-items: center; justify-content: center; width: 96px; height: 96px; border-radius: 50%; background: var(--color-accent-faint); color: var(--color-accent); font-size: 56px; margin-bottom: var(--space-6);">
+            <i class="ph ph-check-circle" weight="fill"></i>
+          </div>
+          <h1 class="page-hero__title">Děkujeme!<br><em>Ozveme se vám co nejdříve.</em></h1>
+          <p class="page-hero__desc">
+            Vaše poptávka byla úspěšně odeslána. V pracovní době vám obvykle odpovíme do 2 hodin, mimo ni nejpozději následující pracovní den.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container container--tight">
+        <div class="bento stagger">
+          <div class="bento-card bento-card--third">
+            <div class="icon-frame icon-frame--lg"><i class="ph ph-envelope" weight="fill"></i></div>
+            <h3>Co se bude dít dál</h3>
+            <p>Podíváme se na vaši poptávku a pošleme vám odhad ceny i termín. Pokud bude potřeba upřesnit detaily, ozveme se telefonicky.</p>
+          </div>
+
+          <a href="tel:+420733622017" class="bento-card bento-card--third">
+            <div class="icon-frame icon-frame--lg icon-frame--accent-deep"><i class="ph ph-phone" weight="fill"></i></div>
+            <h3>Potřebujete to rychle?</h3>
+            <p>Zavolejte přímo - většinu poptávek umíme vyřešit hned.</p>
+            <strong style="color: var(--color-ink); font: 700 var(--text-xl) var(--font-display); letter-spacing: -0.02em;">+420 733 622 017</strong>
+          </a>
+
+          <a href="./cenik.html" class="bento-card bento-card--third bento-card--dark">
+            <div class="icon-frame icon-frame--lg" style="background: rgba(255,107,43,0.15); color: var(--color-accent);"><i class="ph ph-list-magnifying-glass" weight="fill"></i></div>
+            <h3>Mezitím</h3>
+            <p>Můžete si projít ceník pro váš model a podívat se na další služby.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" style="padding-top: var(--space-6);">
+      <div class="container" style="text-align: center;">
+        <a href="./index.html" class="btn btn-ghost btn-lg">
+          <i class="ph ph-arrow-left" weight="bold"></i>
+          <span>Zpět na hlavní stránku</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="./index.html" class="footer__logo">
+            <img src="./images/phonetech-logo-white.svg" alt="PhoneTech" class="footer__logo-img">
+          </a>
+          <p data-i18n="footer.brand">Profesionální servis mobilních telefonů a elektroniky. Jindřichův Hradec &amp; Praha - od roku 2020.</p>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/phonetech.cz/" target="_blank" rel="noopener" aria-label="Facebook"><i class="ph ph-facebook-logo" weight="fill"></i></a>
+            <a href="https://www.instagram.com/phonetech.cz/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ph ph-instagram-logo" weight="fill"></i></a>
+          </div>
+        </div>
+        <nav class="footer__nav">
+          <strong data-i18n="footer.navHeading">Navigace</strong>
+          <a href="./sluzby.html" data-i18n="nav.services">Služby</a>
+          <a href="./cenik.html" data-i18n="nav.pricing">Ceník</a>
+          <a href="./blog.html" data-i18n="nav.blog">Blog</a>
+          <a href="./o-nas.html" data-i18n="nav.about">O nás</a>
+          <a href="./recenze.html" data-i18n="nav.reviews">Recenze</a>
+          <a href="./kontakt.html" data-i18n="nav.contact">Kontakt</a>
+          <a href="https://www.kupfoun.cz" target="_blank" rel="noopener" data-i18n="nav.eshop">E-shop</a>
+        </nav>
+        <div class="footer__contact">
+          <strong data-i18n="footer.contactHeading">Kontakt</strong>
+          <a href="tel:+420733622017"><i class="ph ph-phone"></i> +420 733 622 017</a>
+          <a href="mailto:info@phonetech.cz"><i class="ph ph-envelope"></i> info@phonetech.cz</a>
+          <span style="display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:var(--text-sm);margin-top:var(--space-3);font-weight:600;"><i class="ph ph-user"></i> Tomáš Stoklasa</span><span style="display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.85);font-size:var(--text-sm);margin-top:var(--space-2);"><i class="ph ph-identification-card"></i> <span><strong>IČO:</strong> 19065477</span></span>
+          <span style="display:flex;flex-direction:column;gap:2px;color:rgba(255,255,255,.72);font-size:var(--text-sm);margin-top:var(--space-2);"><span style="display:inline-flex;align-items:center;gap:8px;line-height:1;"><i class="ph ph-clock" weight="bold" style="font-size:14px;line-height:1;flex-shrink:0;display:inline-block;"></i><span data-i18n="footer.hoursLabel" style="color:rgba(255,255,255,.92);font-weight:600;font-size:var(--text-sm);line-height:1;">Otevírací doba:</span></span><span data-i18n="footer.hoursValue" style="padding-left:22px;">Dle telefonické domluvy</span></span>
+        </div>
+        <div class="footer__locations">
+          <strong data-i18n="footer.branchesHeading">Pobočky</strong>
+          <address>
+            <p><strong>Jindřichův Hradec</strong>Jiráskovo předm. 636<br>377 01 Jindřichův Hradec</p>
+            <p><strong>Praha 3</strong>Jeseniova 1196/52<br>130 00 Praha - Žižkov</p>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <span data-i18n="footer.copy">© 2026 PhoneTech - Tomáš Stoklasa. Všechna práva vyhrazena.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./src/scripts/navbar.js" type="module"></script>
+  <script src="./src/scripts/animations.js?v=55" type="module"></script>
+  <script src="./src/scripts/magnetic.js" type="module"></script>
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Informace o cookies">
+    <div class="cookie-banner__icon"><i class="ph ph-cookie" weight="fill"></i></div>
+    <div class="cookie-banner__text" data-i18n="cookie.text">
+      Tento web používá pouze nezbytné cookies pro správné fungování.
+    </div>
+    <div class="cookie-banner__actions"><button type="button" class="cookie-banner__btn cookie-banner__btn--ghost" data-cookie-reject data-i18n="cookie.btnReject">Odmítnout</button><button type="button" class="cookie-banner__btn" data-cookie-accept data-i18n="cookie.btn">Rozumím</button></div>
+  </div>
+  <script src="./src/scripts/cookie-banner.js?v=51" type="module"></script>
+  <script src="./src/scripts/i18n.js?v=24" type="module"></script>
+</body>
+</html>
