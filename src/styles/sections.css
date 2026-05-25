@@ -315,8 +315,10 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
   font-weight: 800;
   max-width: 15ch;
 }
-/* padding/margin 0.18em (předtím 0.08em) - víc rezervy pro diakritiku v overflow:hidden */
-.hero__title .word { display: inline-block; overflow: hidden; padding: 0.18em 0; margin: -0.18em 0; }
+/* Padding 0.3em (předtím 0.18em) - Nunito Sans má vyšší diakritiku (háčky/čárky)
+   než Syne. overflow:hidden v .word je nutný pro text-reveal animaci, ale
+   musí mít dost vertikální rezervy. */
+.hero__title .word { display: inline-block; overflow: hidden; padding: 0.3em 0; margin: -0.3em 0; }
 .hero__title .word > span { display: inline-block; }
 
 .hero__description {
