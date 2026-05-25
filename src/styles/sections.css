@@ -12,7 +12,7 @@
   height: 38px;
   display: flex;
   align-items: center;
-  transition: transform 220ms var(--ease-out); /* show: rychle */
+  transition: transform 150ms var(--ease-out); /* show: snappy */
   will-change: transform;
 }
 .announcement-bar__inner {
@@ -87,15 +87,17 @@
     border-color var(--duration-slow) var(--ease-soft),
     height var(--duration-slow) var(--ease-soft),
     top var(--duration-slow) var(--ease-soft),
-    transform 220ms var(--ease-out); /* show: rychle */
+    transform 150ms var(--ease-out); /* show: snappy */
   border-bottom: 1px solid transparent;
   will-change: transform;
 }
 
-/* Skrytí navigace + announcement při scrollu dolů */
+/* Skrytí navigace + announcement při scrollu dolů
+   180ms (předtím 420ms) - sjednoceno se show transition pro snappier UX.
+   Půl-sekundový slide-up působil "líně" zvlášť na mobilu při rychlém scrollu. */
 body.nav-hidden .announcement-bar,
 body.nav-hidden .navbar {
-  transition: transform 420ms var(--ease-soft); /* hide: pomaleji */
+  transition: transform 180ms var(--ease-out);
 }
 body.nav-hidden .announcement-bar { transform: translateY(-100%); }
 body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
