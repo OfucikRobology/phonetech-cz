@@ -4,5 +4,5 @@
   "outputDirectory": ".",
   "framework": null,
   "trailingSlash": false,
-  "cleanUrls": false
+  "cleanUrls": true
 }

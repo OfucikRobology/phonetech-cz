@@ -108,7 +108,7 @@ const renderDetailPage = (article, template) => {
 };
 
 // ─── Featured karta (jediná, největší) ────────────────────────
-const renderFeaturedCard = (article) => `        <a href="./blog/${article.slug}.html" class="blog-featured reveal">
+const renderFeaturedCard = (article) => `        <a href="./blog/${article.slug}" class="blog-featured reveal">
           <div class="blog-featured__image">
             <img src="${escapeHtml(article.thumbnail)}" alt="${escapeHtml(article.thumbnailAlt)}" loading="lazy">
           </div>
@@ -129,7 +129,7 @@ const renderFeaturedCard = (article) => `        <a href="./blog/${article.slug}
         </a>`;
 
 // ─── Karta v gridu ────────────────────────────────────────────
-const renderGridCard = (article) => `          <a href="./blog/${article.slug}.html" class="article-card">
+const renderGridCard = (article) => `          <a href="./blog/${article.slug}" class="article-card">
             <div class="article-card__image">
               <img src="${escapeHtml(article.thumbnail)}" alt="${escapeHtml(article.thumbnailAlt)}" loading="lazy">
             </div>
