@@ -45,7 +45,7 @@
   --color-dark:           var(--color-ink);
 
   /* ─── TYPOGRAFIE ────────────────────────────── */
-  --font-display: 'Syne', 'Helvetica Neue', sans-serif;
+  --font-display: 'Nunito Sans', 'Helvetica Neue', sans-serif;
   --font-body:    'Inter', 'Helvetica Neue', sans-serif;
   --font-mono:    'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
 
