@@ -47,7 +47,7 @@ export const translations = {
     },
     // Home / hero
     home: {
-      title: 'Vaše zařízení <em class="text-gradient">v bezpečných rukou</em>.',
+      title: 'Vaše zařízení v <em class="text-gradient">bezpečných rukou</em>.',
       desc: 'Opravy mobilních telefonů, notebooků a jiné elektroniky. Originální díly, 12 měsíců záruka. Jindřichův Hradec &amp; Praha.',
       searchPh: 'Najít model: iPhone 15 Pro, iPhone 13, iPhone 12 Mini…',
       ctaPrimary: 'Nezávazná poptávka',
