@@ -628,6 +628,98 @@
         </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════════════
+         KONTAKTNÍ FORMULÁŘ (nad footer)
+    ═══════════════════════════════════════════ -->
+    <section class="contact-section" id="kontakt" aria-labelledby="home-contact-heading">
+      <div class="container">
+        <div class="section-header reveal" style="text-align: center; max-width: 720px; margin: 0 auto var(--space-8);">
+          <span class="eyebrow eyebrow--center" data-i18n="home.contactEyebrow">Nezávazná poptávka</span>
+          <h2 id="home-contact-heading" data-i18n="footer.ctaHeading">Připraveni dát zařízení <em class="text-gradient">druhou šanci?</em></h2>
+          <p class="section-description" data-i18n="footer.ctaText">Vyplňte formulář níže. Zavolejte nebo přijďte na pobočku.</p>
+        </div>
+
+        <div class="contact-section__form-wrapper reveal" style="max-width: 720px; margin: 0 auto;">
+          <form
+            class="contact-form"
+            id="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            novalidate
+          >
+            <input type="hidden" name="access_key" value="1057aaef-e76e-4f73-9c4e-33bc9836984b">
+            <input type="hidden" name="subject" value="Nová poptávka z phonetech.cz (home)">
+            <input type="hidden" name="from_name" value="PhoneTech web">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" data-i18n="contact.lblNameReq">Jméno a příjmení <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Jan Novák" data-i18n-attr="placeholder:contact.phName" required autocomplete="name">
+                <span class="form-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone" data-i18n="contact.lblPhoneReq">Telefonní číslo <span aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="+420 xxx xxx xxx" required autocomplete="tel">
+                <span class="form-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" data-i18n="contact.lblEmailReq">E-mail <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" placeholder="jan@email.cz" data-i18n-attr="placeholder:contact.phEmail" required autocomplete="email">
+              <span class="form-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="device" data-i18n="contact.lblDeviceReq">Model zařízení <span aria-hidden="true">*</span></label>
+              <input type="text" id="device" name="device" placeholder="iPhone 14 Pro, Samsung S23..." data-i18n-attr="placeholder:contact.phDevice" required>
+              <span class="form-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="delivery" data-i18n="contact.lblDeliveryReq">Způsob předání <span aria-hidden="true">*</span></label>
+              <select id="delivery" name="delivery" required>
+                <option value="" data-i18n="contact.delvSelect">Vyberte způsob...</option>
+                <option value="osobne-jh" data-i18n="contact.delvJh">Osobně - J. Hradec</option>
+                <option value="osobne-praha" data-i18n="contact.delvPraha">Osobně - Praha 3</option>
+                <option value="kuryr" data-i18n="contact.delvKuryr">Kurýr</option>
+              </select>
+              <span class="form-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message" data-i18n="contact.lblMessageReq">Popis problému <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Rozbitý displej, nejde zapnout, nefunguje kamera…" data-i18n-attr="placeholder:contact.phMessage" required></textarea>
+              <span class="form-hint" data-i18n="contact.hintMsg">Čím víc detailů, tím přesnější cena.</span>
+              <span class="form-error" role="alert"></span>
+            </div>
+
+            <div class="form-group form-group--checkbox">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent" data-i18n="contact.consentReq">Souhlasím se <a href="./gdpr" target="_blank">zpracováním osobních údajů</a></label>
+              <span class="form-error" role="alert"></span>
+            </div>
+
+            <button type="submit" class="btn btn-accent btn-full btn-lg magnetic" data-strength="0.15" id="submit-btn">
+              <span class="btn-text" data-i18n="contact.submit">Odeslat poptávku</span>
+              <i class="ph ph-paper-plane-right" weight="bold"></i>
+              <span class="btn-spinner" aria-hidden="true" hidden></span>
+            </button>
+
+            <div class="form-success" id="form-success" role="status" hidden>
+              <i class="ph ph-check-circle" weight="fill"></i>
+              <span data-i18n="contact.success">Děkujeme! Formulář jsme v pořádku přijali. Ozveme se co nejdříve.</span>
+            </div>
+            <div class="form-error-global" id="form-error-global" role="alert" hidden>
+              <i class="ph ph-warning-circle" weight="fill"></i>
+              <span data-i18n="contact.errorGlobal">Něco se pokazilo. Zkuste to prosím znovu nebo nás kontaktujte telefonicky.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ═══════════════════════════════════════════
@@ -635,23 +727,6 @@
   ═══════════════════════════════════════════ -->
   <footer class="footer" role="contentinfo">
     <div class="container">
-      <div class="footer__top reveal">
-        <div class="footer__cta">
-          <h2 data-i18n="footer.ctaHeading">Připraveni dát zařízení <em>druhou šanci?</em></h2>
-          <p data-i18n="footer.ctaText">Napište nám, zavolejte nebo přijďte na pobočku. Odpovídáme co nejrychleji.</p>
-        </div>
-        <div class="footer__cta-actions">
-          <a href="./kontakt" class="btn btn-accent btn-xl magnetic" data-strength="0.2">
-            <span data-i18n="footer.ctaBtn">Nezávazná poptávka</span>
-            <i class="ph ph-arrow-up-right" weight="bold"></i>
-          </a>
-          <a href="tel:+420733622017" class="btn btn-ghost btn-ghost--inverse btn-lg">
-            <i class="ph ph-phone" weight="bold"></i>
-            +420 733 622 017
-          </a>
-        </div>
-      </div>
-
       <div class="footer__grid">
         <div class="footer__brand">
           <a href="./index" class="footer__logo">
@@ -721,6 +796,7 @@
     <div class="cookie-banner__actions"><button type="button" class="cookie-banner__btn cookie-banner__btn--ghost" data-cookie-reject data-i18n="cookie.btnReject">Odmítnout</button><button type="button" class="cookie-banner__btn" data-cookie-accept data-i18n="cookie.btn">Rozumím</button></div>
   </div>
   <script src="./src/scripts/cookie-banner.js?v=51" type="module"></script>
-  <script src="./src/scripts/i18n.js?v=27" type="module"></script>
+  <script src="./src/scripts/form.js?v=53" type="module"></script>
+  <script src="./src/scripts/i18n.js?v=28" type="module"></script>
 </body>
 </html>

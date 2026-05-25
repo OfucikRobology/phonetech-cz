@@ -27,7 +27,7 @@ export const translations = {
     // Footer
     footer: {
       ctaHeading: 'Připraveni dát zařízení <em>druhou šanci?</em>',
-      ctaText: 'Napište nám, zavolejte nebo přijďte na pobočku. Odpovídáme co nejrychleji.',
+      ctaText: 'Vyplňte formulář níže. Zavolejte nebo přijďte na pobočku.',
       brand: 'Profesionální servis mobilních telefonů a elektroniky. Jindřichův Hradec &amp; Praha - od roku 2020.',
       navHeading: 'Navigace',
       contactHeading: 'Kontakt',
@@ -47,6 +47,7 @@ export const translations = {
     },
     // Home / hero
     home: {
+      contactEyebrow: 'Nezávazná poptávka',
       title: 'Vaše zařízení v <em class="text-gradient">bezpečných rukou</em>.',
       desc: 'Opravy mobilních telefonů, notebooků a jiné elektroniky. Originální díly, 12 měsíců záruka. Jindřichův Hradec &amp; Praha.',
       searchPh: 'Najít model: iPhone 15 Pro, iPhone 13, iPhone 12 Mini…',
@@ -732,7 +733,7 @@ export const translations = {
     },
     footer: {
       ctaHeading: 'Ready to give your device <em>a second chance?</em>',
-      ctaText: 'Write, call, or stop by. We respond as fast as we can.',
+      ctaText: 'Fill in the form below. Call us or come to one of our branches.',
       brand: 'Professional mobile phone &amp; electronics repair. Jindřichův Hradec &amp; Prague - since 2020.',
       navHeading: 'Navigation',
       contactHeading: 'Contact',
@@ -752,6 +753,7 @@ export const translations = {
       btnReject: 'Reject',
     },
     home: {
+      contactEyebrow: 'Non-binding inquiry',
       title: 'Your device <em class="text-gradient">in safe hands</em>.',
       desc: 'Repairs of mobile phones, laptops and other electronics. Original parts, 12-month warranty. Jindřichův Hradec &amp; Prague.',
       searchPh: 'Find model: iPhone 15 Pro, iPhone 13, iPhone 12 Mini…',
