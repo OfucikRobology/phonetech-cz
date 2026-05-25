@@ -437,7 +437,7 @@ export const translations = {
     // Contact
     contact: {
       breadcrumb: 'Kontakt',
-      title: 'Vyplňte <em class="text-gradient">formulář</em>, napište nebo zavolejte...',
+      title: 'Vyplňte <em class="text-gradient">formulář</em>, napište nebo zavolejte. Odpovíme co nejrychleji.',
       desc: 'Nezávazná poptávka online, telefonicky nebo osobně na pobočce. V pracovní době reagujeme rychle, mimo ni nejpozději následující den.',
       tag: 'Odpověď co nejrychleji',
       cardPhone: 'Telefon',
@@ -1115,7 +1115,7 @@ export const translations = {
     },
     contact: {
       breadcrumb: 'Contact',
-      title: 'Fill in the <em class="text-gradient">form</em>, write or call...',
+      title: 'Fill in the <em class="text-gradient">form</em>, write or call. We respond ASAP.',
       desc: 'Free inquiry online, by phone, or in person. We respond fast during business hours, and by the next day outside them.',
       tag: 'Reply ASAP',
       cardPhone: 'Phone',
