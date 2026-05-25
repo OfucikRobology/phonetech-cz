@@ -26,9 +26,11 @@ const observer = new IntersectionObserver(
 const allTargets = document.querySelectorAll(selectors.join(','));
 allTargets.forEach((el) => observer.observe(el));
 
-// Safety net: po krátkém delay zkontroluj, jestli některé elementy
-// neměly trigger (bug v iOS Safari nebo jiný edge case). Pokud je
-// element částečně viditelný a stále nemá .is-visible, force-add ho.
+// Safety net: po krátkém delay po loadu zkontroluj, jestli některé
+// elementy neměly trigger (bug v iOS Safari nebo jiný edge case).
+// JEN na load - scroll listener byl odstraněn, protože volal
+// getBoundingClientRect() na 30+ elementech při každém scroll event
+// (= jank/lag na mobilu).
 const safetyCheck = () => {
   const winH = window.innerHeight;
   allTargets.forEach((el) => {
@@ -41,17 +43,24 @@ const safetyCheck = () => {
   });
 };
 window.addEventListener('load', () => setTimeout(safetyCheck, 800));
-window.addEventListener('scroll', safetyCheck, { passive: true });
 
-// Scroll progress bar
+// Scroll progress bar - rAF throttled (předtím sledoval každý scroll
+// event bez throttle = duplicitní práce s navbar.js).
 const progress = document.getElementById('scroll-progress');
 if (progress) {
+  let progressTicking = false;
   const updateProgress = () => {
     const h = document.documentElement;
     const max = h.scrollHeight - h.clientHeight;
     const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
     progress.style.width = pct + '%';
+    progressTicking = false;
   };
-  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('scroll', () => {
+    if (!progressTicking) {
+      requestAnimationFrame(updateProgress);
+      progressTicking = true;
+    }
+  }, { passive: true });
   updateProgress();
 }
