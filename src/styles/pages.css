@@ -28,7 +28,7 @@
 .page-hero__content { max-width: 780px; }
 .page-hero__title {
   font-size: var(--fluid-page);
-  line-height: 1.02;
+  line-height: 1.12; /* Nunito Sans potřebuje víc prostoru pro diakritiku */
   margin: var(--space-4) 0 var(--space-5);
   letter-spacing: var(--tracking-tightest);
   max-width: 16ch;

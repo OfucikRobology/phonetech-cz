@@ -59,12 +59,15 @@ h1 {
   font-size: var(--fluid-h1);
   letter-spacing: var(--tracking-tightest);
   font-weight: 800;
-  line-height: 0.98;
+  /* Bylo 0.98 (těsně pro Syne). Nunito Sans má vyšší diakritiku,
+     potřebuje 1.12 aby se háčky/čárky neořezávaly. */
+  line-height: 1.12;
 }
 h2 {
   font-size: var(--fluid-h2);
   font-weight: 700;
-  line-height: 1.02;
+  /* Bylo 1.02 (Syne). Nunito potřebuje víc. */
+  line-height: 1.15;
   letter-spacing: -0.03em;
 }
 h3 {
