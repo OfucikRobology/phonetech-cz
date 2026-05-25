@@ -4,6 +4,10 @@ const drawer = document.getElementById('nav-drawer');
 
 let lastScrollY = window.scrollY;
 let ticking = false;
+// Accumulator pattern: počítá kumulativní scroll dolů od posledního up.
+// Lepší než per-frame delta threshold - funguje i pro pomalý scroll na mobilu
+// (kde každý rAF tick je 1-2px a původní delta > 4 se nikdy nesplnil).
+let downAccum = 0;
 
 const updateScroll = () => {
   const currentY = window.scrollY;
@@ -15,10 +19,15 @@ const updateScroll = () => {
   // Show: u vrcholu NEBO jakýkoliv pohyb nahoru → zobraz okamžitě
   if (currentY < 100 || delta < 0) {
     document.body.classList.remove('nav-hidden');
+    downAccum = 0;
   }
-  // Hide: scroll dolů s malým dampingem, jen po 200px od vrcholu
-  else if (delta > 4 && currentY > 200) {
-    document.body.classList.add('nav-hidden');
+  // Hide: až po 16px kumulativního scrollu dolů od posledního up
+  // (filtruje drobné jittery, ale i pomalý scroll postupně nasčítá).
+  else if (delta > 0 && currentY > 200) {
+    downAccum += delta;
+    if (downAccum > 16) {
+      document.body.classList.add('nav-hidden');
+    }
   }
 
   lastScrollY = currentY;
