@@ -39,28 +39,36 @@ window.addEventListener(
 );
 updateScroll();
 
-// iOS-safe scroll lock pro hamburger menu.
-// overflow:hidden na body samo NESTAČÍ na iOS Safari - musí se použít
-// position:fixed trick. Stejný pattern jako v cenik-modal.js.
+// Scroll lock pro hamburger menu - blokuje touch i wheel.
+// Predcházející position:fixed přístup způsoboval bugy s drawer
+// (drawer position:absolute relativně k navbar, ale fixed body
+// měnilo scroll context).
+//
+// Nový přístup: preventDefault na touchmove/wheel mimo drawer.
+// Zachová scroll pozici, nezpůsobuje layout shift.
+let blockHandler = null;
+
 const lockBodyScroll = () => {
-  const scrollY = window.scrollY;
-  document.body.dataset.menuLockY = String(scrollY);
-  document.body.style.position = 'fixed';
-  document.body.style.top = `-${scrollY}px`;
-  document.body.style.left = '0';
-  document.body.style.right = '0';
-  document.body.style.width = '100%';
+  document.documentElement.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
+  // Block touch scroll mimo drawer (iOS Safari)
+  blockHandler = (e) => {
+    if (drawer && !drawer.contains(e.target)) {
+      e.preventDefault();
+    }
+  };
+  document.addEventListener('touchmove', blockHandler, { passive: false });
+  document.addEventListener('wheel', blockHandler, { passive: false });
 };
 
 const unlockBodyScroll = () => {
-  const scrollY = parseInt(document.body.dataset.menuLockY || '0', 10);
-  document.body.style.position = '';
-  document.body.style.top = '';
-  document.body.style.left = '';
-  document.body.style.right = '';
-  document.body.style.width = '';
-  delete document.body.dataset.menuLockY;
-  window.scrollTo(0, scrollY);
+  document.documentElement.style.overflow = '';
+  document.body.style.overflow = '';
+  if (blockHandler) {
+    document.removeEventListener('touchmove', blockHandler);
+    document.removeEventListener('wheel', blockHandler);
+    blockHandler = null;
+  }
 };
 
 const closeMenu = () => {
