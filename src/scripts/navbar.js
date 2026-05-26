@@ -39,22 +39,52 @@ window.addEventListener(
 );
 updateScroll();
 
+// iOS-safe scroll lock pro hamburger menu.
+// overflow:hidden na body samo NESTAČÍ na iOS Safari - musí se použít
+// position:fixed trick. Stejný pattern jako v cenik-modal.js.
+const lockBodyScroll = () => {
+  const scrollY = window.scrollY;
+  document.body.dataset.menuLockY = String(scrollY);
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollY}px`;
+  document.body.style.left = '0';
+  document.body.style.right = '0';
+  document.body.style.width = '100%';
+};
+
+const unlockBodyScroll = () => {
+  const scrollY = parseInt(document.body.dataset.menuLockY || '0', 10);
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.right = '';
+  document.body.style.width = '';
+  delete document.body.dataset.menuLockY;
+  window.scrollTo(0, scrollY);
+};
+
+const closeMenu = () => {
+  hamburger?.classList.remove('open');
+  hamburger?.setAttribute('aria-expanded', 'false');
+  drawer?.classList.remove('open');
+  drawer?.setAttribute('aria-hidden', 'true');
+  unlockBodyScroll();
+};
+
 hamburger?.addEventListener('click', () => {
   const isOpen = hamburger.classList.toggle('open');
   hamburger.setAttribute('aria-expanded', String(isOpen));
   drawer?.classList.toggle('open', isOpen);
   drawer?.setAttribute('aria-hidden', String(!isOpen));
-  document.body.style.overflow = isOpen ? 'hidden' : '';
+  if (isOpen) {
+    lockBodyScroll();
+  } else {
+    unlockBodyScroll();
+  }
 });
 
 drawer?.querySelectorAll('a').forEach((a) => {
-  a.addEventListener('click', () => {
-    hamburger?.classList.remove('open');
-    hamburger?.setAttribute('aria-expanded', 'false');
-    drawer.classList.remove('open');
-    drawer.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  });
+  a.addEventListener('click', closeMenu);
 });
 
 // Smooth anchor scroll (same page only)
