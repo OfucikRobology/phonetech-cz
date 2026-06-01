@@ -42,7 +42,7 @@ author: PhoneTech
 <hr />
 <h2>Kdy se vyplatí koupit nový (nebo použitý) telefon?</h2>
 <h3>Telefon je starý (5 let a více)</h3>
-<p>Starší iPhony jako iPhone 7 nebo 8 jsou na hranici podpory — nebo ji přesáhly. Oprava displeje za 1 500–2 000 Kč na telefon, který za rok přestane dostávat bezpečnostní aktualizace, je špatná investice.</p>
+<p>Starší iPhony jako iPhone 7 nebo 8 jsou bez podpory. Oprava displeje za 1 500–2 000 Kč na telefon, který přestal dostávat bezpečnostní aktualizace, je špatná investice.</p>
 <h3>Baterie je vybitá (pod 80 %)</h3>
 <p>Pokud musíte opravit displej i vyměnit baterii, náklady se sčítají. Za 2 500–4 000 Kč na opravy si místo toho kupte použitý iPhone o generaci novější.</p>
 <h3>Telefon má víc problémů najednou</h3>
