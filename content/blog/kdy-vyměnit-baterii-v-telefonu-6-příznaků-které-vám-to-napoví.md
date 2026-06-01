@@ -1,7 +1,7 @@
 ---
 title: Kdy vyměnit baterii v telefonu? 6 příznaků, které vám to napoví
 date: 2026-06-01
-category: Údržba
+category: Návody
 readTime: 5
 thumbnail: /images/blog/uploads/phoenix-v1.0_smartphone_screen_showing_a_low_battery_warning_at_5_percent_glowing_red_battery-0.jpg
 excerpt: Baterie v telefonu nevydrží? 6 příznaků, že je čas na výměnu — a jak to
