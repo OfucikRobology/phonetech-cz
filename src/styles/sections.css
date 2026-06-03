@@ -1457,10 +1457,13 @@ body.nav-hidden .navbar { transform: translateY(calc(-100% - 38px)); }
 /* ═══════════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════════ */
-@media (max-width: 1200px) {
+/* Breakpoint 1440px (předtím 1200) - XPS 13/15 mají efektivní šířku
+   1280-1366px, nad 1200px se proto aplikoval base right: -14% overhang
+   a badge "Na počkání" vyjížděl mimo viewport (clip ho ořízl).
+   1440px pokryje všechny běžné laptopy. */
+@media (max-width: 1440px) {
   .hero__title { font-size: clamp(44px, 7vw, 88px); }
-  /* Na užších laptop displejích (XPS 1280px atd.) ať floating cards
-     zůstanou uvnitř hero containeru, neuříznou se. */
+  /* Floating cards zarovnané s okrajem hero__visual, žádný overhang ven */
   .floating-card--tl { left: 0; }
   .floating-card--tr { right: 0; }
   .floating-card--bl { left: 0; }
