@@ -52,7 +52,7 @@ collections:
         pattern: "První pomoc"
     fields:
       - {label: "Titulek", name: "title", widget: "string", hint: "Hlavní nadpis článku"}
-      - {label: "Datum publikace", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false}
+      - {label: "Datum publikace", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, hint: "Klikněte na datum a vyberte libovolný den (i v minulosti). Předvyplněné je dnešní datum - přepište ho podle potřeby. Toto datum se zobrazuje u článku."}
       - label: "Kategorie"
         name: "category"
         widget: "select"
