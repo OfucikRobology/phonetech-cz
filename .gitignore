@@ -18,5 +18,13 @@ yarn-error.log
 # Vercel
 .vercel
 
+# Generované blog HTML (build artefakty z content/blog/*.md).
+# Zdroj pravdy jsou MD soubory + _template.html; HTML generuje
+# scripts/build-blog.mjs při každém Vercel buildu.
+blog/*.html
+!blog/_template.html
+# bundle.css je taky build artefakt (scripts/build-css.mjs)
+src/styles/bundle.css
+
 # Claude Code lokální konfigurace
 .claude/
