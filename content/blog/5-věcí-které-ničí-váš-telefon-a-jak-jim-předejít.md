@@ -1,6 +1,6 @@
 ---
 title: 5 věcí, které ničí váš telefon (a jak jim předejít)
-date: 2026-06-01
+date: 2026-06-02
 category: Návody
 readTime: 5
 thumbnail: /images/blog/uploads/phoenix-v1.0_smartphone_left_on_a_hot_car_dashboard_in_direct_summer_sunlight_heat_shimmer_ef-0.jpg
